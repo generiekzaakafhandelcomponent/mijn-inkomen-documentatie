@@ -7,6 +7,11 @@
 * [Architectuur](overzicht/architectuur.md)
 * [Begrippenlijst](overzicht/begrippen.md)
 
+## Handleiding
+
+* [Aan de slag](handleiding/aan-de-slag.md)
+* [Werken met een dossier](handleiding/werken-met-een-dossier.md)
+
 ## Functionaliteit
 
 * [Zaaktypen](functionaliteit/zaaktypen.md)

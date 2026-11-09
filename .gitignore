@@ -1,0 +1,10 @@
+# Ruwe opnames van capture-screenshots.mjs. Alleen de verkleinde versies
+# in .gitbook/assets/ horen in versiebeheer.
+shots/
+
+# Playwright en andere lokale afhankelijkheden
+node_modules/
+package-lock.json
+package.json
+
+.DS_Store
