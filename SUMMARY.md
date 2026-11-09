@@ -16,6 +16,7 @@
 * [Handhaving en voorschot](functionaliteit/handhaving-en-voorschot.md)
 * [Besluit en afsluiting](functionaliteit/besluit-en-afsluiting.md)
 * [Werken in de applicatie](functionaliteit/werken-in-de-applicatie.md)
+* [Rollen en rechten](functionaliteit/rollen-en-rechten.md)
 
 ## Gegevens
 

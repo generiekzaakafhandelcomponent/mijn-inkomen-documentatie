@@ -136,4 +136,8 @@ Beide zijn opgeslagen als objecttype in de Objects API en hebben een eigen weerg
 
 ## Rechten
 
-De applicatie kent twee rollen: `ROLE_USER` en `ROLE_ADMIN`. De permissies zijn per resourcetype en actie vastgelegd in `config/pbac/all.permission.json` — bijvoorbeeld welke rol zaken mag inzien, aanmaken, wijzigen, claimen of verwijderen. Gebruikers en hun rollen worden beheerd in Keycloak.
+Het inkomensdomein kent elf rollen, van Behandelaar tot de verschillende raadplegervarianten. Per rol is precies vastgelegd welke actie op welk object is toegestaan, afgebakend op dossiertype — tot op het niveau van individuele tabbladen en dashboards.
+
+Niet elke rol ziet dus hetzelfde zaakscherm: de tabbladen *Suwinet* en *Bewoning* zijn bijvoorbeeld voorbehouden aan rollen die het dossier inhoudelijk beoordelen.
+
+Zie [Rollen en rechten](rollen-en-rechten.md) voor de volledige kruisjeslijst. Gebruikers en hun rollen worden beheerd in Keycloak.
