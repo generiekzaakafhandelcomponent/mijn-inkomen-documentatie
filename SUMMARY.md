@@ -36,6 +36,7 @@
 
 * [Configuratie](beheer/configuratie.md)
 * [Lokaal draaien](beheer/lokaal-draaien.md)
+* [Een zaak starten](beheer/zaak-starten.md)
 
 ## Releasenotes
 
