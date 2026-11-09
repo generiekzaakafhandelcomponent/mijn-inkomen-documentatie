@@ -3,3 +3,10 @@
 #
 # Voeg hier alleen toe wat je daadwerkelijk hebt bekeken en wat aantoonbaar
 # geen gemeente, persoon of e-mailadres is. Twijfel je? Dan hoort het hier niet.
+
+# Testpersoon uit de Suwinet-simulator, gebruikt in de handleiding.
+# Beoordeeld: fictieve testdata die in de simulator is ingebakken en in
+# schermafbeeldingen zichtbaar is. Geen bestaand persoon.
+022264541
+Sanne Marieke Visser
+Nora van Wollingen

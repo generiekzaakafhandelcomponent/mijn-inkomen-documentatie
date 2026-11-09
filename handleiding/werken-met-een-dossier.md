@@ -81,21 +81,34 @@ De taak opent in een paneel náást het dossier, zodat je de zaakgegevens kunt b
 
 ### Hoe een vaststelling werkt
 
-Een vaststellingstaak zet steeds twee dingen naast elkaar: **wat de inwoner heeft opgegeven** en **wat de basisregistratie zegt**. Jij beoordeelt het verschil en legt vast wat telt.
+Dit patroon komt in bijna alle vaststellingstaken terug: het formulier zet **wat de inwoner heeft opgegeven** naast **wat de basisregistratie zegt**, en vraagt jou om de knoop door te hakken.
 
-In het voorbeeld hierboven lukt de BRP-bevraging niet — de blokken *Persoonsgegevens uit BRP* blijven leeg en het formulier meldt dat de gegevens niet konden worden opgehaald. Je krijgt dan het veld **Gewenst BSN** om een correctie door te geven, waarna de taak opnieuw wordt aangeboden.
+In het voorbeeld hierboven lopen beide uiteen:
 
-Lukt de bevraging wel, dan staan beide blokken gevuld en kun je kiezen of de BRP-gegevens gebruikt mogen worden, met een verplichte **Toelichting** waarin je die keuze onderbouwt.
+| | Opgegeven | Volgens de BRP |
+| --- | --- | --- |
+| BSN | 022264541 | 022264541 |
+| Naam | Sanne Marieke Visser | Nora van Wollingen |
+| Geboortedatum | 12-04-1993 | 12-03-1985 |
 
-{% hint style="info" %}
-Dit is het uitzonderingsgeval. Normaal staan beide blokken gevuld en hoef je alleen te bevestigen of te corrigeren. Blijft de BRP onbereikbaar, meld het dan bij functioneel beheer — met een handmatig opgezocht BSN kun je intussen verder.
-{% endhint %}
+Het BSN komt overeen, maar naam en geboortedatum niet. Precies daarvoor is deze taak er — het systeem kan zo'n verschil niet zelf wegstrepen.
 
-Velden met een rood sterretje zijn verplicht. De knop **Indienen** wordt pas actief als alles is ingevuld én de taak aan jou is toegewezen.
+Zulke verschillen hebben uiteenlopende oorzaken: een typefout bij het invullen, een recente naamswijziging die nog niet is verwerkt, of een BSN dat bij iemand anders hoort.
+
+Je kiest tussen twee antwoorden:
+
+* **Ja, gebruik de gegevens uit de BRP** — de basisregistratie is leidend; de aanvraaggegevens worden gecorrigeerd.
+* **Nee, het opgegeven BSN hoort niet bij deze naam** — er is iets anders aan de hand, bijvoorbeeld een typefout in het BSN.
+
+In beide gevallen onderbouw je je keuze in het veld **Toelichting**. Dat is verplicht, en het is wat later bij bezwaar je motivering vormt.
 
 {% hint style="warning" %}
 Wat je hier vaststelt, is wat meetelt voor de beoordeling. De oorspronkelijke aanvraaggegevens en de brongegevens blijven apart bewaard, zodat achteraf aantoonbaar is wat de inwoner opgaf, wat de bron zei en wat jij daarvan hebt gemaakt. Zie [Datamodel](../gegevens/datamodel.md).
 {% endhint %}
+
+Lukt de BRP-bevraging niet, dan blijven de BRP-velden leeg en meldt het formulier dat de gegevens niet konden worden opgehaald. Je krijgt dan een veld **Gewenst BSN** om een correctie door te geven, waarna de taak opnieuw wordt aangeboden.
+
+Velden met een rood sterretje zijn verplicht. De knop **Indienen** wordt pas actief als alles is ingevuld én de taak aan jou is toegewezen.
 
 Met de knoppen rechtsboven in het taakpaneel kun je tussentijds **opslaan**, de **geschiedenis** bekijken of de taak **sluiten** zonder in te dienen. Een taak die je sluit blijft openstaan.
 
