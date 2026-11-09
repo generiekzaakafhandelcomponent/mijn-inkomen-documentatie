@@ -99,7 +99,19 @@ Verhoog het `changesetId` in het gewijzigde bestand. Is dat ID al eerder uitgero
 {% endtab %}
 
 {% tab title="Brongegevens blijven leeg" %}
-Controleer of de simulatorcontainers draaien en of de URL's in `.env.properties` kloppen. Fouten komen in het dossier terecht onder `connectionError`, met foutcode.
+Controleer eerst of de simulatorcontainers draaien en of de URL's in `.env.properties` kloppen. Fouten komen in het dossier terecht onder `connectionError`, met foutcode.
+
+{% hint style="warning" %}
+**De Suwinet-simulator start leeg.** Zonder ingeladen testpersonen geeft elke BRP-bevraging een leeg antwoord, en krijgt de behandelaar de taak *Bepalen vervolgactie* met de melding dat het BSN niet gevonden is. Dat lijkt op een storing maar is het niet — er is simpelweg geen data.
+
+Laad testpersonen in voordat je een dossier doorloopt; **persona-lab** genereert samenhangende sets en kan ze naar de simulator pushen. Controleren wat erin zit:
+
+```bash
+curl -s -u <user>:<password> http://localhost:8090/api/responses
+```
+
+Komt daar een lege lijst uit, dan is dat je verklaring.
+{% endhint %}
 
 De behandeling loopt bewust door als een bron uitvalt — de velden blijven dan alleen leeg.
 {% endtab %}

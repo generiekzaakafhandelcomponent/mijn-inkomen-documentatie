@@ -6,7 +6,7 @@ description: Het zaakscherm, de tabbladen, taken uitvoeren en losse acties start
 
 ## Het zaakscherm
 
-Open je een zaak, dan kom je op **Dossier details**. Dit scherm is je werkplek voor de hele behandeling.
+Open je een zaak, dan kom je op **Dossierdetails**. Dit scherm is je werkplek voor de hele behandeling.
 
 ![Het dossierscherm met de kopbalk, tabbladen en het takenpaneel](../.gitbook/assets/07-dossier-algemeen.png)
 
@@ -14,8 +14,8 @@ Bovenaan staat altijd dezelfde kopbalk, ongeacht welk tabblad je bekijkt:
 
 * het **zaaknummer**;
 * de **interne status** — hier *Aanvraag ontvangen*;
-* **Gebruiker toewijzen aan dit dossier** om een behandelaar te koppelen;
-* de knop **Start** voor losse acties.
+* een knop om een **behandelaar aan het dossier** te koppelen;
+* de knop **Starten** voor losse acties.
 
 Daaronder staat een blok met de kerngegevens van aanvrager en partner: naam, geboortedatum en BSN. Dat blok blijft staan terwijl je door de tabbladen loopt, zodat je altijd weet over wie het gaat.
 
@@ -36,22 +36,26 @@ Let op de **uiterste afhandelingsdatum**: dat is de wettelijke termijn waarbinne
 
 ## De tabbladen
 
-Het dossier is verdeeld over twaalf tabbladen.
+Het dossier is verdeeld over veertien tabbladen.
 
 | Tabblad | Wat je er doet |
 | --- | --- |
 | **Algemeen** | De samenvatting hierboven. |
+| **Signalen** | Termijnsignalen en aandachtspunten bij deze zaak. |
+| **Poortonderzoek** | Uitkomsten van het handhavingsonderzoek. |
 | **Brede Intake** | Gegevens uit het intakegesprek. |
 | **Woonsituatie** | Waar en met wie de aanvrager woont. |
 | **Inkomen** | Inkomsten van aanvrager en partner. |
 | **Vermogen** | Bankrekeningen, bezittingen, schulden, eigen woning. |
-| **Suwinet** | De ruwe brongegevens van UWV, SVB, DUO, RDW en Kadaster. |
 | **Bewoning** | Wie er volgens de BRP op het adres staan ingeschreven. |
+| **Suwinet** | De ruwe brongegevens van UWV, SVB, DUO, RDW en Kadaster. |
 | **Informatieverzoeken** | Alle verzoeken aan de inwoner, met status en ontvangen stukken. |
 | **Voortgang** | Het procesverloop, als diagram. |
 | **Log** | Het volledige wijzigingslogboek. |
 | **Documenten** | Alle documenten bij de zaak. |
 | **Notities** | Aantekeningen van behandelaars. |
+
+Niet alle veertien passen tegelijk in beeld; met het pijltje rechts blader je verder.
 
 {% hint style="info" %}
 Welke tabbladen je ziet, hangt af van je rol. *Suwinet* en *Bewoning* zijn bijvoorbeeld voorbehouden aan rollen die het dossier inhoudelijk beoordelen. Zie [Rollen en rechten](../functionaliteit/rollen-en-rechten.md).
@@ -69,7 +73,7 @@ Dit is het snelste antwoord op de vraag *"waarom gebeurt er niets?"*: je ziet di
 
 ## Taken uitvoeren
 
-Rechts op het dossierscherm staat het paneel **Taken**, verdeeld in *Mijn taken* en *Overige taken*. Klik op een taak om hem te openen.
+Rechts schuift het paneel **Taken** uit, verdeeld in *Mijn taken* en *Overige taken*. Klik op een taak om hem te openen; met het kruisje rechtsboven klap je het paneel weg.
 
 ![Een geopende taak naast het dossier](../.gitbook/assets/09-taak-formulier.png)
 
@@ -77,14 +81,17 @@ De taak opent in een paneel náást het dossier, zodat je de zaakgegevens kunt b
 
 ### Hoe een vaststelling werkt
 
-Het voorbeeld hierboven — *Vaststellen persoon aanvrager* — laat het patroon zien dat in bijna alle vaststellingstaken terugkomt. Het formulier toont twee blokken naast elkaar:
+Een vaststellingstaak zet steeds twee dingen naast elkaar: **wat de inwoner heeft opgegeven** en **wat de basisregistratie zegt**. Jij beoordeelt het verschil en legt vast wat telt.
 
-* **Persoonsgegevens zoals opgegeven** — wat de inwoner zelf heeft ingevuld;
-* **Persoonsgegevens uit BRP** — wat de basisregistratie zegt.
+In het voorbeeld hierboven lukt de BRP-bevraging niet — de blokken *Persoonsgegevens uit BRP* blijven leeg en het formulier meldt dat de gegevens niet konden worden opgehaald. Je krijgt dan het veld **Gewenst BSN** om een correctie door te geven, waarna de taak opnieuw wordt aangeboden.
 
-In dit dossier verschillen ze: de opgegeven geboortedatum is 13-03-1985, de BRP zegt 12-03-1985. Precies daarom wordt de vraag aan jou voorgelegd.
+Lukt de bevraging wel, dan staan beide blokken gevuld en kun je kiezen of de BRP-gegevens gebruikt mogen worden, met een verplichte **Toelichting** waarin je die keuze onderbouwt.
 
-Je kiest vervolgens of de BRP-gegevens gebruikt mogen worden, en onderbouwt die keuze in het veld **Toelichting**. Velden met een rood sterretje zijn verplicht; de knop **Indienen** wordt pas actief als alles is ingevuld.
+{% hint style="info" %}
+Dit is het uitzonderingsgeval. Normaal staan beide blokken gevuld en hoef je alleen te bevestigen of te corrigeren. Blijft de BRP onbereikbaar, meld het dan bij functioneel beheer — met een handmatig opgezocht BSN kun je intussen verder.
+{% endhint %}
+
+Velden met een rood sterretje zijn verplicht. De knop **Indienen** wordt pas actief als alles is ingevuld én de taak aan jou is toegewezen.
 
 {% hint style="warning" %}
 Wat je hier vaststelt, is wat meetelt voor de beoordeling. De oorspronkelijke aanvraaggegevens en de brongegevens blijven apart bewaard, zodat achteraf aantoonbaar is wat de inwoner opgaf, wat de bron zei en wat jij daarvan hebt gemaakt. Zie [Datamodel](../gegevens/datamodel.md).
@@ -94,7 +101,7 @@ Met de knoppen rechtsboven in het taakpaneel kun je tussentijds **opslaan**, de 
 
 ### Een taak aan jezelf toewijzen
 
-Boven in het taakpaneel staat **Gebruiker toewijzen**. Daarmee claim je de taak, zodat voor collega's zichtbaar is dat jij ermee bezig bent.
+Boven in het taakpaneel staat **Taak toewijzen**. Daarmee claim je de taak, zodat voor collega's zichtbaar is dat jij ermee bezig bent.
 
 {% hint style="warning" %}
 **Je moet de taak eerst toewijzen voordat je hem kunt indienen.** Zolang de taak niet aan jou is toegewezen, blijft de knop **Indienen** grijs — ook als het formulier volledig is ingevuld. Dat is de meest voorkomende reden dat indienen niet lijkt te werken.
@@ -102,36 +109,26 @@ Boven in het taakpaneel staat **Gebruiker toewijzen**. Daarmee claim je de taak,
 
 ### Meerdere taken tegelijk
 
-Verderop in de behandeling staan er vaak meerdere taken tegelijk open. Dat is geen achterstand, maar het ontwerp: de beoordelingen lopen parallel.
+Verderop in de behandeling staan er vaak meerdere taken tegelijk open. Dat is geen achterstand, maar het ontwerp: de beoordelingen lopen parallel. Je kunt ze in willekeurige volgorde oppakken. Pas als ze allemaal zijn afgerond, schuift de zaak door naar de beslisfase.
 
-![Het takenpaneel met zes gelijktijdig openstaande taken](../.gitbook/assets/11-vaststellen-taken.png)
-
-In dit dossier lopen zes beoordelingen naast elkaar — inkomen, vermogen, verblijfstitel, ingangsdatum, en de twee overwegingen rond informatieverzoek en handhaving. Je kunt ze in willekeurige volgorde oppakken. Pas als ze allemaal zijn afgerond, schuift de zaak door naar de beslisfase.
-
-Een overweging ziet er zo uit — een enkele ja/nee-vraag die bepaalt of er een vervolgtaak komt:
-
-![Het formulier Overwegen uitzetten informatieverzoek](../.gitbook/assets/13-overwegen-informatieverzoek.png)
-
-Antwoord je **Ja**, dan verschijnt een vervolgtaak waarin je bepaalt welke stukken je opvraagt. Antwoord je **Nee**, dan is deze beoordeling klaar.
+Een **overweging** is een bijzonder soort taak: een enkele ja/nee-vraag die bepaalt of er vervolgwerk komt. Antwoord je bij *Overwegen uitzetten informatieverzoek* met **Ja**, dan verschijnt een vervolgtaak waarin je bepaalt welke stukken je opvraagt. Antwoord je **Nee**, dan is die beoordeling klaar.
 
 ## Als er iets misgaat
 
-Sommige stappen praten met een extern systeem. Lukt dat niet, dan blijft de zaak staan en krijg je een taak met de foutmelding erbij.
+Sommige stappen praten met een extern systeem. Lukt dat niet, dan blijft de zaak staan en krijg je een taak met de foutmelding erbij — bijvoorbeeld wanneer de uitkeringsadministratie onbereikbaar is.
 
-![Een mislukte koppeling met de uitkeringsadministratie](../.gitbook/assets/12-socrates-fout.png)
+Je ziet dan wat er is misgegaan, en hebt twee knoppen:
 
-Je ziet wat er is misgegaan en hebt twee knoppen:
-
-* **Probeer het opnieuw** — gebruik dit als het probleem inmiddels verholpen is, bijvoorbeeld omdat het externe systeem weer bereikbaar is.
+* **Probeer het opnieuw** — gebruik dit als het probleem inmiddels verholpen is.
 * **Overslaan** — hiermee gaat de behandeling verder zonder dat de stap is uitgevoerd.
 
 {% hint style="warning" %}
-**Overslaan lost het onderliggende probleem niet op.** In het voorbeeld hierboven is de dienst níet opgevoerd in de uitkeringsadministratie; de zaak loopt wel door. Gebruik het alleen bewust, en zorg dat de overgeslagen handeling alsnog gebeurt.
+**Overslaan lost het onderliggende probleem niet op.** De overgeslagen handeling is niet uitgevoerd; de zaak loopt wel door. Gebruik het bewust, en zorg dat het alsnog gebeurt.
 {% endhint %}
 
 ## Losse acties starten
 
-Niet al het werk komt als taak binnen. Soms moet je zelf iets in gang zetten — een informatieverzoek annuleren, de aanvraag intrekken, brongegevens opnieuw ophalen. Dat doe je met de knop **Start** rechtsboven.
+Niet al het werk komt als taak binnen. Soms moet je zelf iets in gang zetten — een informatieverzoek annuleren, de aanvraag intrekken, brongegevens opnieuw ophalen. Dat doe je met de knop **Starten** rechtsboven.
 
 ![Het Start-menu met de beschikbare acties](../.gitbook/assets/10-startmenu.png)
 

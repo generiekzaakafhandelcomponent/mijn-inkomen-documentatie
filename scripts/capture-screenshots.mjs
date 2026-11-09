@@ -1,7 +1,7 @@
 import { chromium } from 'playwright';
 import fs from 'node:fs';
 const OUT='shots'; const BASE='http://localhost:4200';
-const AB=`${BASE}/dossiers/aanvraag-algemene-bijstand-dcm`;
+const AB=`${BASE}/cases/aanvraag-algemene-bijstand-dcm`;  // v13: /cases/ i.p.v. /dossiers/
 const log=[];
 const b=await chromium.launch({channel:'chrome',headless:true});
 const ctx=await b.newContext({viewport:{width:1600,height:1000},locale:'nl-NL',deviceScaleFactor:2});
