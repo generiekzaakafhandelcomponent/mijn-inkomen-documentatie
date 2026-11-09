@@ -96,6 +96,39 @@ Met de knoppen rechtsboven in het taakpaneel kun je tussentijds **opslaan**, de 
 
 Boven in het taakpaneel staat **Gebruiker toewijzen**. Daarmee claim je de taak, zodat voor collega's zichtbaar is dat jij ermee bezig bent.
 
+{% hint style="warning" %}
+**Je moet de taak eerst toewijzen voordat je hem kunt indienen.** Zolang de taak niet aan jou is toegewezen, blijft de knop **Indienen** grijs — ook als het formulier volledig is ingevuld. Dat is de meest voorkomende reden dat indienen niet lijkt te werken.
+{% endhint %}
+
+### Meerdere taken tegelijk
+
+Verderop in de behandeling staan er vaak meerdere taken tegelijk open. Dat is geen achterstand, maar het ontwerp: de beoordelingen lopen parallel.
+
+![Het takenpaneel met zes gelijktijdig openstaande taken](../.gitbook/assets/11-vaststellen-taken.png)
+
+In dit dossier lopen zes beoordelingen naast elkaar — inkomen, vermogen, verblijfstitel, ingangsdatum, en de twee overwegingen rond informatieverzoek en handhaving. Je kunt ze in willekeurige volgorde oppakken. Pas als ze allemaal zijn afgerond, schuift de zaak door naar de beslisfase.
+
+Een overweging ziet er zo uit — een enkele ja/nee-vraag die bepaalt of er een vervolgtaak komt:
+
+![Het formulier Overwegen uitzetten informatieverzoek](../.gitbook/assets/13-overwegen-informatieverzoek.png)
+
+Antwoord je **Ja**, dan verschijnt een vervolgtaak waarin je bepaalt welke stukken je opvraagt. Antwoord je **Nee**, dan is deze beoordeling klaar.
+
+## Als er iets misgaat
+
+Sommige stappen praten met een extern systeem. Lukt dat niet, dan blijft de zaak staan en krijg je een taak met de foutmelding erbij.
+
+![Een mislukte koppeling met de uitkeringsadministratie](../.gitbook/assets/12-socrates-fout.png)
+
+Je ziet wat er is misgegaan en hebt twee knoppen:
+
+* **Probeer het opnieuw** — gebruik dit als het probleem inmiddels verholpen is, bijvoorbeeld omdat het externe systeem weer bereikbaar is.
+* **Overslaan** — hiermee gaat de behandeling verder zonder dat de stap is uitgevoerd.
+
+{% hint style="warning" %}
+**Overslaan lost het onderliggende probleem niet op.** In het voorbeeld hierboven is de dienst níet opgevoerd in de uitkeringsadministratie; de zaak loopt wel door. Gebruik het alleen bewust, en zorg dat de overgeslagen handeling alsnog gebeurt.
+{% endhint %}
+
 ## Losse acties starten
 
 Niet al het werk komt als taak binnen. Soms moet je zelf iets in gang zetten — een informatieverzoek annuleren, de aanvraag intrekken, brongegevens opnieuw ophalen. Dat doe je met de knop **Start** rechtsboven.
