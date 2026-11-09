@@ -44,7 +44,7 @@ description: De termen die in Mijn Inkomen en in deze documentatie worden gebrui
 | --- | --- |
 | **DCM** | Dynamic Case Management. Behandeling als een verzameling losse, door regels aangestuurde brokjes werk in plaats van een vast stappenplan. |
 | **Business service (BS)** | Eén afgebakend stuk inhoudelijk werk, bijvoorbeeld *vaststelling vermogen*. Genummerd volgens de landelijke referentie, zoals BS 214. |
-| **Business service bouwblok (BSB)** | Het omhulsel om een business service dat status, annulering en terugmelding regelt. |
+| **Business service bouwblok (BSB)** | Het omhulsel om een business service dat status, annulering en terugmelding regelt. Sinds v13 is een bouwblok ook de eenheid van configuratie: één map met procesmodel, formulieren, links en schema. |
 | **Fase** | De stand van de behandeling: `vaststellen-belanghebbenden`, `opvoeren-dienst`, `vaststellen`, `beslissen`, `beslist`, `intrekken`, `buiten-behandeling-stellen`, `afsluiten`. |
 | **Gebeurtenis** | Een melding dat er iets is gebeurd, bijvoorbeeld `vermogen-vastgesteld`. Hierop reageert de regie. |
 | **Vaststelling** | Het door de behandelaar bevestigen of corrigeren van een gegeven, waarmee het de officiële waarde voor de beoordeling wordt. |
@@ -56,7 +56,7 @@ description: De termen die in Mijn Inkomen en in deze documentatie worden gebrui
 | --- | --- |
 | **GZAC** | Generiek Zaakafhandelcomponent: het open source zaakafhandelplatform waarop Mijn Inkomen draait. |
 | **Valtimo** | Het onderliggende platform van GZAC, geleverd door Ritense. |
-| **Camunda** | De procesengine die de BPMN-modellen en DMN-tabellen uitvoert. |
+| **Operaton** | De procesengine die de BPMN-modellen en DMN-tabellen uitvoert. Open source voortzetting van Camunda 7; tot v12 heette dit Camunda. |
 | **BPMN** | Business Process Model and Notation: de modelleertaal voor de processen. |
 | **DMN** | Decision Model and Notation: de taal voor de beslistabellen. |
 | **ZGW-API's** | De Nederlandse standaard-API's voor zaakgericht werken: Zaken, Catalogi, Documenten en Besluiten. |

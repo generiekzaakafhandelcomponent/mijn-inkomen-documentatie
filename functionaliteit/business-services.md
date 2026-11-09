@@ -134,7 +134,7 @@ De beslistabel `bs-219-bepalen-basisnormbedrag` bevat de bijstandsnormen per pei
 | Beiden in inrichting | `II` | € 690,27 |
 
 {% hint style="warning" %}
-**Deze bedragen worden halfjaarlijks geïndexeerd.** De tabel bevat regels per periode (1 juli 2024, 1 januari 2025, 1 juli 2025, 1 januari 2026). Bij elke indexering moet er een regel bij in `config/dmn/alo-dcm/bs-219-bepalen-basisnormbedrag.dmn`. Voor peildata vóór 1 juli 2024 geeft de tabel nul terug.
+**Deze bedragen worden halfjaarlijks geïndexeerd.** De tabel bevat regels per periode (1 juli 2024, 1 januari 2025, 1 juli 2025, 1 januari 2026). Bij elke indexering moet er een regel bij in de beslistabel `bs-219-bepalen-basisnormbedrag`, in het bouwblok `bs-219-vaststelling-norm`. Voor peildata vóór 1 juli 2024 geeft de tabel nul terug.
 {% endhint %}
 
 ### BS 216 — Vaststelling relaties
@@ -160,10 +160,10 @@ Daarnaast bestaat er een **annuleringssamenhang**: start de behandelaar BS 213 (
 
 ## Waar staat wat
 
-| Laag | Map |
+| Onderdeel | Waar |
 | --- | --- |
-| Bouwblokken (BSB) | `config/bpmn/business-service-bouwblok/` |
-| Business services (BS) | `config/bpmn/business-service/` |
-| Beslistabellen | `config/dmn/alo-dcm/` |
-| Formulieren | `config/form/` |
-| Formulierstromen | `config/form-flow/` |
+| Alles van één business service | `config/building-block/<naam-van-het-blok>/` |
+| Gedeelde formulieren en links | `config/global/` |
+| Gedeelde schema's | `config/document/` |
+
+Sinds v13 staat alles wat bij één business service hoort — procesmodel, bouwblok, formulieren, beslistabellen en schema — bij elkaar in één map.

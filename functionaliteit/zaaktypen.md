@@ -83,8 +83,8 @@ Beide verschillen zijn puur configuratie: twee regels in `besturen-business-serv
 
 De opzet is erop gericht dat een extra regeling grotendeels met configuratie kan. In grote lijnen:
 
-1. Een **zaakdossierschema** maken (`config/document/definition/`), met hergebruik van de bestaande referentieschema's.
-2. Een **zaakproces** en **initialisatieproces** toevoegen, naar het model van `ab-afhandelen-aanvraag-dcm`.
+1. Een **zaakdossierschema** maken onder `config/case/<zaaktype>/<versie>/`, met hergebruik van de bestaande referentieschema's uit `config/document/`.
+2. Een **zaakproces** en **initialisatieproces** toevoegen als bouwblok, naar het model van `ab-afhandelen-aanvraag-dcm`.
 3. De **startprocessen** voor behandelaarsacties toevoegen met het eigen voorvoegsel.
 4. **Regels toevoegen** aan `besturen-business-services.dmn` voor het nieuwe dossiertype en de bijbehorende startset.
 5. De afgeleide beslissing *Fase 'vaststellen' afgerond* uitbreiden met een regel voor het nieuwe type.

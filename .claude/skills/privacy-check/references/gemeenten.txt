@@ -1,0 +1,414 @@
+# Nederlandse gemeenten — handmatig onderhouden lijst.
+# Bevat ook opgeheven/samengevoegde gemeenten: oude namen duiken nog op in
+# aangeleverde teksten en zijn net zo herleidbaar als huidige.
+#
+# Namen onder [ambigu] zijn ook gewone Nederlandse woorden. Die worden als
+# twijfelgeval gemeld in plaats van als blokkerende bevinding.
+#
+# Aanvullen: voeg de naam toe op alfabetische plek. Eén naam per regel.
+
+Aa en Hunze
+Aalburg
+Aalsmeer
+Aalten
+Achtkarspelen
+Alblasserdam
+Albrandswaard
+Alkmaar
+Almelo
+Almere
+Alphen aan den Rijn
+Alphen-Chaam
+Altena
+Ameland
+Amersfoort
+Amstelveen
+Amsterdam
+Apeldoorn
+Appingedam
+Arnhem
+Assen
+Asten
+Baarle-Nassau
+Baarn
+Barendrecht
+Barneveld
+Bedum
+Beekdaelen
+Beemster
+Beesel
+Berg en Dal
+Bergeijk
+Bergen op Zoom
+Berkelland
+Bernheze
+Beuningen
+Beverwijk
+Bladel
+Blaricum
+Bloemendaal
+Bodegraven
+Bodegraven-Reeuwijk
+Boekel
+Borger-Odoorn
+Borne
+Borsele
+Boxmeer
+Boxtel
+Breda
+Brielle
+Bronckhorst
+Brummen
+Brunssum
+Bunnik
+Bunschoten
+Capelle aan den IJssel
+Castricum
+Coevorden
+Cranendonck
+Cromstrijen
+Cuijk
+Culemborg
+Dalfsen
+Dantumadiel
+Delft
+Delfzijl
+Den Helder
+Deurne
+Deventer
+Diemen
+Dijk en Waard
+Dinkelland
+Doesburg
+Doetinchem
+Dongen
+Dordrecht
+Drechterland
+Drimmelen
+Dronten
+Druten
+Duiven
+Echt-Susteren
+Edam-Volendam
+Eemnes
+Eemsdelta
+Eemsmond
+Eersel
+Eijsden-Margraten
+Eindhoven
+Elburg
+Emmen
+Enkhuizen
+Enschede
+Epe
+Ermelo
+Etten-Leur
+Ferwerderadiel
+Franekeradeel
+Geertruidenberg
+Geldermalsen
+Geldrop-Mierlo
+Gemert-Bakel
+Gennep
+Giessenlanden
+Gilze en Rijen
+Goeree-Overflakkee
+Goirle
+Gooise Meren
+Gorinchem
+Gouda
+Grave
+Groesbeek
+Groningen
+Grootegast
+Gulpen-Wittem
+Haaksbergen
+Haaren
+Haarlem
+Haarlemmerliede
+Haarlemmermeer
+Halderberge
+Hardenberg
+Harderwijk
+Hardinxveld-Giessendam
+Harlingen
+Hattem
+Heemskerk
+Heemstede
+Heerde
+Heerenveen
+Heerhugowaard
+Heerlen
+Heeze-Leende
+Heiloo
+Hellendoorn
+Hellevoetsluis
+Helmond
+Hendrik-Ido-Ambacht
+Hengelo
+Heumen
+Heusden
+Hillegom
+Hilvarenbeek
+Hilversum
+Hoeksche Waard
+Hof van Twente
+Hollands Kroon
+Hoogeveen
+Hoogezand-Sappemeer
+Hoorn
+Horst aan de Maas
+Houten
+Huizen
+Hulst
+IJsselstein
+Kaag en Braassem
+Kampen
+Kapelle
+Katwijk
+Kerkrade
+Koggenland
+Krimpen aan den IJssel
+Krimpenerwaard
+Laarbeek
+Land van Cuijk
+Landerd
+Landgraaf
+Landsmeer
+Langedijk
+Lansingerland
+Leek
+Leerdam
+Leeuwarden
+Leiden
+Leiderdorp
+Leidschendam-Voorburg
+Lelystad
+Leudal
+Leusden
+Lingewaard
+Lingewaal
+Lisse
+Littenseradiel
+Lochem
+Loon op Zand
+Lopik
+Loppersum
+Losser
+Maasdriel
+Maasgouw
+Maashorst
+Maassluis
+Maastricht
+Marum
+Medemblik
+Meerssen
+Meierijstad
+Menameradiel
+Menterwolde
+Meppel
+Middelburg
+Midden-Delfland
+Midden-Drenthe
+Midden-Groningen
+Mill en Sint Hubert
+Moerdijk
+Molenlanden
+Molenwaard
+Montferland
+Montfoort
+Mook en Middelaar
+Neder-Betuwe
+Nederweert
+Neerijnen
+Nieuwegein
+Nieuwkoop
+Nijkerk
+Nijmegen
+Nissewaard
+Noardeast-Fryslan
+Noardeast-Fryslân
+Noord-Beveland
+Noordenveld
+Noordoostpolder
+Noordwijk
+Noordwijkerhout
+Nuenen
+Nuth
+Nunspeet
+Oegstgeest
+Oirschot
+Oisterwijk
+Oldambt
+Oldebroek
+Oldenzaal
+Olst-Wijhe
+Onderbanken
+Oost Gelre
+Oosterhout
+Ooststellingwerf
+Oostzaan
+Opmeer
+Opsterland
+Oss
+Oude IJsselstreek
+Ouder-Amstel
+Oudewater
+Overbetuwe
+Papendrecht
+Peel en Maas
+Pekela
+Pijnacker-Nootdorp
+Purmerend
+Putten
+Raalte
+Reimerswaal
+Renkum
+Renswoude
+Reusel-De Mierden
+Rheden
+Rhenen
+Ridderkerk
+Rijssen-Holten
+Rijswijk
+Rimburg
+Roerdalen
+Roermond
+Roosendaal
+Rotterdam
+Rozendaal
+Rucphen
+Schagen
+Scherpenzeel
+Schiedam
+Schiermonnikoog
+Schinnen
+Schouwen-Duiveland
+Simpelveld
+Sint Anthonis
+Sint-Michielsgestel
+Sittard-Geleen
+Sliedrecht
+Slochteren
+Sluis
+Smallingerland
+Soest
+Someren
+Son en Breugel
+Stadskanaal
+Staphorst
+Stede Broec
+Steenbergen
+Steenwijkerland
+Stichtse Vecht
+Strijen
+Sudwest-Fryslan
+Súdwest-Fryslân
+Ten Boer
+Terneuzen
+Terschelling
+Texel
+Teylingen
+Tholen
+Tiel
+Tilburg
+Tubbergen
+Twenterand
+Tynaarlo
+Tytsjerksteradiel
+Uden
+Uitgeest
+Uithoorn
+Urk
+Utrecht
+Utrechtse Heuvelrug
+Vaals
+Valkenburg aan de Geul
+Valkenswaard
+Veendam
+Veenendaal
+Veldhoven
+Velsen
+Venlo
+Venray
+Vianen
+Vijfheerenlanden
+Vlaardingen
+Vlieland
+Vlissingen
+Voerendaal
+Voorne aan Zee
+Voorschoten
+Voorst
+Vught
+Waadhoeke
+Waalre
+Waalwijk
+Waddinxveen
+Wageningen
+Wassenaar
+Waterland
+Weesp
+Werkendam
+West Betuwe
+West Maas en Waal
+Westerkwartier
+Westerveld
+Westervoort
+Westerwolde
+Westland
+Weststellingwerf
+Westvoorne
+Wierden
+Wijchen
+Wijdemeren
+Wijk bij Duurstede
+Winsum
+Winterswijk
+Woensdrecht
+Woerden
+Wormerland
+Woudenberg
+Woudrichem
+Zaanstad
+Zaltbommel
+Zandvoort
+Zederik
+Zeewolde
+Zeist
+Zevenaar
+Zoetermeer
+Zoeterwoude
+Zuidhorn
+Zuidplas
+Zundert
+Zutphen
+Zwartewaterland
+Zwijndrecht
+Zwolle
+
+[ambigu]
+# Ook gewone Nederlandse woorden of systeemtermen. Worden als twijfelgeval
+# gemeld, nooit als blokkerende bevinding.
+Beek
+Bergen
+Best
+Bunnik
+Buren
+De Bilt
+De Fryske Marren
+De Ronde Venen
+De Wolden
+Den Haag
+Ede
+Goes
+Heerde
+Horst
+Laren
+Leek
+Meerlo
+Nuth
+Stein
+Veere
+Weert
+Winsum

@@ -8,7 +8,7 @@ description: De applicatie en de omringende stack op je eigen machine starten.
 
 | | |
 | --- | --- |
-| Java | 17 |
+| Java | 21 |
 | Docker | Met Docker Compose |
 | Keycloak | Draaiend (zie hieronder) |
 | Database | PostgreSQL |
@@ -39,7 +39,7 @@ Mijn Inkomen heeft nogal wat omringende systemen nodig. Die draaien in Docker. H
 | **Objecten** | Objects API 3.2, Objecttypes API 3.0 |
 | **Identiteit** | Keycloak 24 |
 | **Portaal** | NL Portal backend en frontend |
-| **Bronnen (gesimuleerd)** | Suwinet-simulator, BRP Bewoning-mock, BAG-simulator |
+| **Bronnen (gesimuleerd)** | Suwinet-simulator, BRP Bewoning-mock, BAG-simulator, **Socrates-simulator** |
 | **E-mail** | MailHog |
 | **Infrastructuur** | PostgreSQL / PostGIS, Redis, RabbitMQ |
 
@@ -48,9 +48,11 @@ docker compose up -d
 ```
 
 {% hint style="info" %}
-De Suwinet-, BRP- en BAG-containers zijn **simulatoren**. Ze geven realistische maar verzonnen gegevens terug, zodat je kunt ontwikkelen zonder toegang tot de echte registraties.
+De Suwinet-, BRP-, BAG- en Socrates-containers zijn **simulatoren**. Ze geven realistische maar verzonnen gegevens terug, zodat je kunt ontwikkelen zonder toegang tot de echte registraties.
+{% endhint %}
 
-Socrates zit niet in de Compose-set. Voor lokale ontwikkeling wijs je `AUTODEPLOYMENT_PLUGINCONFIG_SOCRATES_URL` naar een testomgeving of een eigen mock.
+{% hint style="warning" %}
+**Gebruik de simulatorversies die de compose vastpint.** Die zijn afgestemd op de plugins in deze release. Bouw je er zelf een uit de laatste broncode, dan kun je een afwijkend berichtcontract krijgen — met als symptoom een `MALFORMED_JSON`-antwoord terwijl de simulator gewoon draait.
 {% endhint %}
 
 De Gradle-build kan de stack ook zelf beheren: het project gebruikt de `docker-compose`-plugin, zodat containers mee opstarten met de applicatie.
@@ -70,12 +72,12 @@ curl http://localhost:8080/api/ping
 ```
 
 {% hint style="info" %}
-De eerste start duurt langer dan de volgende. Alle configuratie wordt dan uitgerold: ruim 125 procesmodellen, de beslistabellen, de dossierschema's, de formulieren en de plugininstellingen.
+De eerste start duurt langer dan de volgende. Alle configuratie wordt dan uitgerold: zestig bouwblokken met hun procesmodellen, beslistabellen, schema's en formulieren, plus de plugininstellingen.
 {% endhint %}
 
 ## De objecttypen
 
-Vier objecttypen moeten in de Objecttypes API staan voordat de applicatie goed werkt:
+Vijf objecttypen moeten in de Objecttypes API staan voordat de applicatie goed werkt:
 
 | Objecttype | Waarvoor |
 | --- | --- |
@@ -83,6 +85,7 @@ Vier objecttypen moeten in de Objecttypes API staan voordat de applicatie goed w
 | Externe Klanttaak | Taken in het portaal. |
 | ALO: Informatieverzoek Items | Beheerde lijst met opvraagbare items. |
 | Adressen met veel bewoners | Beheerde lijst voor handhavingssignalering. |
+| Gemeentespecifieke Configuratie | Instellingen die per gemeente verschillen. |
 
 De map `imports/` bevat fixtures voor de Objects API en de Objecttypes API, plus een Keycloak-realm en database-dumps voor Open Zaak en Open Notificaties. Daarmee start je met een gevulde omgeving.
 
@@ -108,7 +111,7 @@ Controleer ook of de objecttype-UUID in `.env.properties` overeenkomt met het ob
 {% endtab %}
 
 {% tab title="Proces loopt vast" %}
-Kijk op het tabblad **Voortgang** waar de zaak staat, en in de Camunda-cockpit welke stap blokkeert.
+Kijk op het tabblad **Voortgang** waar de zaak staat; daar zie je het procesmodel met de actieve stap gemarkeerd.
 
 Blijft een zaak hangen in `opvoeren-dienst`, dan is het opvoeren in Socrates waarschijnlijk mislukt: kijk naar `socratesError` in het dossier.
 {% endtab %}

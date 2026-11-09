@@ -15,7 +15,7 @@ flowchart TB
     end
 
     subgraph gzac["Mijn Inkomen (GZAC)"]
-        engine["Camunda<br/>procesengine"]
+        engine["Operaton<br/>procesengine"]
         dmn["DMN<br/>beslistabellen"]
         doc["Zaakdossier<br/>(JSON-document)"]
         ui["Behandelaar-UI"]
@@ -139,7 +139,7 @@ De beslistabel krijgt zeven invoerwaarden:
 Daaruit volgen drie uitkomsten: welke bouwblokken moeten starten, welke moeten stoppen, en wat de nieuwe fase is.
 
 {% hint style="success" %}
-Dit is de kern van het hele ontwerp. Wie wil begrijpen waarom een zaak doet wat hij doet, kijkt naar `config/dmn/alo-dcm/besturen-business-services.dmn`. Zie [Het aanvraagproces](../functionaliteit/aanvraagproces.md) voor de fasen en gebeurtenissen.
+Dit is de kern van het hele ontwerp. Wie wil begrijpen waarom een zaak doet wat hij doet, kijkt naar de beslistabel `besturen-business-services`. Zie [Het aanvraagproces](../functionaliteit/aanvraagproces.md) voor de fasen en gebeurtenissen.
 {% endhint %}
 
 ## Configuratie boven code
@@ -148,17 +148,12 @@ De applicatie bevat precies één Kotlin-bestand: `Application.kt`, de Spring Bo
 
 | Soort | Map | Inhoud |
 | --- | --- | --- |
-| Procesmodellen | `config/bpmn` | Ruim 120 BPMN-modellen |
-| Beslistabellen | `config/dmn` | Regie, normbedragen, besluittypen |
-| Zaakdossierschema's | `config/document/definition` | JSON Schema van het dossier |
-| Formulieren | `config/form` | Form.io-formulieren voor taken en tabbladen |
-| Formulierstromen | `config/form-flow` | Meerstapsformulieren |
-| Zaakconfiguratie | `config/case` | Statussen, labels, zaaklijsten |
-| Tabbladen | `config/tabs` | Indeling van het zaakscherm |
+| Bouwblokken | `config/building-block` | Zestig blokken, elk met eigen procesmodel, formulieren, links en schema |
+| Zaakconfiguratie | `config/case` | Geversioneerde zaakdefinities, statussen, labels, tabbladen, zaaklijsten |
+| Gedeelde schema's | `config/document` | Referentieschema's die blokken delen |
+| Gedeelde onderdelen | `config/global` | Formulieren en links die over blokken heen gaan |
 | Dashboards | `config/dashboard` | Stuurinformatie |
 | Koppelingen | `config/pluginconfig` | Plugininstellingen per omgeving |
-| Procesverbindingen | `config/process-link` | Koppeling taak ↔ formulier ↔ plugin |
-| Brieven | `config/template` | FreeMarker-sjablonen |
-| Rechten | `config/pbac` | Rollen en permissies |
+| Rechten | `config/pbac` | Rollen en permissies, één bestand per rol |
 
 Zie [Configuratie](../beheer/configuratie.md) voor de details.

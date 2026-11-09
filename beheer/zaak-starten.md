@@ -68,7 +68,7 @@ Accept-Crs: EPSG:4326
 Authorization: Token <objects-api-token>
 
 {
-  "type": "http://localhost:8011/api/v2/objecttypes/<verzoek-alo-objecttype-uuid>",
+  "type": "http://host.docker.internal:8011/api/v2/objecttypes/<verzoek-alo-objecttype-uuid>",
   "record": {
     "typeVersion": 1,
     "startAt": "2026-11-09",
@@ -97,11 +97,38 @@ Een antwoord met **HTTP 201** betekent dat het object is aangemaakt. Kort daarna
 | Objecttype-UUID | `AUTODEPLOYMENT_OBJECTMANAGEMENT_VERZOEK_ALO_OBJECTTYPE_UUID` in dezelfde file |
 | Voorbeeldpayloads | De `.http`-bestanden van **persona-lab**, die samenhangende testpersona's genereren |
 
-{% hint style="warning" %}
-**De objecttype-URL moet exact overeenkomen met de geregistreerde service.** De Objects API koppelt permissies aan de combinatie van service-URL en objecttype-UUID. Gebruik je een andere host — bijvoorbeeld `host.docker.internal` in plaats van `localhost` — dan herkent de API het objecttype niet en krijg je **HTTP 403 "You do not have permission to perform this action"**, ook met een geldig token.
+### Eén hostnaam, overal dezelfde
 
-De juiste basis-URL staat in de fixtures van de Objects API, als `api_root` van de service *Objecttypes API*.
+{% hint style="danger" %}
+**Dit is de hardnekkigste valkuil van de lokale opstelling.** De backend draait op de host, alle andere componenten in containers. `localhost` betekent aan weerszijden iets anders: voor een container is het de container zelf. Alleen **`host.docker.internal`** verwijst vanuit beide werelden naar hetzelfde.
+
+Meerdere onderdelen vergelijken objecttype-URL's als **tekst**, niet als netwerkadres. Staat ergens `localhost` en elders `host.docker.internal`, dan is het dezelfde service maar niet dezelfde string — en dan faalt de vergelijking stil.
 {% endhint %}
+
+Het breekt op minstens twee plekken, met heel verschillende symptomen:
+
+| Waar | Symptoom |
+| --- | --- |
+| **Objects API, bij het aanmaken** | `HTTP 403 — You do not have permission to perform this action`, ook met een geldig token. De API koppelt permissies aan service-URL plus objecttype-UUID en herkent het objecttype niet. |
+| **Open Notificaties, bij het bezorgen** | Geen foutmelding, maar **er gebeurt niets**. Het abonnement filtert op de objecttype-URL; wijkt die af, dan matcht de notificatie niet en wordt er nooit bezorgd. De zaak blijft uit. |
+
+Dat tweede geval is het vervelendst: alles meldt succes. Het object krijgt een 201, Open Notificaties neemt de melding aan met een 201, en toch komt er geen zaak.
+
+**De regel: kies `host.docker.internal` en gebruik die overal** — in de objecttype-URL van je request, in de plugin-URL's voor de Objects en Objecttypes API, en in de service-registratie binnen de Objects API zelf. Wijk nergens af, ook niet "even snel".
+
+Controleren of het klopt:
+
+```bash
+# Waar wijst de Objects API naar voor objecttypen?
+docker exec <objecten-api-database> psql -U objects -d objects \
+  -t -A -c "select api_root from zgw_consumers_service;"
+
+# Waar filtert het abonnement op?
+docker exec <open-notificaties-database> psql -U notifications -d notifications \
+  -t -A -c "select key, value from datamodel_filter;"
+```
+
+Die twee moeten dezelfde host noemen als het `type`-veld in je request.
 
 ### Handmatig vanuit de applicatie
 
@@ -120,6 +147,7 @@ Verschijnt er na het aanmaken van het object geen zaak, loop dan deze keten lang
 | Draait Open Notificaties? | Zonder notificatie hoort Mijn Inkomen niets. |
 | Bestaat het abonnement? | Open Notificaties moet een abonnement hebben op het objecttype-kanaal. |
 | Draait de backend? | Een notificatie die niemand aanneemt, leidt niet tot een zaak. |
+| Komen de hostnamen overeen? | Zie [Eén hostnaam, overal dezelfde](#een-hostnaam-overal-dezelfde). Dit faalt stil. |
 
 {% hint style="warning" %}
 **Een notificatie wordt verstuurd op het moment van aanmaken.** Ligt de backend er op dat moment uit, dan is de melding mogelijk verloren en komt er geen zaak — ook niet nadat de backend weer draait. Maak in dat geval het object opnieuw aan, met een nieuw `submission_id` en `public_reference`.

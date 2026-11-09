@@ -52,10 +52,10 @@ Mijn Inkomen is een implementatie bovenop **GZAC** (Generiek Zaakafhandelcompone
 | | |
 | --- | --- |
 | Platform | GZAC / Valtimo |
-| Taal & runtime | Kotlin, Java 17, Spring Boot |
-| Procesengine | Camunda (BPMN 2.0 + DMN) |
+| Taal & runtime | Kotlin, Java 21, Spring Boot |
+| Procesengine | Operaton (BPMN 2.0 + DMN) |
 | Database | PostgreSQL |
 | Authenticatie | Keycloak (OAuth2 / OIDC) |
 | Zaakregistratie | Open Zaak (ZGW API's) |
 
-De broncode staat in de repository `mijn-inkomen-gzac-backend`.
+De broncode staat in de repository `mijn-inkomen-gzac-backend`, branch `develop`.

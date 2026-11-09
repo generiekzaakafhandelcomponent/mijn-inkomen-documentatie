@@ -1,0 +1,5 @@
+# Beoordeelde uitzonderingen op de privacycontrole.
+# Eén term per regel, exact zoals het script hem meldt. '#' is commentaar.
+#
+# Voeg hier alleen toe wat je daadwerkelijk hebt bekeken en wat aantoonbaar
+# geen gemeente, persoon of e-mailadres is. Twijfel je? Dan hoort het hier niet.

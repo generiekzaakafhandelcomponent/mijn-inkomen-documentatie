@@ -15,39 +15,53 @@ Dit betekent dat functionele wijzigingen — een stap toevoegen aan een proces, 
 Alles staat onder `src/main/resources/config/`.
 
 | Map | Inhoud | Aantal |
-| --- | --- | --- |
-| `bpmn/` | Procesmodellen | 126 |
-| `dmn/` | Beslistabellen | 15 |
-| `document/definition/` | Zaakdossierschema's en referentieschema's | 76 |
-| `form/` | Form.io-formulieren voor taken en tabbladen | 74 |
-| `form-flow/` | Meerstapsformulieren | 3 |
-| `case/` | Zaakdefinities, statussen, labels, zaaklijsten | 8 |
-| `tabs/` | Indeling van het zaakscherm | 1 |
+| --- | --- | --: |
+| `building-block/` | De bouwblokken: per blok een eigen map met procesmodel, formulieren, process-links en documentdefinitie | 481 |
+| `case/` | Zaakdefinities per zaaktype, geversioneerd als `case/<zaaktype>/<versie>/` | 247 |
+| `document/` | Gedeelde document- en referentieschema's | 75 |
+| `global/` | Formulieren en process-links die over bouwblokken heen worden gebruikt | 9 |
+| `pbac/` | Rollen en permissies, één bestand per rol | 12 |
+| `pluginconfig/` | Plugininstellingen per omgeving | 7 |
+| `objectmanagement/` | Objecttypen in de Objects API | 5 |
 | `dashboard/` | Dashboards en widgets | 4 |
-| `search/` | Zoekvelden per zaaktype | 2 |
-| `dropdown/` | Keuzelijsten | 2 |
-| `pluginconfig/` | Plugininstellingen | 7 |
-| `process-link/` | Koppeling processtap ↔ formulier of plugin | 78 |
-| `process-document-link/` | Welke processen een zaak starten of door de gebruiker gestart mogen worden | 1 |
-| `objectmanagement/` | Objecttypen in de Objects API | 4 |
 | `valuemapping/` | Omzetting portaalverzoek naar dossier | 2 |
-| `template/` | FreeMarker-sjablonen voor brieven en afgeleide velden | 18 |
-| `pbac/` | Rollen en permissies | 2 |
-| `zgw/` | Velden bij documentupload | 1 |
-| `documenten-api/` | Instellingen Documenten API | 1 |
+| `dropdown/` | Keuzelijsten | 2 |
 
-## De BPMN-indeling
+{% hint style="warning" %}
+**Deze indeling is nieuw in v13.** Tot v12 stonden procesmodellen, formulieren en process-links in losse mappen (`bpmn/`, `form/`, `process-link/`, `tabs/`). Nu hoort alles wat bij één bouwblok hoort bij elkaar in één map onder `building-block/`.
 
-De procesmodellen zijn in vier groepen verdeeld. Die indeling is wat hergebruik tussen de regelingen mogelijk maakt.
+Kom je oudere documentatie of voorbeelden tegen die naar `config/bpmn/...` verwijzen, dan gaat dat over v12.
+{% endhint %}
 
-| Map | Rol |
+## De bouwblokindeling
+
+De zestig mappen onder `building-block/` volgen de business services die ze implementeren:
+
+| Soort bouwblok | Voorbeelden |
 | --- | --- |
-| `bpmn/aanvraag-levensonderhoud/algemene-bijstand-dcm/` | Zaakproces en startprocessen voor Algemene bijstand. |
-| `bpmn/aanvraag-levensonderhoud/ioaw-dcm/` | Idem voor IOAW. |
-| `bpmn/aanvraag-levensonderhoud/shared/` | Gedeeld tussen beide regelingen: brongegevens ophalen, documenten genereren, adrescontrole. |
-| `bpmn/business-service/` | De inhoudelijke business services. |
-| `bpmn/business-service-bouwblok/` | De omhulsels eromheen. |
-| `bpmn/generic/` | Regelingonafhankelijk: informatieverzoeken, Suwinet-bevragingen, status bijwerken, besluiten vastleggen, betrokkenen informeren. |
+| Vaststellingen | `bs-211-vaststelling-persoon`, `bs-214-vaststelling-vermogen`, `bs-224-vaststelling-inkomen` |
+| Procesondersteunend | `bs-afsluiten-zaak`, `alo-genereer-document`, `alo-genereer-rapportage` |
+| Gemeentespecifiek | `alo-gemeente-configuratie` |
+
+Elk blok is daarmee een op zichzelf staand geheel: je kunt één vaststelling aanpassen zonder in gedeelde mappen te hoeven zoeken.
+
+{% hint style="info" %}
+In v13 krijgt **elk bouwblok een eigen documentdefinitie**. Naast het zaakdossier `aanvraag-algemene-bijstand-dcm` zie je in de database dus ook documenten als `bs-211-vaststelling-persoon` en `uitvoeren-business-services`. Dat is bedoeld: elk blok beheert zijn eigen gegevens.
+{% endhint %}
+
+## Waar een bouwblok uit bestaat
+
+Binnen één map onder `building-block/` staat alles wat bij dat blok hoort:
+
+| Onderdeel | Rol |
+| --- | --- |
+| Procesmodel | Het BPMN-model van het bouwblok. |
+| Formulieren | De Form.io-formulieren voor de taken erin. |
+| Process-links | De koppeling tussen processtap en formulier of plugin-actie. |
+| Documentdefinitie | Het JSON-schema van de gegevens die het blok beheert. |
+| Beslistabellen | De DMN-tabellen die bij dit blok horen. |
+
+Wat over bouwblokken heen wordt gedeeld — bijvoorbeeld generieke formulieren — staat in `global/`.
 
 Zie [Architectuur](../overzicht/architectuur.md#de-procesarchitectuur-drie-lagen).
 
@@ -117,13 +131,16 @@ De variabelen vallen uiteen in groepen:
 
 | | |
 | --- | --- |
-| Valtimo | 12.47.0 |
-| Spring Boot | 3.5.10 |
-| Kotlin | 2.1.20 |
-| Java | 17 |
-| PostgreSQL-driver | 42.7.4 |
+| Valtimo | 13.54.0-1 |
+| Procesengine | **Operaton** |
+| Java | 21 |
+| Taal | Kotlin |
 
-De Valtimo-versie is bijgewerkt in [Release Junin](../releasenotes/junin.md). De actuele versies staan altijd in `gradle.properties`.
+De actuele versies staan altijd in `gradle.properties`.
+
+{% hint style="warning" %}
+**v13 draait op Operaton, niet meer op Camunda.** Operaton is de open source voortzetting van Camunda 7. Voor de modellen verandert er weinig — het blijft BPMN 2.0 en DMN — maar in logregels en stacktraces zie je `org.operaton.*` in plaats van `org.camunda.*`.
+{% endhint %}
 
 Plugins worden als losse afhankelijkheden meegeleverd: `externe-klanttaak`, `freemarker`, `haal-centraal`, `haal-centraal-authentication`, `object-management`, `smtpmail`, `socrates`, `suwinet`, `suwinet-auth`, `valuemapper`.
 
@@ -133,7 +150,7 @@ Codekwaliteit wordt bewaakt met **ktlint** en **Spotless**. Afhankelijkheden wor
 
 {% tabs %}
 {% tab title="Normbedragen indexeren" %}
-De bijstandsnormen worden halfjaarlijks aangepast. Voeg een regel toe aan de beslistabel `config/dmn/alo-dcm/bs-219-bepalen-basisnormbedrag.dmn` met het nieuwe datumbereik en de twintig bedragen.
+De bijstandsnormen worden halfjaarlijks aangepast. Voeg een regel toe aan de beslistabel de beslistabel `bs-219-bepalen-basisnormbedrag` in het bouwblok `bs-219-vaststelling-norm` met het nieuwe datumbereik en de twintig bedragen.
 
 Let op dat het datumbereik van de vórige regel aansluit, zodat er geen gat ontstaat.
 {% endtab %}
@@ -143,11 +160,11 @@ Geen release nodig. De items staan als object in de Objects API en zijn via het 
 {% endtab %}
 
 {% tab title="Veld op een tabblad" %}
-Pas het Form.io-formulier in `config/form/` aan dat aan het tabblad gekoppeld is. Staat het veld nog niet in het dossierschema, voeg het dan ook toe aan `config/document/definition/`.
+Pas het Form.io-formulier aan in de map van het betreffende bouwblok. Staat het veld nog niet in het schema, voeg het dan ook toe aan de documentdefinitie van dat blok.
 {% endtab %}
 
 {% tab title="Gedrag van de regie" %}
-Pas `config/dmn/alo-dcm/besturen-business-services.dmn` aan. Houd rekening met de hit policy **FIRST**: de eerste passende regel wint, dus de volgorde is betekenisvol.
+Pas de beslistabel `besturen-business-services` aan. Houd rekening met de hit policy **FIRST**: de eerste passende regel wint, dus de volgorde is betekenisvol.
 
 Controleer ook of de afgeleide beslissing *Fase 'vaststellen' afgerond* mee moet veranderen.
 {% endtab %}
@@ -155,4 +172,4 @@ Controleer ook of de afgeleide beslissing *Fase 'vaststellen' afgerond* mee moet
 
 ## Testen
 
-De testopzet gebruikt `camunda-bpm-assert` en `camunda-bpm-assert-scenario`, waarmee procesverlopen getest kunnen worden zonder de volledige stack te starten. Het Camunda-platform wordt gemockt met `camunda-bpm-mockito`.
+De testopzet test procesverlopen zonder de volledige stack te starten, met de assert- en scenario-bibliotheken van de procesengine.

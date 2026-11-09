@@ -103,6 +103,6 @@ Alle actieve bouwblokken worden dan geannuleerd en de complete set vaststellinge
 | Informatieverzoek | `informatieverzoek.ftlh` | Bij het uitzetten van een informatieverzoek. |
 | Besluit | `besluit.ftlh` | Bij het vastleggen van het besluit. |
 
-Per regeling bestaat er een eigen configuratiebestand dat het sjabloon aan het zaaktype koppelt, zodat de aanhef en toelichting per regeling kunnen verschillen. De sjablonen staan in `config/template/mail-templates`.
+Per regeling bestaat er een eigen configuratiebestand dat het sjabloon aan het zaaktype koppelt, zodat de aanhef en toelichting per regeling kunnen verschillen. De sjablonen horen bij het bouwblok dat de brief genereert.
 
-Daarnaast zijn er **teksttemplates** (`config/template/text-templates`) die in de zaaklijst worden gebruikt om afgeleide waarden te tonen, zoals de volledige naam van de aanvrager, de postcode en het genomen besluit.
+Daarnaast zijn er **teksttemplates** die in de zaaklijst worden gebruikt om afgeleide waarden te tonen, zoals de volledige naam van de aanvrager, de postcode en het genomen besluit.
