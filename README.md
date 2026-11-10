@@ -57,5 +57,3 @@ Mijn Inkomen is een implementatie bovenop **GZAC** (Generiek Zaakafhandelcompone
 | Database | PostgreSQL |
 | Authenticatie | Keycloak (OAuth2 / OIDC) |
 | Zaakregistratie | Open Zaak (ZGW API's) |
-
-De broncode staat in de repository `mijn-inkomen-gzac-backend`, branch `develop`.
