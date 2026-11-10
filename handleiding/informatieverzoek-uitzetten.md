@@ -4,7 +4,7 @@ description: Aanvullende stukken opvragen bij de inwoner, stap voor stap.
 
 # Een informatieverzoek uitzetten
 
-Mis je gegevens om de aanvraag te kunnen beoordelen, dan vraag je die op bij de inwoner. Dat gaat in twee taken: eerst de afweging, dan het samenstellen van het verzoek.
+Mis je gegevens om de aanvraag te kunnen beoordelen, dan vraag je die op bij de inwoner. Dat gaat in drie stappen: eerst de afweging, dan het samenstellen van het verzoek, en ten slotte het controleren van de brief voordat die de deur uit gaat.
 
 Zie [Informatieverzoeken](../functionaliteit/informatieverzoek.md) voor het volledige verloop inclusief deadlines, verlengen en annuleren.
 
@@ -52,9 +52,9 @@ Onder de documentenlijst leg je vast wat de inwoner te horen krijgt:
 | Veld | Toelichting |
 | --- | --- |
 | **Bericht aan aanvrager** | De tekst die in de brief en in het portaal verschijnt. Schrijf hier waarom je de stukken nodig hebt. |
-| **Deadline informatieverzoek** | Tot wanneer de inwoner de tijd heeft. Dit veld is voorgevuld met een standaardtermijn; je kunt hem aanpassen. |
+| **Deadline informatieverzoek** | Tot wanneer de inwoner de tijd heeft. Voorgevuld met een standaardtermijn; aanpasbaar. |
 | **Hersteltermijn van toepassing?** | Bepaalt of de wettelijke beslistermijn wordt opgeschort zolang de inwoner aan zet is. |
-| **Vervolgactie bepalen** | Wat er na het indienen gebeurt. |
+| **Vervolgactie bepalen** | Wat er na deze stap gebeurt. |
 
 {% hint style="warning" %}
 **De hersteltermijn is geen formaliteit.** Zet je hem op *Ja*, dan telt de tijd dat de inwoner aan zet is niet mee voor de wettelijke afhandeltermijn. Zet je hem op *Nee*, dan loopt die termijn gewoon door en komt de zaak sneller in de knel. Zie [Informatieverzoeken](../functionaliteit/informatieverzoek.md).
@@ -62,12 +62,32 @@ Onder de documentenlijst leg je vast wat de inwoner te horen krijgt:
 
 Bij **Vervolgactie bepalen** kies je uit drie opties:
 
-* **Ik heb alle op te vragen items verzameld en wil het informatieverzoek uitzetten** — het verzoek gaat eruit: er wordt een brief gegenereerd en de taak verschijnt bij de inwoner in het portaal.
+* **Ik heb alle op te vragen items verzameld en wil het informatieverzoek uitzetten** — door naar de brief.
 * **Ik wil het uitzetten van een informatieverzoek annuleren** — je ziet er toch van af; er gaat niets uit.
 * **Ik ben nog niet klaar met het verzamelen van op te vragen items** — je bewaart je werk en pakt het later op.
 
+Sluit af met **Brief genereren**. Het verzoek gaat daarmee nog niet de deur uit.
+
+## Stap 3 — De brief controleren
+
+Het systeem maakt de brief op en biedt hem aan ter controle, als taak **Controleren document**.
+
+![De taak Controleren document](../.gitbook/assets/15-controleren-document.png)
+
+Je hebt twee keuzes:
+
+* **Informatieverzoek uitzetten** — de brief klopt. Het verzoek gaat naar de inwoner en verschijnt als taak in het portaal.
+* **Niet akkoord, terug naar vorige stap** — je gaat terug om de items of de tekst aan te passen.
+
+{% hint style="info" %}
+Deze tussenstap is er met opzet: je ziet de daadwerkelijke brief voordat hij verstuurd wordt. Pas na *Informatieverzoek uitzetten* ontvangt de inwoner iets.
+{% endhint %}
+
 ## Daarna
 
-Is het verzoek uitgezet, dan gaat de zaak naar interne status **Informatieverzoek uitgezet** en wacht het systeem op de inwoner. Wat er daarna kan gebeuren — reactie via het portaal, handmatige aanlevering, verlopen deadline, of annuleren — staat in [Informatieverzoeken](../functionaliteit/informatieverzoek.md).
+Is het verzoek uitgezet, dan gaat de zaak naar interne status **Informatieverzoek uitgezet** en verschijnt de taak *Aanleveren informatie* bij de inwoner in het portaal. Het systeem wacht.
 
-De voortgang van alle verzoeken bij deze zaak zie je op het tabblad **Informatieverzoeken**.
+![Het tabblad Informatieverzoeken met het uitgezette verzoek](../.gitbook/assets/16-informatieverzoeken-tab.png)
+
+Op het tabblad **Informatieverzoeken** zie je per verzoek de datum, wie het heeft uitgezet, de deadline, of er een hersteltermijn geldt, welke stukken zijn opgevraagd en de meegestuurde toelichting. Wat er daarna kan gebeuren — reactie via het portaal, handmatige aanlevering, verlopen deadline, of annuleren — staat in [Informatieverzoeken](../functionaliteit/informatieverzoek.md).
+
