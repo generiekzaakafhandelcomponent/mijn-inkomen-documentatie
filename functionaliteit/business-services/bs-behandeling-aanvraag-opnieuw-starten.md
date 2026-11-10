@@ -10,6 +10,19 @@ Bouwblok `bs-behandeling-aanvraag-opnieuw-starten`.
 
 Dit bouwblok benoemt geen invoer- en uitvoervariabelen in het procesmodel.
 
+## Wie roept dit aan
+
+| | |
+| --- | --- |
+| **Direct aangeroepen door** | `bsb-behandeling-aanvraag-opnieuw-starten` |
+| **Binnen zaakproces** | `ab-afhandelen-aanvraag-dcm`, `basisafhandelproces-afhandelen-aanvraag`, `ioaw-afhandelen-aanvraag-dcm` |
+
+De volledige keten:
+
+* `bs-behandeling-aanvraag-opnieuw-starten` ← `bsb-behandeling-aanvraag-opnieuw-starten` ← `basisafhandelproces-uitvoeren-business-services` ← `basisafhandelproces-behandelen-zaak` ← `basisafhandelproces-afhandelen-aanvraag`
+* `bs-behandeling-aanvraag-opnieuw-starten` ← `bsb-behandeling-aanvraag-opnieuw-starten` ← `uitvoeren-business-services` ← `ab-afhandelen-aanvraag-dcm`
+* `bs-behandeling-aanvraag-opnieuw-starten` ← `bsb-behandeling-aanvraag-opnieuw-starten` ← `uitvoeren-business-services` ← `ioaw-afhandelen-aanvraag-dcm`
+
 ## Het procesmodel
 
 ![Procesmodel: BS Behandeling aanvraag opnieuw starten](../../.gitbook/assets/bpmn/bs-behandeling-aanvraag-opnieuw-starten.svg)

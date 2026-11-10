@@ -10,6 +10,22 @@ Bouwblok `bs-211-ophalen-brp-tbv-vaststellen-persoon`.
 
 Dit bouwblok benoemt geen invoer- en uitvoervariabelen in het procesmodel.
 
+## Wie roept dit aan
+
+| | |
+| --- | --- |
+| **Direct aangeroepen door** | `bs-211-vaststelling-persoon` |
+| **Binnen zaakproces** | `ab-afhandelen-aanvraag-dcm`, `basisafhandelproces-afhandelen-aanvraag`, `ioaw-afhandelen-aanvraag-dcm` |
+
+De volledige keten:
+
+* `bs-211-ophalen-brp-persoonsgegevens-tbv-vaststellen-persoon` ← `bs-211-vaststelling-persoon` ← `basisafhandelproces-bsb-211-vaststelling-persoon-aanvrager` ← `basisafhandelproces-uitvoeren-business-services` ← `basisafhandelproces-behandelen-zaak` ← `basisafhandelproces-afhandelen-aanvraag`
+* `bs-211-ophalen-brp-persoonsgegevens-tbv-vaststellen-persoon` ← `bs-211-vaststelling-persoon` ← `basisafhandelproces-bsb-211-vaststelling-persoon-partner` ← `basisafhandelproces-uitvoeren-business-services` ← `basisafhandelproces-behandelen-zaak` ← `basisafhandelproces-afhandelen-aanvraag`
+* `bs-211-ophalen-brp-persoonsgegevens-tbv-vaststellen-persoon` ← `bs-211-vaststelling-persoon` ← `bsb-211-vaststelling-persoon-aanvrager` ← `uitvoeren-business-services` ← `ab-afhandelen-aanvraag-dcm`
+* `bs-211-ophalen-brp-persoonsgegevens-tbv-vaststellen-persoon` ← `bs-211-vaststelling-persoon` ← `bsb-211-vaststelling-persoon-aanvrager` ← `uitvoeren-business-services` ← `ioaw-afhandelen-aanvraag-dcm`
+* `bs-211-ophalen-brp-persoonsgegevens-tbv-vaststellen-persoon` ← `bs-211-vaststelling-persoon` ← `bsb-211-vaststelling-persoon-partner` ← `uitvoeren-business-services` ← `ab-afhandelen-aanvraag-dcm`
+* `bs-211-ophalen-brp-persoonsgegevens-tbv-vaststellen-persoon` ← `bs-211-vaststelling-persoon` ← `bsb-211-vaststelling-persoon-partner` ← `uitvoeren-business-services` ← `ioaw-afhandelen-aanvraag-dcm`
+
 ## Het procesmodel
 
 ![Procesmodel: BS 211 ophalen BRP persoonsgegevens tbv vaststellen persoon](../../.gitbook/assets/bpmn/bs-211-ophalen-brp-tbv-vaststellen-persoon.svg)

@@ -35,6 +35,18 @@ Bouwblok `bs-223-vastsstellen-leef-en-woonsituatie`.
 * `leefsituatie`
 * `toelichtingLeefsituatie`
 
+## Wie roept dit aan
+
+| | |
+| --- | --- |
+| **Direct aangeroepen door** | `bsb-223-vaststelling-leef-en-woonsituatie` |
+| **Binnen zaakproces** | `ab-afhandelen-aanvraag-dcm`, `ioaw-afhandelen-aanvraag-dcm` |
+
+De volledige keten:
+
+* `bs-223-vastsstellen-leef-en-woonsituatie` ← `bsb-223-vaststelling-leef-en-woonsituatie` ← `uitvoeren-business-services` ← `ab-afhandelen-aanvraag-dcm`
+* `bs-223-vastsstellen-leef-en-woonsituatie` ← `bsb-223-vaststelling-leef-en-woonsituatie` ← `uitvoeren-business-services` ← `ioaw-afhandelen-aanvraag-dcm`
+
 ## Het procesmodel
 
 ![Procesmodel: BS 223 vastsstellen leef en woonsituatie](../../.gitbook/assets/bpmn/bs-223-vastsstellen-leef-en-woonsituatie.svg)

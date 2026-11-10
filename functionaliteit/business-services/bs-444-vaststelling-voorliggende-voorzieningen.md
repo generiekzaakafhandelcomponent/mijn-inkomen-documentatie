@@ -27,6 +27,20 @@ Bouwblok `bs-444-vaststelling-voorliggende-voorzieningen`.
 * `brontype = 2 (Professional)`
 * `vastleggingsdatum = sysdate`
 
+## Wie roept dit aan
+
+| | |
+| --- | --- |
+| **Direct aangeroepen door** | `bsb-444-vaststelling-voorliggende-voorzieningen-aanvrager`, `bsb-444-vaststelling-voorliggende-voorzieningen-partner` |
+| **Binnen zaakproces** | `ab-afhandelen-aanvraag-dcm`, `ioaw-afhandelen-aanvraag-dcm` |
+
+De volledige keten:
+
+* `bs-444-vaststelling-voorliggende-voorzieningen` ← `bsb-444-vaststelling-voorliggende-voorzieningen-aanvrager` ← `uitvoeren-business-services` ← `ab-afhandelen-aanvraag-dcm`
+* `bs-444-vaststelling-voorliggende-voorzieningen` ← `bsb-444-vaststelling-voorliggende-voorzieningen-aanvrager` ← `uitvoeren-business-services` ← `ioaw-afhandelen-aanvraag-dcm`
+* `bs-444-vaststelling-voorliggende-voorzieningen` ← `bsb-444-vaststelling-voorliggende-voorzieningen-partner` ← `uitvoeren-business-services` ← `ab-afhandelen-aanvraag-dcm`
+* `bs-444-vaststelling-voorliggende-voorzieningen` ← `bsb-444-vaststelling-voorliggende-voorzieningen-partner` ← `uitvoeren-business-services` ← `ioaw-afhandelen-aanvraag-dcm`
+
 ## Het procesmodel
 
 ![Procesmodel: BS 444 vaststelling voorliggende voorzieningen](../../.gitbook/assets/bpmn/bs-444-vaststelling-voorliggende-voorzieningen.svg)

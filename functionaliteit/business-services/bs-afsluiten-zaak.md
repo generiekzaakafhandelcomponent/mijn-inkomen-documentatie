@@ -10,6 +10,19 @@ Bouwblok `bs-afsluiten-zaak`.
 
 Dit bouwblok benoemt geen invoer- en uitvoervariabelen in het procesmodel.
 
+## Wie roept dit aan
+
+| | |
+| --- | --- |
+| **Direct aangeroepen door** | `basisafhandelproces-bsb-afsluiten-zaak`, `bsb-afsluiten-zaak` |
+| **Binnen zaakproces** | `ab-afhandelen-aanvraag-dcm`, `basisafhandelproces-afhandelen-aanvraag`, `ioaw-afhandelen-aanvraag-dcm` |
+
+De volledige keten:
+
+* `bs-afsluiten-zaak` ← `basisafhandelproces-bsb-afsluiten-zaak` ← `basisafhandelproces-uitvoeren-business-services` ← `basisafhandelproces-behandelen-zaak` ← `basisafhandelproces-afhandelen-aanvraag`
+* `bs-afsluiten-zaak` ← `bsb-afsluiten-zaak` ← `uitvoeren-business-services` ← `ab-afhandelen-aanvraag-dcm`
+* `bs-afsluiten-zaak` ← `bsb-afsluiten-zaak` ← `uitvoeren-business-services` ← `ioaw-afhandelen-aanvraag-dcm`
+
 ## Het procesmodel
 
 ![Procesmodel: BS Afsluiten zaak](../../.gitbook/assets/bpmn/bs-afsluiten-zaak.svg)

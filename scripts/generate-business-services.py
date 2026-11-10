@@ -46,6 +46,43 @@ TYPE_NL = {
 }
 
 
+def bouw_aanroepindex(basis_config):
+    """Wie roept wie aan? Levert {aangeroepen: {aanroepers}} en de procesnamen.
+
+    De keten loopt doorgaans bs-<x> ← bsb-<x> ← uitvoeren-business-services
+    ← het zaakproces van de regeling.
+    """
+    calls, namen = {}, {}
+    for f in glob.glob(os.path.join(basis_config, "**", "*.bpmn"), recursive=True):
+        try:
+            root = ET.parse(f).getroot()
+        except ET.ParseError:
+            continue
+        for proc in root.findall(B + "process"):
+            pid = proc.get("id")
+            if not pid:
+                continue
+            namen[pid] = (proc.get("name") or pid).strip()
+            for ca in proc.iter(B + "callActivity"):
+                ce = ca.get("calledElement")
+                if ce:
+                    calls.setdefault(ce, set()).add(pid)
+    return calls, namen
+
+
+def ketens(key, calls, pad=None, diep=0):
+    """Alle aanroepketens van `key` omhoog, tot aan een proces dat niemand aanroept."""
+    pad = pad or [key]
+    if diep > 6 or key not in calls:
+        return [pad]
+    uit = []
+    for c in sorted(calls[key]):
+        if c in pad:
+            continue
+        uit += ketens(c, calls, pad + [c], diep + 1)
+    return uit or [pad]
+
+
 def tekst(el):
     return (el.text or "").strip() if el is not None else ""
 
@@ -55,7 +92,7 @@ def lees_bouwblok(map_pad):
     key = os.path.basename(map_pad)
     data = {"key": key, "naam": key, "beschrijving": "", "stappen": [],
             "input": [], "output": [], "formulieren": [], "dmn": [],
-            "schema": False, "formflow": []}
+            "schema": False, "formflow": [], "proces_ids": []}
 
     defs = glob.glob(f"{map_pad}/*/building-block/definition/*.json")
     if defs:
@@ -88,6 +125,10 @@ def lees_bouwblok(map_pad):
             _lees_annotatie(tekst(ta.find(B + "text")), data)
 
         for proc in root.findall(B + "process"):
+            # De mapnaam en het proces-id lopen niet altijd gelijk; voor het
+            # opzoeken van aanroepers telt het proces-id.
+            if proc.get("id") and proc.get("id") not in data["proces_ids"]:
+                data["proces_ids"].append(proc.get("id"))
             for el in proc:
                 tag = el.tag.replace(B, "")
                 naam = (el.get("name") or "").strip()
@@ -157,6 +198,32 @@ def schrijf_pagina(d):
         r.append("")
         r.append("Dit bouwblok benoemt geen invoer- en uitvoervariabelen in het procesmodel.")
         r.append("")
+
+    if d.get("ketens"):
+        r.append("## Wie roept dit aan")
+        r.append("")
+        direct = sorted({k[1] for k in d["ketens"] if len(k) > 1})
+        wortels = sorted({k[-1] for k in d["ketens"] if len(k) > 2})
+        if direct:
+            r.append("| | |")
+            r.append("| --- | --- |")
+            r.append("| **Direct aangeroepen door** | " +
+                     ", ".join(f"`{x}`" for x in direct) + " |")
+            if wortels:
+                r.append("| **Binnen zaakproces** | " +
+                         ", ".join(f"`{x}`" for x in wortels) + " |")
+            r.append("")
+            r.append("De volledige keten:")
+            r.append("")
+            for k in d["ketens"]:
+                if len(k) > 1:
+                    r.append("* " + " ← ".join(f"`{x}`" for x in k))
+            r.append("")
+        else:
+            r.append("Dit bouwblok wordt door geen ander procesmodel aangeroepen. "
+                     "Het wordt rechtstreeks door de regie gestart of los gestart "
+                     "door de behandelaar.")
+            r.append("")
 
     svg = os.path.join(DOCS, ".gitbook", "assets", "bpmn", d["key"] + ".svg")
     if os.path.exists(svg):
@@ -249,11 +316,16 @@ def main():
         print(f"Bouwblokken niet gevonden: {basis}", file=sys.stderr)
         return 1
 
+    config = os.path.join(backend, "src", "main", "resources", "config")
+    calls, _namen = bouw_aanroepindex(config)
+
     os.makedirs(UIT, exist_ok=True)
     mappen = sorted(p for p in glob.glob(f"{basis}/{PREFIX}*") if os.path.isdir(p))
     gemaakt = []
     for m in mappen:
         d = lees_bouwblok(m)
+        ids = d["proces_ids"] or [d["key"]]
+        d["ketens"] = [k for pid in ids for k in ketens(pid, calls)]
         pad = os.path.join(UIT, d["key"] + ".md")
         open(pad, "w", encoding="utf-8").write(schrijf_pagina(d))
         gemaakt.append(d)

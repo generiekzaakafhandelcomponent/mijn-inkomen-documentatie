@@ -32,6 +32,18 @@ Bouwblok `bs-219-vaststelling-norm`.
 * `vastgesteldKostendelersNormbedragIndividueel`
 * `vastgesteldKostendelersNormbedragGezamenlijk`
 
+## Wie roept dit aan
+
+| | |
+| --- | --- |
+| **Direct aangeroepen door** | `bsb-219-vaststelling-norm` |
+| **Binnen zaakproces** | `ab-afhandelen-aanvraag-dcm`, `ioaw-afhandelen-aanvraag-dcm` |
+
+De volledige keten:
+
+* `bs-219-vaststelling-norm` ← `bsb-219-vaststelling-norm` ← `uitvoeren-business-services` ← `ab-afhandelen-aanvraag-dcm`
+* `bs-219-vaststelling-norm` ← `bsb-219-vaststelling-norm` ← `uitvoeren-business-services` ← `ioaw-afhandelen-aanvraag-dcm`
+
 ## Het procesmodel
 
 ![Procesmodel: BS 219 vaststelling norm](../../.gitbook/assets/bpmn/bs-219-vaststelling-norm.svg)

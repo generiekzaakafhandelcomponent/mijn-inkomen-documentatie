@@ -42,6 +42,18 @@ Bouwblok `bs-221-vaststelling-ingangsdatum-uitkering`.
 * `datumVaststellingIngangsdatumUitkering`
 * `toelichtingVaststellingIngangsdatumConsulent`
 
+## Wie roept dit aan
+
+| | |
+| --- | --- |
+| **Direct aangeroepen door** | `bsb-221-vaststelling-ingangsdatum` |
+| **Binnen zaakproces** | `ab-afhandelen-aanvraag-dcm`, `ioaw-afhandelen-aanvraag-dcm` |
+
+De volledige keten:
+
+* `bs-221-vaststelling-ingangsdatum-uitkering` ← `bsb-221-vaststelling-ingangsdatum` ← `uitvoeren-business-services` ← `ab-afhandelen-aanvraag-dcm`
+* `bs-221-vaststelling-ingangsdatum-uitkering` ← `bsb-221-vaststelling-ingangsdatum` ← `uitvoeren-business-services` ← `ioaw-afhandelen-aanvraag-dcm`
+
 ## Het procesmodel
 
 ![Procesmodel: BS 221 Vaststelling Ingangdatum](../../.gitbook/assets/bpmn/bs-221-vaststelling-ingangsdatum-uitkering.svg)

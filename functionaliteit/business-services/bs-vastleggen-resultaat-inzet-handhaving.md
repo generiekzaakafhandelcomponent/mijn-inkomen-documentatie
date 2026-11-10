@@ -10,6 +10,18 @@ Bouwblok `bs-vastleggen-resultaat-inzet-handhaving`.
 
 Dit bouwblok benoemt geen invoer- en uitvoervariabelen in het procesmodel.
 
+## Wie roept dit aan
+
+| | |
+| --- | --- |
+| **Direct aangeroepen door** | `bsb-vastleggen-resultaat-inzet-handhaving` |
+| **Binnen zaakproces** | `ab-afhandelen-aanvraag-dcm`, `ioaw-afhandelen-aanvraag-dcm` |
+
+De volledige keten:
+
+* `bs-vastleggen-resultaat-inzet-handhaving` ← `bsb-vastleggen-resultaat-inzet-handhaving` ← `uitvoeren-business-services` ← `ab-afhandelen-aanvraag-dcm`
+* `bs-vastleggen-resultaat-inzet-handhaving` ← `bsb-vastleggen-resultaat-inzet-handhaving` ← `uitvoeren-business-services` ← `ioaw-afhandelen-aanvraag-dcm`
+
 ## Het procesmodel
 
 ![Procesmodel: BS vastleggen resultaat inzet handhaving](../../.gitbook/assets/bpmn/bs-vastleggen-resultaat-inzet-handhaving.svg)

@@ -10,6 +10,18 @@ Bouwblok `bs-opbouwen-uitgebreide-motivering`.
 
 Dit bouwblok benoemt geen invoer- en uitvoervariabelen in het procesmodel.
 
+## Wie roept dit aan
+
+| | |
+| --- | --- |
+| **Direct aangeroepen door** | `bsb-opbouwen-uitgebreide-motivering` |
+| **Binnen zaakproces** | `ab-afhandelen-aanvraag-dcm`, `ioaw-afhandelen-aanvraag-dcm` |
+
+De volledige keten:
+
+* `bs-opbouwen-uitgebreide-motivering` ← `bsb-opbouwen-uitgebreide-motivering` ← `uitvoeren-business-services` ← `ab-afhandelen-aanvraag-dcm`
+* `bs-opbouwen-uitgebreide-motivering` ← `bsb-opbouwen-uitgebreide-motivering` ← `uitvoeren-business-services` ← `ioaw-afhandelen-aanvraag-dcm`
+
 ## Het procesmodel
 
 ![Procesmodel: BS opbouwen uitgebreide motivering](../../.gitbook/assets/bpmn/bs-opbouwen-uitgebreide-motivering.svg)

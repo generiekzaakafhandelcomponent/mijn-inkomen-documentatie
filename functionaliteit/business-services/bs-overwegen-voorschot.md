@@ -10,6 +10,18 @@ Bouwblok `bs-overwegen-voorschot`.
 
 Dit bouwblok benoemt geen invoer- en uitvoervariabelen in het procesmodel.
 
+## Wie roept dit aan
+
+| | |
+| --- | --- |
+| **Direct aangeroepen door** | `bsb-overwegen-voorschot` |
+| **Binnen zaakproces** | `ab-afhandelen-aanvraag-dcm`, `ioaw-afhandelen-aanvraag-dcm` |
+
+De volledige keten:
+
+* `bs-overwegen-voorschot` ← `bsb-overwegen-voorschot` ← `uitvoeren-business-services` ← `ab-afhandelen-aanvraag-dcm`
+* `bs-overwegen-voorschot` ← `bsb-overwegen-voorschot` ← `uitvoeren-business-services` ← `ioaw-afhandelen-aanvraag-dcm`
+
 ## Het procesmodel
 
 ![Procesmodel: BS Overwegen voorschot](../../.gitbook/assets/bpmn/bs-overwegen-voorschot.svg)

@@ -10,6 +10,18 @@ Bouwblok `bs-216-vaststelling-relaties`.
 
 Dit bouwblok benoemt geen invoer- en uitvoervariabelen in het procesmodel.
 
+## Wie roept dit aan
+
+| | |
+| --- | --- |
+| **Direct aangeroepen door** | `bsb-216-vaststelling-relaties` |
+| **Binnen zaakproces** | `ab-afhandelen-aanvraag-dcm`, `ioaw-afhandelen-aanvraag-dcm` |
+
+De volledige keten:
+
+* `bs-216-vaststelling-relaties` ← `bsb-216-vaststelling-relaties` ← `uitvoeren-business-services` ← `ab-afhandelen-aanvraag-dcm`
+* `bs-216-vaststelling-relaties` ← `bsb-216-vaststelling-relaties` ← `uitvoeren-business-services` ← `ioaw-afhandelen-aanvraag-dcm`
+
 ## Het procesmodel
 
 ![Procesmodel: BS 216 Vaststelling Relaties](../../.gitbook/assets/bpmn/bs-216-vaststelling-relaties.svg)

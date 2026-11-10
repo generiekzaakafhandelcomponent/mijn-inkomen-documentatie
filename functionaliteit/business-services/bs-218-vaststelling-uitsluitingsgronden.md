@@ -28,6 +28,20 @@ Bouwblok `bs-218-vaststelling-uitsluitingsgronden`.
 * `geimplementeerd`
 * `handmatig of automatisch vastgesteld`
 
+## Wie roept dit aan
+
+| | |
+| --- | --- |
+| **Direct aangeroepen door** | `bsb-218-vaststelling-uitsluitingsgronden-aanvrager`, `bsb-218-vaststelling-uitsluitingsgronden-partner` |
+| **Binnen zaakproces** | `ab-afhandelen-aanvraag-dcm`, `ioaw-afhandelen-aanvraag-dcm` |
+
+De volledige keten:
+
+* `bs-218-vaststelling-uitsluitingsgronden` ← `bsb-218-vaststelling-uitsluitingsgronden-aanvrager` ← `uitvoeren-business-services` ← `ab-afhandelen-aanvraag-dcm`
+* `bs-218-vaststelling-uitsluitingsgronden` ← `bsb-218-vaststelling-uitsluitingsgronden-aanvrager` ← `uitvoeren-business-services` ← `ioaw-afhandelen-aanvraag-dcm`
+* `bs-218-vaststelling-uitsluitingsgronden` ← `bsb-218-vaststelling-uitsluitingsgronden-partner` ← `uitvoeren-business-services` ← `ab-afhandelen-aanvraag-dcm`
+* `bs-218-vaststelling-uitsluitingsgronden` ← `bsb-218-vaststelling-uitsluitingsgronden-partner` ← `uitvoeren-business-services` ← `ioaw-afhandelen-aanvraag-dcm`
+
 ## Het procesmodel
 
 ![Procesmodel: BS 218 vaststelling uitsluitingsgronden](../../.gitbook/assets/bpmn/bs-218-vaststelling-uitsluitingsgronden.svg)

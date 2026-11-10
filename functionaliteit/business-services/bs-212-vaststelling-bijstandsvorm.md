@@ -24,6 +24,18 @@ Bouwblok `bs-212-vaststelling-bijstandsvorm`.
 * `vastgesteldeBijstandsvorm`
 * `automatischVastgesteld`
 
+## Wie roept dit aan
+
+| | |
+| --- | --- |
+| **Direct aangeroepen door** | `bsb-212-vaststelling-bijstandsvorm` |
+| **Binnen zaakproces** | `ab-afhandelen-aanvraag-dcm`, `ioaw-afhandelen-aanvraag-dcm` |
+
+De volledige keten:
+
+* `bs-212-vaststelling-bijstandsvorm` ← `bsb-212-vaststelling-bijstandsvorm` ← `uitvoeren-business-services` ← `ab-afhandelen-aanvraag-dcm`
+* `bs-212-vaststelling-bijstandsvorm` ← `bsb-212-vaststelling-bijstandsvorm` ← `uitvoeren-business-services` ← `ioaw-afhandelen-aanvraag-dcm`
+
 ## Het procesmodel
 
 ![Procesmodel: BS 212 Vaststelling bijstandsvorm](../../.gitbook/assets/bpmn/bs-212-vaststelling-bijstandsvorm.svg)

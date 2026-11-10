@@ -10,6 +10,18 @@ Bouwblok `bs-overwegen-uitzetten-informatieverzoek`.
 
 Dit bouwblok benoemt geen invoer- en uitvoervariabelen in het procesmodel.
 
+## Wie roept dit aan
+
+| | |
+| --- | --- |
+| **Direct aangeroepen door** | `bsb-overwegen-uitzetten-informatieverzoek` |
+| **Binnen zaakproces** | `ab-afhandelen-aanvraag-dcm`, `ioaw-afhandelen-aanvraag-dcm` |
+
+De volledige keten:
+
+* `bs-overwegen-uitzetten-informatieverzoek` ← `bsb-overwegen-uitzetten-informatieverzoek` ← `uitvoeren-business-services` ← `ab-afhandelen-aanvraag-dcm`
+* `bs-overwegen-uitzetten-informatieverzoek` ← `bsb-overwegen-uitzetten-informatieverzoek` ← `uitvoeren-business-services` ← `ioaw-afhandelen-aanvraag-dcm`
+
 ## Het procesmodel
 
 ![Procesmodel: BS Overwegen uitzetten informatieverzoek](../../.gitbook/assets/bpmn/bs-overwegen-uitzetten-informatieverzoek.svg)

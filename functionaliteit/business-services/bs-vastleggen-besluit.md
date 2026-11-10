@@ -10,6 +10,18 @@ Bouwblok `bs-vastleggen-besluit`.
 
 Dit bouwblok benoemt geen invoer- en uitvoervariabelen in het procesmodel.
 
+## Wie roept dit aan
+
+| | |
+| --- | --- |
+| **Direct aangeroepen door** | `bsb-vastleggen-besluit` |
+| **Binnen zaakproces** | `ab-afhandelen-aanvraag-dcm`, `ioaw-afhandelen-aanvraag-dcm` |
+
+De volledige keten:
+
+* `bs-vastleggen-besluit` ← `bsb-vastleggen-besluit` ← `uitvoeren-business-services` ← `ab-afhandelen-aanvraag-dcm`
+* `bs-vastleggen-besluit` ← `bsb-vastleggen-besluit` ← `uitvoeren-business-services` ← `ioaw-afhandelen-aanvraag-dcm`
+
 ## Het procesmodel
 
 ![Procesmodel: BS Vastleggen besluit](../../.gitbook/assets/bpmn/bs-vastleggen-besluit.svg)

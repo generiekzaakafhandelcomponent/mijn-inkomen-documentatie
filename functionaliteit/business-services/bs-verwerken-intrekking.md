@@ -10,6 +10,19 @@ Bouwblok `bs-verwerken-intrekking`.
 
 Dit bouwblok benoemt geen invoer- en uitvoervariabelen in het procesmodel.
 
+## Wie roept dit aan
+
+| | |
+| --- | --- |
+| **Direct aangeroepen door** | `bsb-verwerken-intrekking` |
+| **Binnen zaakproces** | `ab-afhandelen-aanvraag-dcm`, `basisafhandelproces-afhandelen-aanvraag`, `ioaw-afhandelen-aanvraag-dcm` |
+
+De volledige keten:
+
+* `bs-verwerken-intrekking` ← `bsb-verwerken-intrekking` ← `basisafhandelproces-uitvoeren-business-services` ← `basisafhandelproces-behandelen-zaak` ← `basisafhandelproces-afhandelen-aanvraag`
+* `bs-verwerken-intrekking` ← `bsb-verwerken-intrekking` ← `uitvoeren-business-services` ← `ab-afhandelen-aanvraag-dcm`
+* `bs-verwerken-intrekking` ← `bsb-verwerken-intrekking` ← `uitvoeren-business-services` ← `ioaw-afhandelen-aanvraag-dcm`
+
 ## Het procesmodel
 
 ![Procesmodel: BS verwerken intrekking gehele aanvraag](../../.gitbook/assets/bpmn/bs-verwerken-intrekking.svg)

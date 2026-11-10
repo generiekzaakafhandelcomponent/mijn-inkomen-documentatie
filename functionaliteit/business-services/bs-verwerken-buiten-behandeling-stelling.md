@@ -10,6 +10,19 @@ Bouwblok `bs-verwerken-buiten-behandeling-stelling`.
 
 Dit bouwblok benoemt geen invoer- en uitvoervariabelen in het procesmodel.
 
+## Wie roept dit aan
+
+| | |
+| --- | --- |
+| **Direct aangeroepen door** | `bsb-verwerken-buiten-behandeling-stelling` |
+| **Binnen zaakproces** | `ab-afhandelen-aanvraag-dcm`, `basisafhandelproces-afhandelen-aanvraag`, `ioaw-afhandelen-aanvraag-dcm` |
+
+De volledige keten:
+
+* `bs-verwerken-buiten-behandeling-stelling` ← `bsb-verwerken-buiten-behandeling-stelling` ← `basisafhandelproces-uitvoeren-business-services` ← `basisafhandelproces-behandelen-zaak` ← `basisafhandelproces-afhandelen-aanvraag`
+* `bs-verwerken-buiten-behandeling-stelling` ← `bsb-verwerken-buiten-behandeling-stelling` ← `uitvoeren-business-services` ← `ab-afhandelen-aanvraag-dcm`
+* `bs-verwerken-buiten-behandeling-stelling` ← `bsb-verwerken-buiten-behandeling-stelling` ← `uitvoeren-business-services` ← `ioaw-afhandelen-aanvraag-dcm`
+
 ## Het procesmodel
 
 ![Procesmodel: BS Verwerken buiten behandeling stelling](../../.gitbook/assets/bpmn/bs-verwerken-buiten-behandeling-stelling.svg)

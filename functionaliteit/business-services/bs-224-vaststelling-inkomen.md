@@ -10,6 +10,20 @@ Bouwblok `bs-224-vaststelling-inkomen`.
 
 Dit bouwblok benoemt geen invoer- en uitvoervariabelen in het procesmodel.
 
+## Wie roept dit aan
+
+| | |
+| --- | --- |
+| **Direct aangeroepen door** | `bsb-224-vaststelling-inkomen-aanvrager`, `bsb-224-vaststelling-inkomen-partner` |
+| **Binnen zaakproces** | `ab-afhandelen-aanvraag-dcm`, `ioaw-afhandelen-aanvraag-dcm` |
+
+De volledige keten:
+
+* `bs-224-vaststelling-inkomen` ← `bsb-224-vaststelling-inkomen-aanvrager` ← `uitvoeren-business-services` ← `ab-afhandelen-aanvraag-dcm`
+* `bs-224-vaststelling-inkomen` ← `bsb-224-vaststelling-inkomen-aanvrager` ← `uitvoeren-business-services` ← `ioaw-afhandelen-aanvraag-dcm`
+* `bs-224-vaststelling-inkomen` ← `bsb-224-vaststelling-inkomen-partner` ← `uitvoeren-business-services` ← `ab-afhandelen-aanvraag-dcm`
+* `bs-224-vaststelling-inkomen` ← `bsb-224-vaststelling-inkomen-partner` ← `uitvoeren-business-services` ← `ioaw-afhandelen-aanvraag-dcm`
+
 ## Het procesmodel
 
 ![Procesmodel: BS 224 vaststelling inkomen](../../.gitbook/assets/bpmn/bs-224-vaststelling-inkomen.svg)

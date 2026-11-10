@@ -26,6 +26,20 @@ Bouwblok `bs-213-vaststelling-verblijfstitel`.
 * `rechtOpBijstand`
 * `toelichtingConsulent`
 
+## Wie roept dit aan
+
+| | |
+| --- | --- |
+| **Direct aangeroepen door** | `bsb-213-vaststelling-verblijfstitel-aanvrager`, `bsb-213-vaststelling-verblijfstitel-partner` |
+| **Binnen zaakproces** | `ab-afhandelen-aanvraag-dcm`, `ioaw-afhandelen-aanvraag-dcm` |
+
+De volledige keten:
+
+* `bs-213-vaststelling-verblijfstitel` ← `bsb-213-vaststelling-verblijfstitel-aanvrager` ← `uitvoeren-business-services` ← `ab-afhandelen-aanvraag-dcm`
+* `bs-213-vaststelling-verblijfstitel` ← `bsb-213-vaststelling-verblijfstitel-aanvrager` ← `uitvoeren-business-services` ← `ioaw-afhandelen-aanvraag-dcm`
+* `bs-213-vaststelling-verblijfstitel` ← `bsb-213-vaststelling-verblijfstitel-partner` ← `uitvoeren-business-services` ← `ab-afhandelen-aanvraag-dcm`
+* `bs-213-vaststelling-verblijfstitel` ← `bsb-213-vaststelling-verblijfstitel-partner` ← `uitvoeren-business-services` ← `ioaw-afhandelen-aanvraag-dcm`
+
 ## Het procesmodel
 
 ![Procesmodel: BS 213 vaststelling verblijfstitel](../../.gitbook/assets/bpmn/bs-213-vaststelling-verblijfstitel.svg)

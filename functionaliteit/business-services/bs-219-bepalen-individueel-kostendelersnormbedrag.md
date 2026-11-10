@@ -10,6 +10,18 @@ Bouwblok `bs-219-bepalen-individueel-kostendelersnormbedrag`.
 
 Dit bouwblok benoemt geen invoer- en uitvoervariabelen in het procesmodel.
 
+## Wie roept dit aan
+
+| | |
+| --- | --- |
+| **Direct aangeroepen door** | `bs-219-vaststelling-norm` |
+| **Binnen zaakproces** | `ab-afhandelen-aanvraag-dcm`, `ioaw-afhandelen-aanvraag-dcm` |
+
+De volledige keten:
+
+* `bs-219-bepalen-individueel-kostendelersnormbedrag` ← `bs-219-vaststelling-norm` ← `bsb-219-vaststelling-norm` ← `uitvoeren-business-services` ← `ab-afhandelen-aanvraag-dcm`
+* `bs-219-bepalen-individueel-kostendelersnormbedrag` ← `bs-219-vaststelling-norm` ← `bsb-219-vaststelling-norm` ← `uitvoeren-business-services` ← `ioaw-afhandelen-aanvraag-dcm`
+
 ## Het procesmodel
 
 ![Procesmodel: BS 219 Bepalen individueel kostendelersnormbedrag](../../.gitbook/assets/bpmn/bs-219-bepalen-individueel-kostendelersnormbedrag.svg)

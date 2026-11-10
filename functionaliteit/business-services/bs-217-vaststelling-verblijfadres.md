@@ -28,6 +28,22 @@ Bouwblok `bs-217-vaststelling-verblijfadres`.
 * `vastgesteldVerblijfadres`
 * `toelichtingConsulent`
 
+## Wie roept dit aan
+
+| | |
+| --- | --- |
+| **Direct aangeroepen door** | `bsb-217-vaststelling-verblijfadres-aanvrager`, `bsb-217-vaststelling-verblijfadres-partner` |
+| **Binnen zaakproces** | `ab-afhandelen-aanvraag-dcm`, `basisafhandelproces-afhandelen-aanvraag`, `ioaw-afhandelen-aanvraag-dcm` |
+
+De volledige keten:
+
+* `bs-217-vaststelling-verblijfadres` ← `bsb-217-vaststelling-verblijfadres-aanvrager` ← `basisafhandelproces-uitvoeren-business-services` ← `basisafhandelproces-behandelen-zaak` ← `basisafhandelproces-afhandelen-aanvraag`
+* `bs-217-vaststelling-verblijfadres` ← `bsb-217-vaststelling-verblijfadres-aanvrager` ← `uitvoeren-business-services` ← `ab-afhandelen-aanvraag-dcm`
+* `bs-217-vaststelling-verblijfadres` ← `bsb-217-vaststelling-verblijfadres-aanvrager` ← `uitvoeren-business-services` ← `ioaw-afhandelen-aanvraag-dcm`
+* `bs-217-vaststelling-verblijfadres` ← `bsb-217-vaststelling-verblijfadres-partner` ← `basisafhandelproces-uitvoeren-business-services` ← `basisafhandelproces-behandelen-zaak` ← `basisafhandelproces-afhandelen-aanvraag`
+* `bs-217-vaststelling-verblijfadres` ← `bsb-217-vaststelling-verblijfadres-partner` ← `uitvoeren-business-services` ← `ab-afhandelen-aanvraag-dcm`
+* `bs-217-vaststelling-verblijfadres` ← `bsb-217-vaststelling-verblijfadres-partner` ← `uitvoeren-business-services` ← `ioaw-afhandelen-aanvraag-dcm`
+
 ## Het procesmodel
 
 ![Procesmodel: BS 217 vaststelling verblijfadres](../../.gitbook/assets/bpmn/bs-217-vaststelling-verblijfadres.svg)

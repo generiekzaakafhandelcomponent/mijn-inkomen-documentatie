@@ -20,6 +20,18 @@ Bouwblok `bs-ophalen-bewoning-adres`.
 * `adresMetVeelBewoners`
 * `typeVeelBewonersInstelling`
 
+## Wie roept dit aan
+
+| | |
+| --- | --- |
+| **Direct aangeroepen door** | `bsb-ophalen-bewoning-adres-aanvrager` |
+| **Binnen zaakproces** | `ab-afhandelen-aanvraag-dcm`, `ioaw-afhandelen-aanvraag-dcm` |
+
+De volledige keten:
+
+* `bs-ophalen-bewoning-adres` ← `bsb-ophalen-bewoning-adres-aanvrager` ← `uitvoeren-business-services` ← `ab-afhandelen-aanvraag-dcm`
+* `bs-ophalen-bewoning-adres` ← `bsb-ophalen-bewoning-adres-aanvrager` ← `uitvoeren-business-services` ← `ioaw-afhandelen-aanvraag-dcm`
+
 ## Het procesmodel
 
 ![Procesmodel: BS ophalen bewoning adres](../../.gitbook/assets/bpmn/bs-ophalen-bewoning-adres.svg)

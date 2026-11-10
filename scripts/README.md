@@ -58,7 +58,11 @@ Per bouwblok worden gelezen:
 * **invoer en uitvoer** uit de tekstannotaties in het BPMN-model — niet elk
   blok benoemt die, dan meldt de pagina dat;
 * **de processtappen** uit het BPMN-model, met het soort stap erbij;
-* **formulieren, formulierstromen en beslistabellen** uit de mappen ernaast.
+* **formulieren, formulierstromen en beslistabellen** uit de mappen ernaast;
+* **wie het bouwblok aanroept**, door alle BPMN-modellen in de configuratie te
+  scannen op `callActivity` en de keten omhoog te volgen tot aan het zaakproces.
+  Daarbij wordt het proces-id uit het model gebruikt, niet de mapnaam — die
+  twee lopen niet altijd gelijk.
 
 Het script werkt ook `SUMMARY.md` bij: de pagina's komen genest onder
 *Business services* te staan. Dat is nodig, want **GitBook publiceert

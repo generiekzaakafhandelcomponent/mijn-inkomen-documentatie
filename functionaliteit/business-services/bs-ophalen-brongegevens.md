@@ -13,6 +13,20 @@ Bouwblok `bs-ophalen-brongegevens`.
 * `ophalenRdwEnKadasterInfo`
 * `bsn`
 
+## Wie roept dit aan
+
+| | |
+| --- | --- |
+| **Direct aangeroepen door** | `bsb-ophalen-brongegevens-aanvrager`, `bsb-ophalen-brongegevens-partner` |
+| **Binnen zaakproces** | `ab-afhandelen-aanvraag-dcm`, `ioaw-afhandelen-aanvraag-dcm` |
+
+De volledige keten:
+
+* `bs-ophalen-brongegevens` ← `bsb-ophalen-brongegevens-aanvrager` ← `uitvoeren-business-services` ← `ab-afhandelen-aanvraag-dcm`
+* `bs-ophalen-brongegevens` ← `bsb-ophalen-brongegevens-aanvrager` ← `uitvoeren-business-services` ← `ioaw-afhandelen-aanvraag-dcm`
+* `bs-ophalen-brongegevens` ← `bsb-ophalen-brongegevens-partner` ← `uitvoeren-business-services` ← `ab-afhandelen-aanvraag-dcm`
+* `bs-ophalen-brongegevens` ← `bsb-ophalen-brongegevens-partner` ← `uitvoeren-business-services` ← `ioaw-afhandelen-aanvraag-dcm`
+
 ## Het procesmodel
 
 ![Procesmodel: BS ophalen brongegevens](../../.gitbook/assets/bpmn/bs-ophalen-brongegevens.svg)

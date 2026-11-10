@@ -49,6 +49,22 @@ Bouwblok `bs-211-vaststelling-persoon`.
 * `brpraadpleging.opDatum`
 * `brpraadpleging.doorUser`
 
+## Wie roept dit aan
+
+| | |
+| --- | --- |
+| **Direct aangeroepen door** | `basisafhandelproces-bsb-211-vaststelling-persoon-aanvrager`, `basisafhandelproces-bsb-211-vaststelling-persoon-partner`, `bsb-211-vaststelling-persoon-aanvrager`, `bsb-211-vaststelling-persoon-partner` |
+| **Binnen zaakproces** | `ab-afhandelen-aanvraag-dcm`, `basisafhandelproces-afhandelen-aanvraag`, `ioaw-afhandelen-aanvraag-dcm` |
+
+De volledige keten:
+
+* `bs-211-vaststelling-persoon` ← `basisafhandelproces-bsb-211-vaststelling-persoon-aanvrager` ← `basisafhandelproces-uitvoeren-business-services` ← `basisafhandelproces-behandelen-zaak` ← `basisafhandelproces-afhandelen-aanvraag`
+* `bs-211-vaststelling-persoon` ← `basisafhandelproces-bsb-211-vaststelling-persoon-partner` ← `basisafhandelproces-uitvoeren-business-services` ← `basisafhandelproces-behandelen-zaak` ← `basisafhandelproces-afhandelen-aanvraag`
+* `bs-211-vaststelling-persoon` ← `bsb-211-vaststelling-persoon-aanvrager` ← `uitvoeren-business-services` ← `ab-afhandelen-aanvraag-dcm`
+* `bs-211-vaststelling-persoon` ← `bsb-211-vaststelling-persoon-aanvrager` ← `uitvoeren-business-services` ← `ioaw-afhandelen-aanvraag-dcm`
+* `bs-211-vaststelling-persoon` ← `bsb-211-vaststelling-persoon-partner` ← `uitvoeren-business-services` ← `ab-afhandelen-aanvraag-dcm`
+* `bs-211-vaststelling-persoon` ← `bsb-211-vaststelling-persoon-partner` ← `uitvoeren-business-services` ← `ioaw-afhandelen-aanvraag-dcm`
+
 ## Het procesmodel
 
 ![Procesmodel: BS 211 Vaststelling persoon](../../.gitbook/assets/bpmn/bs-211-vaststelling-persoon.svg)

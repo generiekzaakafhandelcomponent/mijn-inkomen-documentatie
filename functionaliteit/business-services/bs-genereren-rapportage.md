@@ -10,6 +10,18 @@ Bouwblok `bs-genereren-rapportage`.
 
 Dit bouwblok benoemt geen invoer- en uitvoervariabelen in het procesmodel.
 
+## Wie roept dit aan
+
+| | |
+| --- | --- |
+| **Direct aangeroepen door** | `bsb-genereren-rapportage` |
+| **Binnen zaakproces** | `ab-afhandelen-aanvraag-dcm`, `ioaw-afhandelen-aanvraag-dcm` |
+
+De volledige keten:
+
+* `bs-genereren-rapportage` ← `bsb-genereren-rapportage` ← `uitvoeren-business-services` ← `ab-afhandelen-aanvraag-dcm`
+* `bs-genereren-rapportage` ← `bsb-genereren-rapportage` ← `uitvoeren-business-services` ← `ioaw-afhandelen-aanvraag-dcm`
+
 ## Het procesmodel
 
 ![Procesmodel: BS genereren rapportage](../../.gitbook/assets/bpmn/bs-genereren-rapportage.svg)

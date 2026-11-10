@@ -10,6 +10,18 @@ Bouwblok `bs-224b-vaststellen-gezamenlijk-inkomen`.
 
 Dit bouwblok benoemt geen invoer- en uitvoervariabelen in het procesmodel.
 
+## Wie roept dit aan
+
+| | |
+| --- | --- |
+| **Direct aangeroepen door** | `bsb-224b-vaststelling-gezamelijk-inkomen` |
+| **Binnen zaakproces** | `ab-afhandelen-aanvraag-dcm`, `ioaw-afhandelen-aanvraag-dcm` |
+
+De volledige keten:
+
+* `bs-224b-vaststellen-gezamenlijk-inkomen` ← `bsb-224b-vaststelling-gezamelijk-inkomen` ← `uitvoeren-business-services` ← `ab-afhandelen-aanvraag-dcm`
+* `bs-224b-vaststellen-gezamenlijk-inkomen` ← `bsb-224b-vaststelling-gezamelijk-inkomen` ← `uitvoeren-business-services` ← `ioaw-afhandelen-aanvraag-dcm`
+
 ## Het procesmodel
 
 ![Procesmodel: BS 224b vaststellen gezamenlijk inkomen](../../.gitbook/assets/bpmn/bs-224b-vaststellen-gezamenlijk-inkomen.svg)
