@@ -6,31 +6,37 @@ description: Hoe Mijn Inkomen is opgebouwd en hoe de onderdelen samenwerken.
 
 ## Het vijflaagsmodel
 
-Mijn Inkomen is ingericht volgens het [Common Ground vijflaagsmodel](https://www.gemmaonline.nl/wiki/Common_Ground_vijflaagsmodel), de gemeentelijke referentiearchitectuur. Het uitgangspunt daarvan is **ontkoppeling**: gegevens, logica en interactie zitten in aparte lagen, zodat je het ene kunt vervangen zonder het andere te raken.
+Mijn Inkomen is ingericht volgens het [Common Ground vijflaagsmodel](https://www.gemmaonline.nl/wiki/Common_Ground_vijflaagsmodel), de gemeentelijke referentiearchitectuur. Het uitgangspunt daarvan is **ontkoppeling**: data, diensten en interactie zitten in aparte lagen, zodat je het ene kunt vervangen zonder het andere te raken.
+
+De lagen tellen van onder naar boven: databronnen onderaan als laag 1, interactie bovenaan als laag 5.
 
 ```mermaid
 flowchart TB
-    L1["<b>1 · Kanalen en toegang</b><br/>Klantportaal · behandelaarstoegang · Keycloak"]
-    L2["<b>2 · Interactie</b><br/>Zaakscherm en formulieren · portaalschermen"]
-    L3["<b>3 · Procesinrichting</b><br/>Procesengine · beslistabellen · DCM-regie"]
-    L4["<b>4 · Diensten</b><br/>Business services · plugins · uitkeringsadministratie"]
-    L5["<b>5 · Databronnen</b><br/>Zaakregistratie · objecten · landelijke registraties"]
+    L5["<b>Laag 5 · Interactie</b><br/>Klantportaal · Open Formulieren · zaakscherm en dashboards"]
+    L4["<b>Laag 4 · Procesinrichting</b><br/>Procesengine · beslistabellen · DCM-regie"]
+    L3["<b>Laag 3 · Datadiensten</b><br/>ZGW-API's · Objects API · plugins naar bronsystemen"]
+    L2["<b>Laag 2 · Data-integratie</b><br/>Het zaakdossier: aanvraag, brongegevens en vaststelling samengebracht"]
+    L1["<b>Laag 1 · Databronnen</b><br/>Suwinet · BRP · Kadaster · RDW · zaakregistratie · uitkeringsadministratie"]
 
-    L1 --> L2 --> L3 --> L4 --> L5
+    L5 --> L4 --> L3 --> L2 --> L1
 ```
 
-Waar Mijn Inkomen in elke laag zit:
+Waar de onderdelen van Mijn Inkomen zitten:
 
-| Laag | Wat Mijn Inkomen daar heeft |
+| Laag | Wat daar thuishoort |
 | --- | --- |
-| **1 · Kanalen en toegang** | Het klantportaal waarop de inwoner indient en reageert, en de toegang van de behandelaar. Keycloak regelt authenticatie en rollen. |
-| **2 · Interactie** | Het zaakscherm met zijn tabbladen, de taakformulieren en de dashboards. Opgebouwd met Form.io, los van de processen eronder. |
-| **3 · Procesinrichting** | De procesengine met de BPMN-modellen, de DMN-beslistabellen en de dynamische regie die bepaalt welk werk wanneer loopt. |
-| **4 · Diensten** | De business services die het inhoudelijke werk doen, de plugins waarmee externe systemen worden aangeroepen, en de uitkeringsadministratie als afnemende dienst. |
-| **5 · Databronnen** | De zaakregistratie, de objectenopslag en de landelijke registraties waaruit brongegevens komen. |
+| **5 · Interactie** | Het klantportaal waarop de inwoner indient, de formulierenengine, en het zaakscherm met tabbladen, taakformulieren en dashboards voor de behandelaar. |
+| **4 · Procesinrichting** | De procesengine met de BPMN-modellen, de DMN-beslistabellen en de dynamische regie die bepaalt welk werk wanneer loopt. |
+| **3 · Datadiensten** | De API's waarmee brondata wordt geleverd en weggeschreven: de ZGW-API's, de Objects API, en de plugins waarmee de bronsystemen worden bevraagd. |
+| **2 · Data-integratie** | Het zaakdossier, dat aanvraaggegevens, opgehaalde brongegevens en de vaststelling van de behandelaar tot één beeld samenbrengt. |
+| **1 · Databronnen** | De registraties zelf: Suwinet met UWV, SVB, DUO, RDW en Kadaster, de BRP, de zaakregistratie en de uitkeringsadministratie. |
 
 {% hint style="info" %}
-**De ontkoppeling is hier geen theorie.** Dat het zaakdossier (laag 5) losstaat van de schermen (laag 2) en van de procesregie (laag 3), is precies waarom een formulier aangepast kan worden zonder het procesmodel te raken — en waarom de regie business services kan starten zonder te weten wat erin gebeurt.
+**GZAC beslaat meer dan één laag.** De applicatie levert zowel het zaakscherm (laag 5) als de procesregie (laag 4). Dat is geen afwijking van het model: een component mag meerdere lagen bedienen, zolang de lagen intern gescheiden blijven.
+{% endhint %}
+
+{% hint style="success" %}
+**De ontkoppeling is hier geen theorie.** Dat het zaakdossier (laag 2) losstaat van de schermen (laag 5) en van de procesregie (laag 4), is precies waarom een formulier aangepast kan worden zonder het procesmodel te raken — en waarom de regie business services kan starten zonder te weten wat erin gebeurt.
 {% endhint %}
 
 ## Het landschap
@@ -118,7 +124,7 @@ Het zaakdossier bevat onder `openzaak` een verwijzing naar de bijbehorende zaak,
 ## De procesarchitectuur: drie lagen
 
 {% hint style="info" %}
-Deze drie lagen staan los van het vijflaagsmodel hierboven. Ze beschrijven hoe de procesmodellen binnen laag 3 en 4 onderling zijn opgebouwd.
+Deze drie lagen staan los van het vijflaagsmodel hierboven. Ze beschrijven hoe de procesmodellen binnen laag 4 onderling zijn opgebouwd.
 {% endhint %}
 
 De BPMN-modellen zijn bewust in drie lagen verdeeld. Dat maakt hergebruik tussen Algemene bijstand en IOAW mogelijk, en houdt de losse modellen klein.

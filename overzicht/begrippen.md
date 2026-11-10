@@ -56,7 +56,7 @@ description: De termen die in Mijn Inkomen en in deze documentatie worden gebrui
 | --- | --- |
 | **GZAC** | Generiek Zaakafhandelcomponent: het open source zaakafhandelplatform waarop Mijn Inkomen draait. |
 | **Common Ground** | De gemeentelijke informatiearchitectuur waarin gegevens, logica en interactie van elkaar worden losgekoppeld. |
-| **Vijflaagsmodel** | De laagindeling van Common Ground: kanalen en toegang, interactie, procesinrichting, diensten en databronnen. Zie [Architectuur](architectuur.md#het-vijflaagsmodel). |
+| **Vijflaagsmodel** | De laagindeling van Common Ground, van onder naar boven: databronnen (1), data-integratie (2), datadiensten (3), procesinrichting (4) en interactie (5). Zie [Architectuur](architectuur.md#het-vijflaagsmodel). |
 | **Valtimo** | Het onderliggende platform van GZAC, geleverd door Ritense. |
 | **Operaton** | De procesengine die de BPMN-modellen en DMN-tabellen uitvoert. Open source voortzetting van Camunda 7; tot v12 heette dit Camunda. |
 | **BPMN** | Business Process Model and Notation: de modelleertaal voor de processen. |
