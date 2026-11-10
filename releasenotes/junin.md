@@ -55,8 +55,8 @@ Met Release Junin zijn verschillende verbeteringen doorgevoerd in de gebruikersi
 
 Met Release Junin is het onderliggende Valtimo/GZAC-platform bijgewerkt naar versie **12.47.0**. Deze upgrade bevat een verbetering in de **beveiliging en toegangscontrole van documenten**.
 
-{% hint style="warning" %}
-**Dit versienummer wijkt af van wat de repository laat zien.** In de commits van de Junin-periode staat het platform op **13.52** en daarna **13.54.0-1**, en `gradle.properties` bevestigt dat. Vermoedelijk slaat 12.47.0 op een eerder moment in de release of op een ander onderdeel van de keten.
+{% hint style="info" %}
+**Versienummers verschillen per repository.** Mijn Inkomen wordt op meerdere plekken onderhouden, en die lopen niet gelijk op. Het nummer 12.47.0 hoort bij de repository waarvoor deze releasenotes zijn geschreven; de repository waarop deze documentatie is gebaseerd staat in dezelfde periode op **13.52** en later **13.54.0-1**.
 
-Ga voor de actuele versie uit van `gradle.properties`; zie [Configuratie](../beheer/configuratie.md#technische-stack).
+Beide kloppen dus, voor hun eigen lijn. Ga voor de versie van jouw omgeving uit van de `gradle.properties` daarvan; zie [Configuratie](../beheer/configuratie.md#technische-stack).
 {% endhint %}
