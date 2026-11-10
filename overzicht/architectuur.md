@@ -4,6 +4,35 @@ description: Hoe Mijn Inkomen is opgebouwd en hoe de onderdelen samenwerken.
 
 # Architectuur
 
+## Het vijflaagsmodel
+
+Mijn Inkomen is ingericht volgens het [Common Ground vijflaagsmodel](https://www.gemmaonline.nl/wiki/Common_Ground_vijflaagsmodel), de gemeentelijke referentiearchitectuur. Het uitgangspunt daarvan is **ontkoppeling**: gegevens, logica en interactie zitten in aparte lagen, zodat je het ene kunt vervangen zonder het andere te raken.
+
+```mermaid
+flowchart TB
+    L1["<b>1 · Kanalen en toegang</b><br/>Klantportaal · behandelaarstoegang · Keycloak"]
+    L2["<b>2 · Interactie</b><br/>Zaakscherm en formulieren · portaalschermen"]
+    L3["<b>3 · Procesinrichting</b><br/>Procesengine · beslistabellen · DCM-regie"]
+    L4["<b>4 · Diensten</b><br/>Business services · plugins · uitkeringsadministratie"]
+    L5["<b>5 · Databronnen</b><br/>Zaakregistratie · objecten · landelijke registraties"]
+
+    L1 --> L2 --> L3 --> L4 --> L5
+```
+
+Waar Mijn Inkomen in elke laag zit:
+
+| Laag | Wat Mijn Inkomen daar heeft |
+| --- | --- |
+| **1 · Kanalen en toegang** | Het klantportaal waarop de inwoner indient en reageert, en de toegang van de behandelaar. Keycloak regelt authenticatie en rollen. |
+| **2 · Interactie** | Het zaakscherm met zijn tabbladen, de taakformulieren en de dashboards. Opgebouwd met Form.io, los van de processen eronder. |
+| **3 · Procesinrichting** | De procesengine met de BPMN-modellen, de DMN-beslistabellen en de dynamische regie die bepaalt welk werk wanneer loopt. |
+| **4 · Diensten** | De business services die het inhoudelijke werk doen, de plugins waarmee externe systemen worden aangeroepen, en de uitkeringsadministratie als afnemende dienst. |
+| **5 · Databronnen** | De zaakregistratie, de objectenopslag en de landelijke registraties waaruit brongegevens komen. |
+
+{% hint style="info" %}
+**De ontkoppeling is hier geen theorie.** Dat het zaakdossier (laag 5) losstaat van de schermen (laag 2) en van de procesregie (laag 3), is precies waarom een formulier aangepast kan worden zonder het procesmodel te raken — en waarom de regie business services kan starten zonder te weten wat erin gebeurt.
+{% endhint %}
+
 ## Het landschap
 
 Mijn Inkomen staat niet op zichzelf. De applicatie is de behandelkant van een keten die begint bij de inwoner en eindigt in de uitkeringsadministratie.
@@ -87,6 +116,10 @@ Dit is de **officiële registratie**.
 Het zaakdossier bevat onder `openzaak` een verwijzing naar de bijbehorende zaak, zodat beide werelden aan elkaar geknoopt blijven.
 
 ## De procesarchitectuur: drie lagen
+
+{% hint style="info" %}
+Deze drie lagen staan los van het vijflaagsmodel hierboven. Ze beschrijven hoe de procesmodellen binnen laag 3 en 4 onderling zijn opgebouwd.
+{% endhint %}
 
 De BPMN-modellen zijn bewust in drie lagen verdeeld. Dat maakt hergebruik tussen Algemene bijstand en IOAW mogelijk, en houdt de losse modellen klein.
 
