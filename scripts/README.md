@@ -58,6 +58,11 @@ Per bouwblok worden gelezen:
 * **de processtappen** uit het BPMN-model, met het soort stap erbij;
 * **formulieren, formulierstromen en beslistabellen** uit de mappen ernaast.
 
+Het script werkt ook `SUMMARY.md` bij: de pagina's komen genest onder
+*Business services* te staan. Dat is nodig, want **GitBook publiceert
+alleen wat in SUMMARY.md staat** — een pagina die er niet in staat wordt
+als bestandsverwijzing behandeld en de link loopt dood op GitHub.
+
 Draai dit opnieuw na een wijziging in de bouwblokken. De pagina's zijn
 volledig gegenereerd — handmatige aanpassingen gaan bij de volgende run
 verloren.

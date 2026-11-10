@@ -88,7 +88,7 @@ Deze services voeren het proces uit in plaats van feiten vast te stellen.
 | [Afsluiten zaak](business-services/bs-afsluiten-zaak.md) | Rondt de zaak administratief af. |
 
 {% hint style="info" %}
-De pagina's achter deze links zijn gegenereerd uit de backend-configuratie met `scripts/generate-business-services.py`. Ze staan bewust niet in de navigatie — het zijn naslagpagina's, geen leesstof.
+De pagina's achter deze links zijn gegenereerd uit de backend-configuratie met `scripts/generate-business-services.py`. In de navigatie staan ze ingeklapt onder deze pagina; het zijn naslagpagina's, geen leesstof.
 {% endhint %}
 
 ## Een paar services uitgelicht

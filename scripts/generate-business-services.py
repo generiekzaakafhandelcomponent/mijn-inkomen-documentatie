@@ -197,6 +197,41 @@ def schrijf_pagina(d):
     return "\n".join(r)
 
 
+def werk_summary_bij(blokken):
+    """Zet de gegenereerde pagina's genest onder 'Business services' in SUMMARY.md.
+
+    GitBook publiceert alleen wat in SUMMARY.md staat; een pagina die ontbreekt
+    wordt als bestandsverwijzing behandeld en de link loopt dood. Genest houdt
+    ze ingeklapt onder de ouderpagina in plaats van los in de navigatie.
+    """
+    pad = os.path.join(DOCS, "SUMMARY.md")
+    s = open(pad, encoding="utf-8").read()
+    anker = "* [Business services](functionaliteit/business-services.md)"
+    if anker not in s:
+        print("! SUMMARY.md: ankerregel niet gevonden, navigatie niet bijgewerkt",
+              file=sys.stderr)
+        return
+    # bestaande geneste regels weghalen
+    regels, in_blok, uit = s.splitlines(), False, []
+    for r in regels:
+        if r.strip() == anker.strip():
+            in_blok = True
+            uit.append(r)
+            continue
+        if in_blok:
+            if r.startswith("  * [") and "business-services/" in r:
+                continue
+            in_blok = False
+        uit.append(r)
+    s = "\n".join(uit)
+    genest = "\n".join(
+        f"  * [{b['naam']}](functionaliteit/business-services/{b['key']}.md)"
+        for b in blokken)
+    s = s.replace(anker, anker + "\n" + genest)
+    open(pad, "w", encoding="utf-8").write(s)
+    print(f"SUMMARY.md bijgewerkt: {len(blokken)} geneste pagina's")
+
+
 def main():
     backend = sys.argv[1] if len(sys.argv) > 1 else os.path.join(
         os.path.dirname(DOCS), "mijn-inkomen-gzac-backend-v13")
@@ -216,6 +251,7 @@ def main():
         io = f"{len(d['input'])} in / {len(d['output'])} uit"
         print(f"  {d['key']:48s} {len(d['stappen']):3d} stappen  {io}")
 
+    werk_summary_bij(gemaakt)
     print(f"\n{len(gemaakt)} pagina's geschreven naar {os.path.relpath(UIT, DOCS)}/")
     return 0
 
