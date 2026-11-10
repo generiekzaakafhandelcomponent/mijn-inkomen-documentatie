@@ -74,4 +74,7 @@
 
 ## Releasenotes
 
+* [Overzicht](releasenotes/overzicht.md)
 * [Junin](releasenotes/junin.md)
+* [Inari](releasenotes/inari.md)
+* [Huron](releasenotes/huron.md)

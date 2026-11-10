@@ -9,7 +9,7 @@ description: >-
 De belangrijkste onderdelen van deze release zijn de introductie van de functionaliteit **Informatieverzoek** en de **eerste versie van de Printstraat**. Daarnaast bevat deze release verbeteringen in de SmartDocuments-integratie, diverse optimalisaties van de gebruikersinterface en een upgrade van het onderliggende Valtimo-platform naar versie 12.47.0.
 
 {% hint style="info" %}
-Dit is de **huidige release**. Zie [Informatieverzoeken](../functionaliteit/informatieverzoek.md) voor de volledige functionele beschrijving van de nieuwe functionaliteit.
+Dit is de **huidige release**. Zie [Overzicht](overzicht.md) voor alle releases op een rij. Zie [Informatieverzoeken](../functionaliteit/informatieverzoek.md) voor de volledige functionele beschrijving van de nieuwe functionaliteit.
 {% endhint %}
 
 ## In het kort
@@ -54,3 +54,9 @@ Met Release Junin zijn verschillende verbeteringen doorgevoerd in de gebruikersi
 ## Upgrade naar 12.47.0
 
 Met Release Junin is het onderliggende Valtimo/GZAC-platform bijgewerkt naar versie **12.47.0**. Deze upgrade bevat een verbetering in de **beveiliging en toegangscontrole van documenten**.
+
+{% hint style="warning" %}
+**Dit versienummer wijkt af van wat de repository laat zien.** In de commits van de Junin-periode staat het platform op **13.52** en daarna **13.54.0-1**, en `gradle.properties` bevestigt dat. Vermoedelijk slaat 12.47.0 op een eerder moment in de release of op een ander onderdeel van de keten.
+
+Ga voor de actuele versie uit van `gradle.properties`; zie [Configuratie](../beheer/configuratie.md#technische-stack).
+{% endhint %}
