@@ -13,9 +13,9 @@ De lagen tellen van onder naar boven: databronnen onderaan als laag 1, interacti
 ```mermaid
 flowchart TB
     L5["<b>Laag 5 · Interactie</b><br/>Klantportaal · Open Formulieren · zaakscherm en dashboards"]
-    L4["<b>Laag 4 · Procesinrichting</b><br/>Procesengine · beslistabellen · DCM-regie"]
+    L4["<b>Laag 4 · Procesinrichting</b><br/>Procesengine · beslistabellen · DCM-regie · zaakdossier"]
     L3["<b>Laag 3 · Datadiensten</b><br/>ZGW-API's · Objects API · plugins naar bronsystemen"]
-    L2["<b>Laag 2 · Data-integratie</b><br/>Het zaakdossier: aanvraag, brongegevens en vaststelling samengebracht"]
+    L2["<b>Laag 2 · Data-integratie</b><br/>Combineren van brondata tot een uniform beeld"]
     L1["<b>Laag 1 · Databronnen</b><br/>Suwinet · BRP · Kadaster · RDW · zaakregistratie · uitkeringsadministratie"]
 
     L5 --> L4 --> L3 --> L2 --> L1
@@ -26,9 +26,9 @@ Waar de onderdelen van Mijn Inkomen zitten:
 | Laag | Wat daar thuishoort |
 | --- | --- |
 | **5 · Interactie** | Het klantportaal waarop de inwoner indient, de formulierenengine, en het zaakscherm met tabbladen, taakformulieren en dashboards voor de behandelaar. |
-| **4 · Procesinrichting** | De procesengine met de BPMN-modellen, de DMN-beslistabellen en de dynamische regie die bepaalt welk werk wanneer loopt. |
+| **4 · Procesinrichting** | De procesengine met de BPMN-modellen, de DMN-beslistabellen, de dynamische regie die bepaalt welk werk wanneer loopt, en het zaakdossier waarin de behandeling wordt vastgelegd. |
 | **3 · Datadiensten** | De API's waarmee brondata wordt geleverd en weggeschreven: de ZGW-API's, de Objects API, en de plugins waarmee de bronsystemen worden bevraagd. |
-| **2 · Data-integratie** | Het zaakdossier, dat aanvraaggegevens, opgehaalde brongegevens en de vaststelling van de behandelaar tot één beeld samenbrengt. |
+| **2 · Data-integratie** | Het combineren van data uit verschillende bronnen tot één passend beeld. Mijn Inkomen heeft hier geen eigen component: het samenbrengen van aanvraag- en brongegevens gebeurt in het zaakdossier, in laag 4. |
 | **1 · Databronnen** | De registraties zelf: Suwinet met UWV, SVB, DUO, RDW en Kadaster, de BRP, de zaakregistratie en de uitkeringsadministratie. |
 
 {% hint style="info" %}
@@ -36,7 +36,7 @@ Waar de onderdelen van Mijn Inkomen zitten:
 {% endhint %}
 
 {% hint style="success" %}
-**De ontkoppeling is hier geen theorie.** Dat het zaakdossier (laag 2) losstaat van de schermen (laag 5) en van de procesregie (laag 4), is precies waarom een formulier aangepast kan worden zonder het procesmodel te raken — en waarom de regie business services kan starten zonder te weten wat erin gebeurt.
+**De ontkoppeling is hier geen theorie.** Dat de schermen (laag 5) losstaan van de procesinrichting (laag 4), en die weer van de bronsystemen (laag 1), is precies waarom een formulier aangepast kan worden zonder het procesmodel te raken — en waarom de behandeling doorloopt als een bron onbereikbaar is.
 {% endhint %}
 
 ## Het landschap
