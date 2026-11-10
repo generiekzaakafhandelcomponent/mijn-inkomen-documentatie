@@ -158,6 +158,15 @@ def schrijf_pagina(d):
         r.append("Dit bouwblok benoemt geen invoer- en uitvoervariabelen in het procesmodel.")
         r.append("")
 
+    svg = os.path.join(DOCS, ".gitbook", "assets", "bpmn", d["key"] + ".svg")
+    if os.path.exists(svg):
+        r.append("## Het procesmodel")
+        r.append("")
+        r.append(f"![Procesmodel: {d['naam']}](../../.gitbook/assets/bpmn/{d['key']}.svg)")
+        r.append("")
+        r.append("Gegenereerd uit het BPMN-model. Open de afbeelding apart om in te zoomen.")
+        r.append("")
+
     if d["stappen"]:
         r.append("## Het proces")
         r.append("")

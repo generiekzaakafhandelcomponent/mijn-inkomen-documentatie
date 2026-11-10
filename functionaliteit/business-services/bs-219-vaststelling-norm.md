@@ -32,6 +32,12 @@ Bouwblok `bs-219-vaststelling-norm`.
 * `vastgesteldKostendelersNormbedragIndividueel`
 * `vastgesteldKostendelersNormbedragGezamenlijk`
 
+## Het procesmodel
+
+![Procesmodel: BS 219 vaststelling norm](../../.gitbook/assets/bpmn/bs-219-vaststelling-norm.svg)
+
+Gegenereerd uit het BPMN-model. Open de afbeelding apart om in te zoomen.
+
 ## Het proces
 
 | Soort | Stap |

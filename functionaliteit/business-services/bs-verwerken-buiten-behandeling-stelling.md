@@ -10,6 +10,12 @@ Bouwblok `bs-verwerken-buiten-behandeling-stelling`.
 
 Dit bouwblok benoemt geen invoer- en uitvoervariabelen in het procesmodel.
 
+## Het procesmodel
+
+![Procesmodel: BS Verwerken buiten behandeling stelling](../../.gitbook/assets/bpmn/bs-verwerken-buiten-behandeling-stelling.svg)
+
+Gegenereerd uit het BPMN-model. Open de afbeelding apart om in te zoomen.
+
 ## Het proces
 
 | Soort | Stap |

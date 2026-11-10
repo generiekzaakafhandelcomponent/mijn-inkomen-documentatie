@@ -10,6 +10,12 @@ Bouwblok `bs-overwegen-inzetten-handhaving`.
 
 Dit bouwblok benoemt geen invoer- en uitvoervariabelen in het procesmodel.
 
+## Het procesmodel
+
+![Procesmodel: BS Overwegen inzetten handhaving](../../.gitbook/assets/bpmn/bs-overwegen-inzetten-handhaving.svg)
+
+Gegenereerd uit het BPMN-model. Open de afbeelding apart om in te zoomen.
+
 ## Het proces
 
 | Soort | Stap |

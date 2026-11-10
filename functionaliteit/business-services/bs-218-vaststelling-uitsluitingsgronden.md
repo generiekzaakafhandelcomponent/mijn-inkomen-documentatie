@@ -28,6 +28,12 @@ Bouwblok `bs-218-vaststelling-uitsluitingsgronden`.
 * `geimplementeerd`
 * `handmatig of automatisch vastgesteld`
 
+## Het procesmodel
+
+![Procesmodel: BS 218 vaststelling uitsluitingsgronden](../../.gitbook/assets/bpmn/bs-218-vaststelling-uitsluitingsgronden.svg)
+
+Gegenereerd uit het BPMN-model. Open de afbeelding apart om in te zoomen.
+
 ## Het proces
 
 | Soort | Stap |

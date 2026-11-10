@@ -24,6 +24,12 @@ Bouwblok `bs-212-vaststelling-bijstandsvorm`.
 * `vastgesteldeBijstandsvorm`
 * `automatischVastgesteld`
 
+## Het procesmodel
+
+![Procesmodel: BS 212 Vaststelling bijstandsvorm](../../.gitbook/assets/bpmn/bs-212-vaststelling-bijstandsvorm.svg)
+
+Gegenereerd uit het BPMN-model. Open de afbeelding apart om in te zoomen.
+
 ## Het proces
 
 | Soort | Stap |

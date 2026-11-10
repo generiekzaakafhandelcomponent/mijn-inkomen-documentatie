@@ -20,6 +20,12 @@ Bouwblok `bs-ophalen-bewoning-adres`.
 * `adresMetVeelBewoners`
 * `typeVeelBewonersInstelling`
 
+## Het procesmodel
+
+![Procesmodel: BS ophalen bewoning adres](../../.gitbook/assets/bpmn/bs-ophalen-bewoning-adres.svg)
+
+Gegenereerd uit het BPMN-model. Open de afbeelding apart om in te zoomen.
+
 ## Het proces
 
 | Soort | Stap |

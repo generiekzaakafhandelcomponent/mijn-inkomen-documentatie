@@ -10,6 +10,12 @@ Bouwblok `bs-219-bepalen-individueel-kostendelersnormbedrag`.
 
 Dit bouwblok benoemt geen invoer- en uitvoervariabelen in het procesmodel.
 
+## Het procesmodel
+
+![Procesmodel: BS 219 Bepalen individueel kostendelersnormbedrag](../../.gitbook/assets/bpmn/bs-219-bepalen-individueel-kostendelersnormbedrag.svg)
+
+Gegenereerd uit het BPMN-model. Open de afbeelding apart om in te zoomen.
+
 ## Het proces
 
 | Soort | Stap |

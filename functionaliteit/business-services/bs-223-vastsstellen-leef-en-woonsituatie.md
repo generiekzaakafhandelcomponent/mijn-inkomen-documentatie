@@ -35,6 +35,12 @@ Bouwblok `bs-223-vastsstellen-leef-en-woonsituatie`.
 * `leefsituatie`
 * `toelichtingLeefsituatie`
 
+## Het procesmodel
+
+![Procesmodel: BS 223 vastsstellen leef en woonsituatie](../../.gitbook/assets/bpmn/bs-223-vastsstellen-leef-en-woonsituatie.svg)
+
+Gegenereerd uit het BPMN-model. Open de afbeelding apart om in te zoomen.
+
 ## Het proces
 
 | Soort | Stap |

@@ -49,6 +49,12 @@ Bouwblok `bs-211-vaststelling-persoon`.
 * `brpraadpleging.opDatum`
 * `brpraadpleging.doorUser`
 
+## Het procesmodel
+
+![Procesmodel: BS 211 Vaststelling persoon](../../.gitbook/assets/bpmn/bs-211-vaststelling-persoon.svg)
+
+Gegenereerd uit het BPMN-model. Open de afbeelding apart om in te zoomen.
+
 ## Het proces
 
 | Soort | Stap |

@@ -10,6 +10,12 @@ Bouwblok `bs-vastleggen-wijziging-contactgegevens-aanvrager`.
 
 Dit bouwblok benoemt geen invoer- en uitvoervariabelen in het procesmodel.
 
+## Het procesmodel
+
+![Procesmodel: BS Vastleggen wijziging contactgegevens aanvrager](../../.gitbook/assets/bpmn/bs-vastleggen-wijziging-contactgegevens-aanvrager.svg)
+
+Gegenereerd uit het BPMN-model. Open de afbeelding apart om in te zoomen.
+
 ## Het proces
 
 | Soort | Stap |

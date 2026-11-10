@@ -10,6 +10,12 @@ Bouwblok `bs-ophalen-verzendadres`.
 
 Dit bouwblok benoemt geen invoer- en uitvoervariabelen in het procesmodel.
 
+## Het procesmodel
+
+![Procesmodel: Ophalen actueel verzendadres](../../.gitbook/assets/bpmn/bs-ophalen-verzendadres.svg)
+
+Gegenereerd uit het BPMN-model. Open de afbeelding apart om in te zoomen.
+
 ## Het proces
 
 | Soort | Stap |

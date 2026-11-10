@@ -10,6 +10,12 @@ Bouwblok `bs-224-vaststelling-inkomen`.
 
 Dit bouwblok benoemt geen invoer- en uitvoervariabelen in het procesmodel.
 
+## Het procesmodel
+
+![Procesmodel: BS 224 vaststelling inkomen](../../.gitbook/assets/bpmn/bs-224-vaststelling-inkomen.svg)
+
+Gegenereerd uit het BPMN-model. Open de afbeelding apart om in te zoomen.
+
 ## Het proces
 
 | Soort | Stap |

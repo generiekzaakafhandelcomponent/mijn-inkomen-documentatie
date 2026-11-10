@@ -10,6 +10,12 @@ Bouwblok `bs-211-ophalen-brp-tbv-vaststellen-persoon`.
 
 Dit bouwblok benoemt geen invoer- en uitvoervariabelen in het procesmodel.
 
+## Het procesmodel
+
+![Procesmodel: BS 211 ophalen BRP persoonsgegevens tbv vaststellen persoon](../../.gitbook/assets/bpmn/bs-211-ophalen-brp-tbv-vaststellen-persoon.svg)
+
+Gegenereerd uit het BPMN-model. Open de afbeelding apart om in te zoomen.
+
 ## Het proces
 
 | Soort | Stap |

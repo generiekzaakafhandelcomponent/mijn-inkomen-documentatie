@@ -10,6 +10,12 @@ Bouwblok `bs-behandeling-aanvraag-opnieuw-starten`.
 
 Dit bouwblok benoemt geen invoer- en uitvoervariabelen in het procesmodel.
 
+## Het procesmodel
+
+![Procesmodel: BS Behandeling aanvraag opnieuw starten](../../.gitbook/assets/bpmn/bs-behandeling-aanvraag-opnieuw-starten.svg)
+
+Gegenereerd uit het BPMN-model. Open de afbeelding apart om in te zoomen.
+
 ## Het proces
 
 | Soort | Stap |

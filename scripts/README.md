@@ -41,6 +41,8 @@ afbeeldingen worden niet gedekt door de privacycontrole in
 
 ## generate-business-services.py
 
+Draai eerst `render-bpmn.mjs` als je ook de procesmodellen wilt meenemen.
+
 Genereert een naslagpagina per business service in
 `functionaliteit/business-services/`, uit de bouwblokken van de backend.
 
@@ -66,3 +68,22 @@ als bestandsverwijzing behandeld en de link loopt dood op GitHub.
 Draai dit opnieuw na een wijziging in de bouwblokken. De pagina's zijn
 volledig gegenereerd — handmatige aanpassingen gaan bij de volgende run
 verloren.
+
+## render-bpmn.mjs
+
+Rendert het BPMN-model van elke business service naar SVG in
+`.gitbook/assets/bpmn/`.
+
+```bash
+npm install bpmn-js playwright
+node scripts/render-bpmn.mjs [pad-naar-backend]
+```
+
+De modellen worden met **bpmn-js** in een headless browser getekend en als
+SVG weggeschreven — schaalbaar, doorzoekbaar en klein. Er wordt een witte
+achtergrond onder gezet, anders is het zwarte lijnwerk onleesbaar in het
+donkere thema van GitBook.
+
+Draai dit vóór `generate-business-services.py`: die zoekt per bouwblok of
+er een SVG klaarstaat en bedt hem dan in. Ontbreekt het diagram, dan slaat
+de pagina die sectie gewoon over.

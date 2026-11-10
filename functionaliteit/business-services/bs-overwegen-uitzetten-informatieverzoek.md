@@ -10,6 +10,12 @@ Bouwblok `bs-overwegen-uitzetten-informatieverzoek`.
 
 Dit bouwblok benoemt geen invoer- en uitvoervariabelen in het procesmodel.
 
+## Het procesmodel
+
+![Procesmodel: BS Overwegen uitzetten informatieverzoek](../../.gitbook/assets/bpmn/bs-overwegen-uitzetten-informatieverzoek.svg)
+
+Gegenereerd uit het BPMN-model. Open de afbeelding apart om in te zoomen.
+
 ## Het proces
 
 | Soort | Stap |

@@ -10,6 +10,12 @@ Bouwblok `bs-opvoeren-dienst-in-socrates`.
 
 Dit bouwblok benoemt geen invoer- en uitvoervariabelen in het procesmodel.
 
+## Het procesmodel
+
+![Procesmodel: BS opvoeren dienst in Socrates](../../.gitbook/assets/bpmn/bs-opvoeren-dienst-in-socrates.svg)
+
+Gegenereerd uit het BPMN-model. Open de afbeelding apart om in te zoomen.
+
 ## Het proces
 
 | Soort | Stap |

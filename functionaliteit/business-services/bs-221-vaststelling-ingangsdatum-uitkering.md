@@ -42,6 +42,12 @@ Bouwblok `bs-221-vaststelling-ingangsdatum-uitkering`.
 * `datumVaststellingIngangsdatumUitkering`
 * `toelichtingVaststellingIngangsdatumConsulent`
 
+## Het procesmodel
+
+![Procesmodel: BS 221 Vaststelling Ingangdatum](../../.gitbook/assets/bpmn/bs-221-vaststelling-ingangsdatum-uitkering.svg)
+
+Gegenereerd uit het BPMN-model. Open de afbeelding apart om in te zoomen.
+
 ## Het proces
 
 | Soort | Stap |

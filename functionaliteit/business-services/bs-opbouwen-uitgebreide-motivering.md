@@ -10,6 +10,12 @@ Bouwblok `bs-opbouwen-uitgebreide-motivering`.
 
 Dit bouwblok benoemt geen invoer- en uitvoervariabelen in het procesmodel.
 
+## Het procesmodel
+
+![Procesmodel: BS opbouwen uitgebreide motivering](../../.gitbook/assets/bpmn/bs-opbouwen-uitgebreide-motivering.svg)
+
+Gegenereerd uit het BPMN-model. Open de afbeelding apart om in te zoomen.
+
 ## Het proces
 
 | Soort | Stap |

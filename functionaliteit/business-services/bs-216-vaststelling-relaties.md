@@ -10,6 +10,12 @@ Bouwblok `bs-216-vaststelling-relaties`.
 
 Dit bouwblok benoemt geen invoer- en uitvoervariabelen in het procesmodel.
 
+## Het procesmodel
+
+![Procesmodel: BS 216 Vaststelling Relaties](../../.gitbook/assets/bpmn/bs-216-vaststelling-relaties.svg)
+
+Gegenereerd uit het BPMN-model. Open de afbeelding apart om in te zoomen.
+
 ## Het proces
 
 | Soort | Stap |

@@ -13,6 +13,12 @@ Bouwblok `bs-ophalen-brongegevens`.
 * `ophalenRdwEnKadasterInfo`
 * `bsn`
 
+## Het procesmodel
+
+![Procesmodel: BS ophalen brongegevens](../../.gitbook/assets/bpmn/bs-ophalen-brongegevens.svg)
+
+Gegenereerd uit het BPMN-model. Open de afbeelding apart om in te zoomen.
+
 ## Het proces
 
 | Soort | Stap |

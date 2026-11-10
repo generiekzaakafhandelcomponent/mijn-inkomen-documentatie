@@ -10,6 +10,12 @@ Bouwblok `bs-genereren-rapportage`.
 
 Dit bouwblok benoemt geen invoer- en uitvoervariabelen in het procesmodel.
 
+## Het procesmodel
+
+![Procesmodel: BS genereren rapportage](../../.gitbook/assets/bpmn/bs-genereren-rapportage.svg)
+
+Gegenereerd uit het BPMN-model. Open de afbeelding apart om in te zoomen.
+
 ## Het proces
 
 | Soort | Stap |

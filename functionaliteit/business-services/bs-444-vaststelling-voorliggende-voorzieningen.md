@@ -27,6 +27,12 @@ Bouwblok `bs-444-vaststelling-voorliggende-voorzieningen`.
 * `brontype = 2 (Professional)`
 * `vastleggingsdatum = sysdate`
 
+## Het procesmodel
+
+![Procesmodel: BS 444 vaststelling voorliggende voorzieningen](../../.gitbook/assets/bpmn/bs-444-vaststelling-voorliggende-voorzieningen.svg)
+
+Gegenereerd uit het BPMN-model. Open de afbeelding apart om in te zoomen.
+
 ## Het proces
 
 | Soort | Stap |

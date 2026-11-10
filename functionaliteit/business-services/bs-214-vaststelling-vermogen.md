@@ -10,6 +10,12 @@ Bouwblok `bs-214-vaststelling-vermogen`.
 
 Dit bouwblok benoemt geen invoer- en uitvoervariabelen in het procesmodel.
 
+## Het procesmodel
+
+![Procesmodel: BS 214 vaststelling vermogen](../../.gitbook/assets/bpmn/bs-214-vaststelling-vermogen.svg)
+
+Gegenereerd uit het BPMN-model. Open de afbeelding apart om in te zoomen.
+
 ## Het proces
 
 | Soort | Stap |

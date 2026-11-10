@@ -28,6 +28,12 @@ Bouwblok `bs-217-vaststelling-verblijfadres`.
 * `vastgesteldVerblijfadres`
 * `toelichtingConsulent`
 
+## Het procesmodel
+
+![Procesmodel: BS 217 vaststelling verblijfadres](../../.gitbook/assets/bpmn/bs-217-vaststelling-verblijfadres.svg)
+
+Gegenereerd uit het BPMN-model. Open de afbeelding apart om in te zoomen.
+
 ## Het proces
 
 | Soort | Stap |

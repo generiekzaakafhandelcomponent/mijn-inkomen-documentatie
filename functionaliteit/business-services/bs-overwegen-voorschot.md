@@ -10,6 +10,12 @@ Bouwblok `bs-overwegen-voorschot`.
 
 Dit bouwblok benoemt geen invoer- en uitvoervariabelen in het procesmodel.
 
+## Het procesmodel
+
+![Procesmodel: BS Overwegen voorschot](../../.gitbook/assets/bpmn/bs-overwegen-voorschot.svg)
+
+Gegenereerd uit het BPMN-model. Open de afbeelding apart om in te zoomen.
+
 ## Het proces
 
 | Soort | Stap |

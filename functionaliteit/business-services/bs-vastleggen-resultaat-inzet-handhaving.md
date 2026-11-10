@@ -10,6 +10,12 @@ Bouwblok `bs-vastleggen-resultaat-inzet-handhaving`.
 
 Dit bouwblok benoemt geen invoer- en uitvoervariabelen in het procesmodel.
 
+## Het procesmodel
+
+![Procesmodel: BS vastleggen resultaat inzet handhaving](../../.gitbook/assets/bpmn/bs-vastleggen-resultaat-inzet-handhaving.svg)
+
+Gegenereerd uit het BPMN-model. Open de afbeelding apart om in te zoomen.
+
 ## Het proces
 
 | Soort | Stap |

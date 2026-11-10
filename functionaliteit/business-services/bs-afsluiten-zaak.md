@@ -10,6 +10,12 @@ Bouwblok `bs-afsluiten-zaak`.
 
 Dit bouwblok benoemt geen invoer- en uitvoervariabelen in het procesmodel.
 
+## Het procesmodel
+
+![Procesmodel: BS Afsluiten zaak](../../.gitbook/assets/bpmn/bs-afsluiten-zaak.svg)
+
+Gegenereerd uit het BPMN-model. Open de afbeelding apart om in te zoomen.
+
 ## Het proces
 
 | Soort | Stap |

@@ -26,6 +26,12 @@ Bouwblok `bs-213-vaststelling-verblijfstitel`.
 * `rechtOpBijstand`
 * `toelichtingConsulent`
 
+## Het procesmodel
+
+![Procesmodel: BS 213 vaststelling verblijfstitel](../../.gitbook/assets/bpmn/bs-213-vaststelling-verblijfstitel.svg)
+
+Gegenereerd uit het BPMN-model. Open de afbeelding apart om in te zoomen.
+
 ## Het proces
 
 | Soort | Stap |
