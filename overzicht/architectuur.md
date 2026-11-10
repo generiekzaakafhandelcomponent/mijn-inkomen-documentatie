@@ -92,7 +92,7 @@ De BPMN-modellen zijn bewust in drie lagen verdeeld. Dat maakt hergebruik tussen
 
 ```mermaid
 flowchart TD
-    A["<b>Laag 1 — Zaakproces</b><br/>ab-afhandelen-aanvraag-dcm<br/>ioaw-afhandelen-aanvraag-dcm<br/><i>Eén per regeling. Bewaakt de zaak van begin tot eind.</i>"]
+    A["<b>Laag 1 — Zaakproces</b><br/>Algemene bijstand aanvraag<br/>IOAW aanvraag<br/><i>Eén per regeling. Bewaakt de zaak van begin tot eind.</i>"]
     B["<b>Laag 2 — Business service bouwblok (BSB)</b><br/>bsb-214-vaststelling-vermogen, bsb-224-…<br/><i>Omhulsel: statusbewaking, annulering, gebeurtenis melden.</i>"]
     C["<b>Laag 3 — Business service (BS)</b><br/>bs-214-vaststelling-vermogen, bs-224-…<br/><i>Het inhoudelijke werk: formulieren, regels, bronraadpleging.</i>"]
     D["<b>Generieke processen</b><br/>informatieverzoek · brongegevens ophalen ·<br/>status bijwerken · brief genereren<br/><i>Herbruikbaar over alle regelingen heen.</i>"]

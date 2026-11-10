@@ -58,8 +58,10 @@ Deze services stellen de feiten vast waarop het recht wordt beoordeeld. Klik doo
 | **224b** | [Vaststelling gezamenlijk inkomen](business-services/bs-224b-vaststellen-gezamenlijk-inkomen.md) | Het inkomen van aanvrager en partner samen. |
 | **444** | [Vaststelling voorliggende voorzieningen](business-services/bs-444-vaststelling-voorliggende-voorzieningen.md) | Bestaat er een andere regeling die vóór de bijstand gaat? |
 
-{% hint style="info" %}
-**BS 442 — vaststelling identiteit — bestaat niet meer.** Die service zat in versie 12 en is in v13 vervallen. Kom je hem nog tegen in oudere ontwerpdocumenten, dan gaat dat over de vorige versie.
+{% hint style="warning" %}
+**BS 442 — vaststelling identiteit — is leeg.** De regie start het bouwblok nog wel, voor aanvrager en partner, maar er zit geen business service onder: het procesmodel gaat rechtstreeks van start naar einde. Er gebeurt dus niets.
+
+Je vindt daarom geen eigen pagina voor BS 442 in deze lijst. Houd er rekening mee dat ontwerpdocumenten die de identiteitsvaststelling beschrijven, niet overeenkomen met wat de applicatie doet.
 {% endhint %}
 
 ### Procesondersteunend

@@ -70,3 +70,15 @@ description: De termen die in Mijn Inkomen en in deze documentatie worden gebrui
 | **Printstraat** | De centrale voorziening waaraan gegenereerde brieven worden aangeboden om afgedrukt en verzonden te worden. |
 | **Plugin** | Herbruikbare koppeling naar een extern systeem, configureerbaar per omgeving. |
 | **Process link** | De verbinding tussen een processtap en wat daar moet gebeuren: een formulier tonen of een plugin aanroepen. |
+
+## Zaakprocessen
+
+De configuratie gebruikt technische procesnamen. Dit zijn de functionele equivalenten:
+
+| Functionele naam | Proces in de configuratie |
+| --- | --- |
+| Algemene bijstand aanvraag | `ab-afhandelen-aanvraag-dcm` |
+| IOAW aanvraag | `ioaw-afhandelen-aanvraag-dcm` |
+| Basisafhandelproces | `basisafhandelproces-afhandelen-aanvraag` |
+
+Het **Basisafhandelproces** is het regelingonafhankelijke afhandelproces dat met v13 is bijgekomen; een deel van de bouwblokken is zowel vanuit de twee regelingen als vanuit dit proces bereikbaar.

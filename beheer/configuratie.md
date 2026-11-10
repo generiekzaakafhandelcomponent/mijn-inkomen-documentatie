@@ -96,7 +96,7 @@ Een processtap in BPMN zegt alleen *dát* er iets moet gebeuren. Wát er gebeurt
 
 Deze scheiding maakt het mogelijk om een formulier aan te passen zonder het procesmodel aan te raken, en andersom.
 
-Daarnaast legt `process-document-link` vast welke processen een zaak mogen aanmaken en welke de behandelaar zelf mag starten. Alleen `ab-afhandelen-aanvraag-dcm` en `ioaw-afhandelen-aanvraag-dcm` mogen een zaak initialiseren; de startprocessen voor behandelaarsacties zijn door de gebruiker startbaar.
+Daarnaast legt `process-document-link` vast welke processen een zaak mogen aanmaken en welke de behandelaar zelf mag starten. Alleen de twee zaakprocessen — *Algemene bijstand aanvraag* (`ab-afhandelen-aanvraag-dcm`) en *IOAW aanvraag* (`ioaw-afhandelen-aanvraag-dcm`) — mogen een zaak initialiseren; de startprocessen voor behandelaarsacties zijn door de gebruiker startbaar.
 
 ## Omgevingsvariabelen
 

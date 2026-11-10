@@ -173,7 +173,7 @@ Deze rechten zijn niet op dossiertype afgebakend, maar op de rol zelf: een rol z
 | Brede intake | | | | |
 | Raadpleger basis | | | | |
 
-Het recht om een proces te starten is beperkt tot een vaste set: `ab-afhandelen-aanvraag-dcm`, `ab-start-buiten-behandeling-stellen`, `ab-start-intrekken-aanvraag` en `ab-start-behandeling-gehele-aanvraag-opnieuw`.
+Het recht om een proces te starten is beperkt tot een vaste set: het zaakproces *Algemene bijstand aanvraag* (`ab-afhandelen-aanvraag-dcm`) plus de startprocessen `ab-start-buiten-behandeling-stellen`, `ab-start-intrekken-aanvraag` en `ab-start-behandeling-gehele-aanvraag-opnieuw`.
 
 {% hint style="info" %}
 **Alleen de drie uitvoerende rollen kunnen werk afronden.** Management en Functioneel beheer zien taken en mogen processen starten, maar kunnen een taak niet zelf afmaken. Dat houdt besluitvorming bij de behandelaars.

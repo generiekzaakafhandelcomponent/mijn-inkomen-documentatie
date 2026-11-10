@@ -20,7 +20,7 @@ flowchart LR
     I -.-> G
 ```
 
-Het bijbehorende hoofdproces heet `ab-afhandelen-aanvraag-dcm` (Algemene bijstand) of `ioaw-afhandelen-aanvraag-dcm` (IOAW). Dat proces doet zelf opvallend weinig: het initialiseert het dossier, zet de zaakstatus, start het regieproces en bewaakt de afhandeltermijn. Al het inhoudelijke werk gebeurt in de business services die de regie aanstuurt.
+Het bijbehorende hoofdproces is **Algemene bijstand aanvraag** of **IOAW aanvraag** — in de configuratie `ab-afhandelen-aanvraag-dcm` en `ioaw-afhandelen-aanvraag-dcm`. Dat proces doet zelf opvallend weinig: het initialiseert het dossier, zet de zaakstatus, start het regieproces en bewaakt de afhandeltermijn. Al het inhoudelijke werk gebeurt in de business services die de regie aanstuurt.
 
 ## Stap 1 — Binnenkomst
 
@@ -87,11 +87,10 @@ Dit is het zwaartepunt van de behandeling. Zodra de vorige fase klaar is, zet de
 * `bsb-overwegen-inzetten-handhaving`
 * `bsb-overwegen-uitzetten-informatieverzoek`
 * `bsb-213-vaststelling-verblijfstitel-aanvrager`
-* `bsb-218-vaststelling-uitsluitingsgronden-aanvrager`
 * `bsb-442-vaststelling-identiteit-aanvrager`
 * `bsb-224-vaststelling-inkomen-aanvrager`
 * `bsb-214-vaststelling-vermogen`
-* `bsb-444-vaststelling-voorliggende-voorzieningen`
+* `bsb-444-vaststelling-voorliggende-voorzieningen-aanvrager`
 * `bsb-221-vaststelling-ingangsdatum`
 {% endtab %}
 
@@ -99,16 +98,14 @@ Dit is het zwaartepunt van de behandeling. Zodra de vorige fase klaar is, zet de
 * `bsb-overwegen-inzetten-handhaving`
 * `bsb-overwegen-uitzetten-informatieverzoek`
 * `bsb-213-vaststelling-verblijfstitel-aanvrager`
-* `bsb-218-vaststelling-uitsluitingsgronden-aanvrager`
 * `bsb-442-vaststelling-identiteit-aanvrager`
-* `bsb-444-vaststelling-voorliggende-voorzieningen`
+* `bsb-444-vaststelling-voorliggende-voorzieningen-aanvrager`
 * `bsb-221-vaststelling-ingangsdatum`
-* `bsb-212-vaststelling-bijstandsvorm`
 {% endtab %}
 {% endtabs %}
 
 {% hint style="warning" %}
-**Het verschil tussen beide regelingen zit hier.** Bij IOAW ontbreken de vaststellingen van vermogen (BS 214) en inkomen (BS 224): voor IOAW is vermogen niet relevant. In ruil daarvoor start de bijstandsvorm (BS 212) direct mee, terwijl die bij Algemene bijstand pas start zodra het vermogen is vastgesteld.
+**Het verschil tussen beide regelingen zit hier.** Bij IOAW ontbreken de vaststellingen van vermogen (BS 214) en inkomen (BS 224): voor IOAW is vermogen niet relevant. De bijstandsvorm (BS 212) start bij beide regelingen pas later, zodra het vermogen is vastgesteld.
 {% endhint %}
 
 Tijdens deze fase komen er vanzelf meer bouwblokken bij, telkens getriggerd door een gebeurtenis:

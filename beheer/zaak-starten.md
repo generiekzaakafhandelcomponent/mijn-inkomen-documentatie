@@ -33,7 +33,7 @@ Stap voor stap:
 1. **De inwoner dient het formulier in.** De formulierenengine schrijft het resultaat weg als **object** in de Objects API, van het objecttype *Verzoek ALO*.
 2. **Open Notificaties meldt dat** er een object is aangemaakt.
 3. **De `verzoek`-plugin** in Mijn Inkomen vangt die notificatie op. Aan de hand van het veld `type` in het object bepaalt hij om welke regeling het gaat.
-4. **Het proces `create-zaakdossier` start.** Dat maakt de zaak aan in Open Zaak, legt de indiener vast als *Initiator*, en start het hoofdproces — `ab-afhandelen-aanvraag-dcm` voor Algemene bijstand.
+4. **Het proces `create-zaakdossier` start.** Dat maakt de zaak aan in Open Zaak, legt de indiener vast als *Initiator*, en start het hoofdproces — *Algemene bijstand aanvraag* (`ab-afhandelen-aanvraag-dcm`) of *IOAW aanvraag* (`ioaw-afhandelen-aanvraag-dcm`).
 5. **Het dossier wordt geïnitialiseerd**: ontvangstdatum, zaaknummer en de gemapte aanvraaggegevens komen in het zaakdossier te staan.
 
 {% hint style="info" %}
