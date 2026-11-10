@@ -11,6 +11,7 @@
 
 * [Aan de slag](handleiding/aan-de-slag.md)
 * [Werken met een dossier](handleiding/werken-met-een-dossier.md)
+* [Een informatieverzoek uitzetten](handleiding/informatieverzoek-uitzetten.md)
 
 ## Functionaliteit
 
