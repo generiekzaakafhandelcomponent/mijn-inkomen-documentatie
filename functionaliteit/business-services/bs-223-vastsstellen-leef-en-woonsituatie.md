@@ -40,9 +40,9 @@ Bouwblok `bs-223-vastsstellen-leef-en-woonsituatie`.
 | | |
 | --- | --- |
 | **Direct aangeroepen door** | `bsb-223-vaststelling-leef-en-woonsituatie` |
-| **Binnen zaakproces** | `ab-afhandelen-aanvraag-dcm`, `ioaw-afhandelen-aanvraag-dcm` |
+| **Binnen zaakproces** | Algemene bijstand aanvraag, IOAW aanvraag |
 
-De volledige keten:
+De volledige keten, met de technische procesnamen:
 
 * `bs-223-vastsstellen-leef-en-woonsituatie` ← `bsb-223-vaststelling-leef-en-woonsituatie` ← `uitvoeren-business-services` ← `ab-afhandelen-aanvraag-dcm`
 * `bs-223-vastsstellen-leef-en-woonsituatie` ← `bsb-223-vaststelling-leef-en-woonsituatie` ← `uitvoeren-business-services` ← `ioaw-afhandelen-aanvraag-dcm`

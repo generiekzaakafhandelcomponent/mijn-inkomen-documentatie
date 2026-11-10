@@ -31,9 +31,9 @@ Bouwblok `bs-213-vaststelling-verblijfstitel`.
 | | |
 | --- | --- |
 | **Direct aangeroepen door** | `bsb-213-vaststelling-verblijfstitel-aanvrager`, `bsb-213-vaststelling-verblijfstitel-partner` |
-| **Binnen zaakproces** | `ab-afhandelen-aanvraag-dcm`, `ioaw-afhandelen-aanvraag-dcm` |
+| **Binnen zaakproces** | Algemene bijstand aanvraag, IOAW aanvraag |
 
-De volledige keten:
+De volledige keten, met de technische procesnamen:
 
 * `bs-213-vaststelling-verblijfstitel` ← `bsb-213-vaststelling-verblijfstitel-aanvrager` ← `uitvoeren-business-services` ← `ab-afhandelen-aanvraag-dcm`
 * `bs-213-vaststelling-verblijfstitel` ← `bsb-213-vaststelling-verblijfstitel-aanvrager` ← `uitvoeren-business-services` ← `ioaw-afhandelen-aanvraag-dcm`

@@ -15,9 +15,9 @@ Dit bouwblok benoemt geen invoer- en uitvoervariabelen in het procesmodel.
 | | |
 | --- | --- |
 | **Direct aangeroepen door** | `basisafhandelproces-bsb-afsluiten-zaak`, `bsb-afsluiten-zaak` |
-| **Binnen zaakproces** | `ab-afhandelen-aanvraag-dcm`, `basisafhandelproces-afhandelen-aanvraag`, `ioaw-afhandelen-aanvraag-dcm` |
+| **Binnen zaakproces** | Algemene bijstand aanvraag, Basisafhandelproces, IOAW aanvraag |
 
-De volledige keten:
+De volledige keten, met de technische procesnamen:
 
 * `bs-afsluiten-zaak` ← `basisafhandelproces-bsb-afsluiten-zaak` ← `basisafhandelproces-uitvoeren-business-services` ← `basisafhandelproces-behandelen-zaak` ← `basisafhandelproces-afhandelen-aanvraag`
 * `bs-afsluiten-zaak` ← `bsb-afsluiten-zaak` ← `uitvoeren-business-services` ← `ab-afhandelen-aanvraag-dcm`

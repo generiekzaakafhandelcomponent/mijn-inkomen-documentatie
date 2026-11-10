@@ -18,9 +18,9 @@ Bouwblok `bs-ophalen-brongegevens`.
 | | |
 | --- | --- |
 | **Direct aangeroepen door** | `bsb-ophalen-brongegevens-aanvrager`, `bsb-ophalen-brongegevens-partner` |
-| **Binnen zaakproces** | `ab-afhandelen-aanvraag-dcm`, `ioaw-afhandelen-aanvraag-dcm` |
+| **Binnen zaakproces** | Algemene bijstand aanvraag, IOAW aanvraag |
 
-De volledige keten:
+De volledige keten, met de technische procesnamen:
 
 * `bs-ophalen-brongegevens` ← `bsb-ophalen-brongegevens-aanvrager` ← `uitvoeren-business-services` ← `ab-afhandelen-aanvraag-dcm`
 * `bs-ophalen-brongegevens` ← `bsb-ophalen-brongegevens-aanvrager` ← `uitvoeren-business-services` ← `ioaw-afhandelen-aanvraag-dcm`

@@ -64,6 +64,11 @@ Per bouwblok worden gelezen:
   Daarbij wordt het proces-id uit het model gebruikt, niet de mapnaam — die
   twee lopen niet altijd gelijk.
 
+Voor de zaakprocessen toont de pagina een leesbare naam in plaats van het
+technische id. Die namen staan in `PROCES_NAMEN` boven in het script; vul
+die tabel aan als er een zaakproces bij komt, anders valt de pagina terug
+op het id.
+
 Het script werkt ook `SUMMARY.md` bij: de pagina's komen genest onder
 *Business services* te staan. Dat is nodig, want **GitBook publiceert
 alleen wat in SUMMARY.md staat** — een pagina die er niet in staat wordt

@@ -15,9 +15,9 @@ Dit bouwblok benoemt geen invoer- en uitvoervariabelen in het procesmodel.
 | | |
 | --- | --- |
 | **Direct aangeroepen door** | `bsb-genereren-rapportage` |
-| **Binnen zaakproces** | `ab-afhandelen-aanvraag-dcm`, `ioaw-afhandelen-aanvraag-dcm` |
+| **Binnen zaakproces** | Algemene bijstand aanvraag, IOAW aanvraag |
 
-De volledige keten:
+De volledige keten, met de technische procesnamen:
 
 * `bs-genereren-rapportage` ← `bsb-genereren-rapportage` ← `uitvoeren-business-services` ← `ab-afhandelen-aanvraag-dcm`
 * `bs-genereren-rapportage` ← `bsb-genereren-rapportage` ← `uitvoeren-business-services` ← `ioaw-afhandelen-aanvraag-dcm`

@@ -15,9 +15,9 @@ Dit bouwblok benoemt geen invoer- en uitvoervariabelen in het procesmodel.
 | | |
 | --- | --- |
 | **Direct aangeroepen door** | `bsb-vastleggen-wijziging-contactgegevens-aanvrager` |
-| **Binnen zaakproces** | `ab-afhandelen-aanvraag-dcm`, `basisafhandelproces-afhandelen-aanvraag`, `ioaw-afhandelen-aanvraag-dcm` |
+| **Binnen zaakproces** | Algemene bijstand aanvraag, Basisafhandelproces, IOAW aanvraag |
 
-De volledige keten:
+De volledige keten, met de technische procesnamen:
 
 * `bs-vastleggen-wijziging-contactgegevens-aanvrager` ← `bsb-vastleggen-wijziging-contactgegevens-aanvrager` ← `basisafhandelproces-uitvoeren-business-services` ← `basisafhandelproces-behandelen-zaak` ← `basisafhandelproces-afhandelen-aanvraag`
 * `bs-vastleggen-wijziging-contactgegevens-aanvrager` ← `bsb-vastleggen-wijziging-contactgegevens-aanvrager` ← `uitvoeren-business-services` ← `ab-afhandelen-aanvraag-dcm`

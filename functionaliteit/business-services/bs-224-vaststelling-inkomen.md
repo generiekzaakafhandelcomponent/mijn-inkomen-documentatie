@@ -15,9 +15,9 @@ Dit bouwblok benoemt geen invoer- en uitvoervariabelen in het procesmodel.
 | | |
 | --- | --- |
 | **Direct aangeroepen door** | `bsb-224-vaststelling-inkomen-aanvrager`, `bsb-224-vaststelling-inkomen-partner` |
-| **Binnen zaakproces** | `ab-afhandelen-aanvraag-dcm`, `ioaw-afhandelen-aanvraag-dcm` |
+| **Binnen zaakproces** | Algemene bijstand aanvraag, IOAW aanvraag |
 
-De volledige keten:
+De volledige keten, met de technische procesnamen:
 
 * `bs-224-vaststelling-inkomen` ← `bsb-224-vaststelling-inkomen-aanvrager` ← `uitvoeren-business-services` ← `ab-afhandelen-aanvraag-dcm`
 * `bs-224-vaststelling-inkomen` ← `bsb-224-vaststelling-inkomen-aanvrager` ← `uitvoeren-business-services` ← `ioaw-afhandelen-aanvraag-dcm`

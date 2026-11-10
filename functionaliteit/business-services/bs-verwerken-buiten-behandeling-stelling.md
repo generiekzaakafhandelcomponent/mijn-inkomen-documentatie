@@ -15,9 +15,9 @@ Dit bouwblok benoemt geen invoer- en uitvoervariabelen in het procesmodel.
 | | |
 | --- | --- |
 | **Direct aangeroepen door** | `bsb-verwerken-buiten-behandeling-stelling` |
-| **Binnen zaakproces** | `ab-afhandelen-aanvraag-dcm`, `basisafhandelproces-afhandelen-aanvraag`, `ioaw-afhandelen-aanvraag-dcm` |
+| **Binnen zaakproces** | Algemene bijstand aanvraag, Basisafhandelproces, IOAW aanvraag |
 
-De volledige keten:
+De volledige keten, met de technische procesnamen:
 
 * `bs-verwerken-buiten-behandeling-stelling` ← `bsb-verwerken-buiten-behandeling-stelling` ← `basisafhandelproces-uitvoeren-business-services` ← `basisafhandelproces-behandelen-zaak` ← `basisafhandelproces-afhandelen-aanvraag`
 * `bs-verwerken-buiten-behandeling-stelling` ← `bsb-verwerken-buiten-behandeling-stelling` ← `uitvoeren-business-services` ← `ab-afhandelen-aanvraag-dcm`

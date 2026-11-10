@@ -29,9 +29,9 @@ Bouwblok `bs-212-vaststelling-bijstandsvorm`.
 | | |
 | --- | --- |
 | **Direct aangeroepen door** | `bsb-212-vaststelling-bijstandsvorm` |
-| **Binnen zaakproces** | `ab-afhandelen-aanvraag-dcm`, `ioaw-afhandelen-aanvraag-dcm` |
+| **Binnen zaakproces** | Algemene bijstand aanvraag, IOAW aanvraag |
 
-De volledige keten:
+De volledige keten, met de technische procesnamen:
 
 * `bs-212-vaststelling-bijstandsvorm` ← `bsb-212-vaststelling-bijstandsvorm` ← `uitvoeren-business-services` ← `ab-afhandelen-aanvraag-dcm`
 * `bs-212-vaststelling-bijstandsvorm` ← `bsb-212-vaststelling-bijstandsvorm` ← `uitvoeren-business-services` ← `ioaw-afhandelen-aanvraag-dcm`

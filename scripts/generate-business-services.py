@@ -25,6 +25,14 @@ UIT = os.path.join(DOCS, "functionaliteit", "business-services")
 # Alleen de business services; generieke hulpprocessen krijgen geen eigen pagina.
 PREFIX = "bs-"
 
+# Leesbare namen voor de zaakprocessen. De sleutel is het proces-id uit het
+# BPMN-model; staat een proces hier niet in, dan toont de pagina het id.
+PROCES_NAMEN = {
+    "ab-afhandelen-aanvraag-dcm": "Algemene bijstand aanvraag",
+    "ioaw-afhandelen-aanvraag-dcm": "IOAW aanvraag",
+    "basisafhandelproces-afhandelen-aanvraag": "Basisafhandelproces",
+}
+
 TYPE_NL = {
     "userTask": "Gebruikerstaak",
     "serviceTask": "Systeemstap",
@@ -210,10 +218,10 @@ def schrijf_pagina(d):
             r.append("| **Direct aangeroepen door** | " +
                      ", ".join(f"`{x}`" for x in direct) + " |")
             if wortels:
-                r.append("| **Binnen zaakproces** | " +
-                         ", ".join(f"`{x}`" for x in wortels) + " |")
+                leesbaar = sorted({PROCES_NAMEN.get(x, f"`{x}`") for x in wortels})
+                r.append("| **Binnen zaakproces** | " + ", ".join(leesbaar) + " |")
             r.append("")
-            r.append("De volledige keten:")
+            r.append("De volledige keten, met de technische procesnamen:")
             r.append("")
             for k in d["ketens"]:
                 if len(k) > 1:

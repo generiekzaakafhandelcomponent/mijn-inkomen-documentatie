@@ -33,9 +33,9 @@ Bouwblok `bs-218-vaststelling-uitsluitingsgronden`.
 | | |
 | --- | --- |
 | **Direct aangeroepen door** | `bsb-218-vaststelling-uitsluitingsgronden-aanvrager`, `bsb-218-vaststelling-uitsluitingsgronden-partner` |
-| **Binnen zaakproces** | `ab-afhandelen-aanvraag-dcm`, `ioaw-afhandelen-aanvraag-dcm` |
+| **Binnen zaakproces** | Algemene bijstand aanvraag, IOAW aanvraag |
 
-De volledige keten:
+De volledige keten, met de technische procesnamen:
 
 * `bs-218-vaststelling-uitsluitingsgronden` ← `bsb-218-vaststelling-uitsluitingsgronden-aanvrager` ← `uitvoeren-business-services` ← `ab-afhandelen-aanvraag-dcm`
 * `bs-218-vaststelling-uitsluitingsgronden` ← `bsb-218-vaststelling-uitsluitingsgronden-aanvrager` ← `uitvoeren-business-services` ← `ioaw-afhandelen-aanvraag-dcm`

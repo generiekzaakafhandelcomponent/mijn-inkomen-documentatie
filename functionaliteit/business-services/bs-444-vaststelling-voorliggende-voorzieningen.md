@@ -32,9 +32,9 @@ Bouwblok `bs-444-vaststelling-voorliggende-voorzieningen`.
 | | |
 | --- | --- |
 | **Direct aangeroepen door** | `bsb-444-vaststelling-voorliggende-voorzieningen-aanvrager`, `bsb-444-vaststelling-voorliggende-voorzieningen-partner` |
-| **Binnen zaakproces** | `ab-afhandelen-aanvraag-dcm`, `ioaw-afhandelen-aanvraag-dcm` |
+| **Binnen zaakproces** | Algemene bijstand aanvraag, IOAW aanvraag |
 
-De volledige keten:
+De volledige keten, met de technische procesnamen:
 
 * `bs-444-vaststelling-voorliggende-voorzieningen` ← `bsb-444-vaststelling-voorliggende-voorzieningen-aanvrager` ← `uitvoeren-business-services` ← `ab-afhandelen-aanvraag-dcm`
 * `bs-444-vaststelling-voorliggende-voorzieningen` ← `bsb-444-vaststelling-voorliggende-voorzieningen-aanvrager` ← `uitvoeren-business-services` ← `ioaw-afhandelen-aanvraag-dcm`

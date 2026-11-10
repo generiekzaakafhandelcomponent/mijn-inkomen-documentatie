@@ -15,9 +15,9 @@ Dit bouwblok benoemt geen invoer- en uitvoervariabelen in het procesmodel.
 | | |
 | --- | --- |
 | **Direct aangeroepen door** | `bsb-overwegen-inzetten-handhaving` |
-| **Binnen zaakproces** | `ab-afhandelen-aanvraag-dcm`, `ioaw-afhandelen-aanvraag-dcm` |
+| **Binnen zaakproces** | Algemene bijstand aanvraag, IOAW aanvraag |
 
-De volledige keten:
+De volledige keten, met de technische procesnamen:
 
 * `bs-overwegen-inzetten-handhaving` ← `bsb-overwegen-inzetten-handhaving` ← `uitvoeren-business-services` ← `ab-afhandelen-aanvraag-dcm`
 * `bs-overwegen-inzetten-handhaving` ← `bsb-overwegen-inzetten-handhaving` ← `uitvoeren-business-services` ← `ioaw-afhandelen-aanvraag-dcm`

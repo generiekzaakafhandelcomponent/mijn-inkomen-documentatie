@@ -33,9 +33,9 @@ Bouwblok `bs-217-vaststelling-verblijfadres`.
 | | |
 | --- | --- |
 | **Direct aangeroepen door** | `bsb-217-vaststelling-verblijfadres-aanvrager`, `bsb-217-vaststelling-verblijfadres-partner` |
-| **Binnen zaakproces** | `ab-afhandelen-aanvraag-dcm`, `basisafhandelproces-afhandelen-aanvraag`, `ioaw-afhandelen-aanvraag-dcm` |
+| **Binnen zaakproces** | Algemene bijstand aanvraag, Basisafhandelproces, IOAW aanvraag |
 
-De volledige keten:
+De volledige keten, met de technische procesnamen:
 
 * `bs-217-vaststelling-verblijfadres` ← `bsb-217-vaststelling-verblijfadres-aanvrager` ← `basisafhandelproces-uitvoeren-business-services` ← `basisafhandelproces-behandelen-zaak` ← `basisafhandelproces-afhandelen-aanvraag`
 * `bs-217-vaststelling-verblijfadres` ← `bsb-217-vaststelling-verblijfadres-aanvrager` ← `uitvoeren-business-services` ← `ab-afhandelen-aanvraag-dcm`

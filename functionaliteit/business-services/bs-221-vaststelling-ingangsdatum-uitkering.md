@@ -47,9 +47,9 @@ Bouwblok `bs-221-vaststelling-ingangsdatum-uitkering`.
 | | |
 | --- | --- |
 | **Direct aangeroepen door** | `bsb-221-vaststelling-ingangsdatum` |
-| **Binnen zaakproces** | `ab-afhandelen-aanvraag-dcm`, `ioaw-afhandelen-aanvraag-dcm` |
+| **Binnen zaakproces** | Algemene bijstand aanvraag, IOAW aanvraag |
 
-De volledige keten:
+De volledige keten, met de technische procesnamen:
 
 * `bs-221-vaststelling-ingangsdatum-uitkering` ← `bsb-221-vaststelling-ingangsdatum` ← `uitvoeren-business-services` ← `ab-afhandelen-aanvraag-dcm`
 * `bs-221-vaststelling-ingangsdatum-uitkering` ← `bsb-221-vaststelling-ingangsdatum` ← `uitvoeren-business-services` ← `ioaw-afhandelen-aanvraag-dcm`
