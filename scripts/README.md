@@ -1,5 +1,22 @@
 # Scripts
 
+Zie [`../ONDERHOUD.md`](../ONDERHOUD.md) voor het grotere plaatje: hoe de site
+in elkaar zit, welke pagina's gegenereerd zijn en in welke volgorde je alles
+opnieuw opbouwt.
+
+## check-docs.py
+
+Controleert de documentatie op structuurfouten: interne links, ankers,
+ontbrekende afbeeldingen, niet-gesloten GitBook-blokken, oneven codefences en
+pagina's die niet in `SUMMARY.md` staan.
+
+```bash
+python3 scripts/check-docs.py
+```
+
+Exitcode 1 bij bevindingen. Draai dit samen met de privacycontrole vóór elke
+push.
+
 ## capture-screenshots.mjs
 
 Maakt de schermafbeeldingen voor de [handleiding](../handleiding/aan-de-slag.md) opnieuw.
