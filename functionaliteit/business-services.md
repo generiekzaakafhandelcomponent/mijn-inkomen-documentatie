@@ -39,24 +39,28 @@ Deze statussen zijn wat de controle *"is de fase vaststellen afgerond?"* uitlees
 
 ### Vaststellingen
 
-Deze services stellen de feiten vast waarop het recht wordt beoordeeld.
+Deze services stellen de feiten vast waarop het recht wordt beoordeeld. Klik door voor het procesverloop, de invoer en de uitvoer per service.
 
 | Nr. | Business service | Wat er wordt vastgesteld |
 | --- | --- | --- |
-| **211** | Vaststelling persoon | Wie is de aanvrager, en wie de partner. Basis voor alle verdere stappen. |
-| **212** | Vaststelling bijstandsvorm | In welke vorm de bijstand wordt verleend. |
-| **213** | Vaststelling verblijfstitel | De verblijfsstatus van aanvrager en partner. |
-| **214** | Vaststelling vermogen | Bankrekeningen, bezittingen, schulden en eigen woning. *Alleen Algemene bijstand.* |
-| **216** | Vaststelling relaties | Relaties van aanvrager en partner die van invloed zijn op het recht. |
-| **217** | Vaststelling verblijfadres | Waar aanvrager en partner feitelijk verblijven. |
-| **218** | Vaststelling uitsluitingsgronden | Omstandigheden die recht uitsluiten, zoals detentie of verblijf in het buitenland. |
-| **219** | Vaststelling norm | Het maandbedrag waar de aanvrager recht op heeft. |
-| **221** | Vaststelling ingangsdatum | Vanaf wanneer de uitkering ingaat. |
-| **223** | Vaststelling leef- en woonsituatie | Alleenstaand, samenwonend, medebewoners, woonvorm. |
-| **224** | Vaststelling inkomen | Inkomsten uit arbeid, uitkering, pensioen, studiefinanciering en onderneming. *Alleen Algemene bijstand.* |
-| **224b** | Vaststelling gezamenlijk inkomen | Het inkomen van aanvrager en partner samen. |
-| **442** | Vaststelling identiteit | Verificatie van de identiteit. |
-| **444** | Vaststelling voorliggende voorzieningen | Bestaat er een andere regeling die vóór de bijstand gaat? |
+| **211** | [Vaststelling persoon](business-services/bs-211-vaststelling-persoon.md) | Wie is de aanvrager, en wie de partner. Basis voor alle verdere stappen. |
+| **212** | [Vaststelling bijstandsvorm](business-services/bs-212-vaststelling-bijstandsvorm.md) | In welke vorm de bijstand wordt verleend. |
+| **213** | [Vaststelling verblijfstitel](business-services/bs-213-vaststelling-verblijfstitel.md) | De verblijfsstatus van aanvrager en partner. |
+| **214** | [Vaststelling vermogen](business-services/bs-214-vaststelling-vermogen.md) | Bankrekeningen, bezittingen, schulden en eigen woning. *Alleen Algemene bijstand.* |
+| **216** | [Vaststelling relaties](business-services/bs-216-vaststelling-relaties.md) | Relaties van aanvrager en partner die van invloed zijn op het recht. |
+| **217** | [Vaststelling verblijfadres](business-services/bs-217-vaststelling-verblijfadres.md) | Waar aanvrager en partner feitelijk verblijven. |
+| **218** | [Vaststelling uitsluitingsgronden](business-services/bs-218-vaststelling-uitsluitingsgronden.md) | Omstandigheden die recht uitsluiten, zoals detentie of verblijf in het buitenland. |
+| **219** | [Vaststelling norm](business-services/bs-219-vaststelling-norm.md) | Het maandbedrag waar de aanvrager recht op heeft. |
+| **219** | [Bepalen individueel kostendelersnormbedrag](business-services/bs-219-bepalen-individueel-kostendelersnormbedrag.md) | Deelberekening binnen de normvaststelling. |
+| **221** | [Vaststelling ingangsdatum](business-services/bs-221-vaststelling-ingangsdatum-uitkering.md) | Vanaf wanneer de uitkering ingaat. |
+| **223** | [Vaststelling leef- en woonsituatie](business-services/bs-223-vastsstellen-leef-en-woonsituatie.md) | Alleenstaand, samenwonend, medebewoners, woonvorm. |
+| **224** | [Vaststelling inkomen](business-services/bs-224-vaststelling-inkomen.md) | Inkomsten uit arbeid, uitkering, pensioen, studiefinanciering en onderneming. *Alleen Algemene bijstand.* |
+| **224b** | [Vaststelling gezamenlijk inkomen](business-services/bs-224b-vaststellen-gezamenlijk-inkomen.md) | Het inkomen van aanvrager en partner samen. |
+| **444** | [Vaststelling voorliggende voorzieningen](business-services/bs-444-vaststelling-voorliggende-voorzieningen.md) | Bestaat er een andere regeling die vóór de bijstand gaat? |
+
+{% hint style="info" %}
+**BS 442 — vaststelling identiteit — bestaat niet meer.** Die service zat in versie 12 en is in v13 vervallen. Kom je hem nog tegen in oudere ontwerpdocumenten, dan gaat dat over de vorige versie.
+{% endhint %}
 
 ### Procesondersteunend
 
@@ -64,22 +68,28 @@ Deze services voeren het proces uit in plaats van feiten vast te stellen.
 
 | Business service | Functie |
 | --- | --- |
-| Opvoeren dienst in Socrates | Meldt de aanvraag aan bij de uitkeringsadministratie. |
-| Ophalen brongegevens | Haalt gegevens op bij de landelijke bronnen. |
-| Overwegen uitzetten informatieverzoek | Beoordeelt of er aanvullende stukken nodig zijn. |
-| Uitzetten en opvolgen informatieverzoek | Zet het verzoek uit, bewaakt de deadline, beoordeelt de reactie. |
-| Overwegen inzetten handhaving | Beoordeelt of er aanleiding is voor een poortonderzoek. |
-| Vastleggen resultaat inzet handhaving | Verwerkt de uitkomst van dat onderzoek. |
-| Overwegen voorschot | Beoordeelt of een voorschot nodig is. |
-| Vastleggen besluit | Legt de beslissing op de aanvraag vast. |
-| Verwerken intrekking | Verwerkt een intrekking door de inwoner. |
-| Verwerken buiten behandeling stelling | Verwerkt een buiten-behandelingstelling. |
-| Vastleggen wijziging contactgegevens | Verwerkt gewijzigde contactgegevens van de aanvrager. |
-| Behandeling aanvraag opnieuw starten | Zet de volledige behandeling terug naar de vaststellingsfase. |
-| Lopende bezwaartermijn | Bewaakt de bezwaartermijn na het besluit. |
-| Afsluiten zaak | Rondt de zaak administratief af. |
-| Annuleren portaaltaak | Trekt een openstaande taak bij de inwoner in. |
-| Aanpassen status | Werkt de interne status van de zaak bij. |
+| [Opvoeren dienst in Socrates](business-services/bs-opvoeren-dienst-in-socrates.md) | Meldt de aanvraag aan bij de uitkeringsadministratie. |
+| [Ophalen brongegevens](business-services/bs-ophalen-brongegevens.md) | Haalt gegevens op bij de landelijke bronnen. |
+| [Ophalen BRP t.b.v. vaststellen persoon](business-services/bs-211-ophalen-brp-tbv-vaststellen-persoon.md) | Haalt de BRP-gegevens op die BS 211 nodig heeft. |
+| [Ophalen bewoning adres](business-services/bs-ophalen-bewoning-adres.md) | Haalt op wie er op het adres staan ingeschreven. |
+| [Ophalen verzendadres](business-services/bs-ophalen-verzendadres.md) | Bepaalt waar post naartoe moet. |
+| [Overwegen uitzetten informatieverzoek](business-services/bs-overwegen-uitzetten-informatieverzoek.md) | Beoordeelt of er aanvullende stukken nodig zijn. |
+| [Uitzetten en opvolgen informatieverzoek](business-services/bs-uitzetten-en-opvolgen-informatieverzoek.md) | Zet het verzoek uit, bewaakt de deadline, beoordeelt de reactie. |
+| [Overwegen inzetten handhaving](business-services/bs-overwegen-inzetten-handhaving.md) | Beoordeelt of er aanleiding is voor een poortonderzoek. |
+| [Vastleggen resultaat inzet handhaving](business-services/bs-vastleggen-resultaat-inzet-handhaving.md) | Verwerkt de uitkomst van dat onderzoek. |
+| [Overwegen voorschot](business-services/bs-overwegen-voorschot.md) | Beoordeelt of een voorschot nodig is. |
+| [Opbouwen uitgebreide motivering](business-services/bs-opbouwen-uitgebreide-motivering.md) | Bouwt de motivering op die onder het besluit ligt. |
+| [Vastleggen besluit](business-services/bs-vastleggen-besluit.md) | Legt de beslissing op de aanvraag vast. |
+| [Verwerken intrekking](business-services/bs-verwerken-intrekking.md) | Verwerkt een intrekking door de inwoner. |
+| [Verwerken buiten behandeling stelling](business-services/bs-verwerken-buiten-behandeling-stelling.md) | Verwerkt een buiten-behandelingstelling. |
+| [Vastleggen wijziging contactgegevens](business-services/bs-vastleggen-wijziging-contactgegevens-aanvrager.md) | Verwerkt gewijzigde contactgegevens van de aanvrager. |
+| [Behandeling aanvraag opnieuw starten](business-services/bs-behandeling-aanvraag-opnieuw-starten.md) | Zet de volledige behandeling terug naar de vaststellingsfase. |
+| [Genereren rapportage](business-services/bs-genereren-rapportage.md) | Stelt een rapportage over het dossier samen. |
+| [Afsluiten zaak](business-services/bs-afsluiten-zaak.md) | Rondt de zaak administratief af. |
+
+{% hint style="info" %}
+De pagina's achter deze links zijn gegenereerd uit de backend-configuratie met `scripts/generate-business-services.py`. Ze staan bewust niet in de navigatie — het zijn naslagpagina's, geen leesstof.
+{% endhint %}
 
 ## Een paar services uitgelicht
 

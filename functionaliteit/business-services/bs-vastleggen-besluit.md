@@ -1,0 +1,42 @@
+---
+description: Procesverloop, invoer en uitvoer van BS Vastleggen besluit.
+---
+
+# BS Vastleggen besluit
+
+Bouwblok `bs-vastleggen-besluit`.
+
+## Invoer en uitvoer
+
+Dit bouwblok benoemt geen invoer- en uitvoervariabelen in het procesmodel.
+
+## Het proces
+
+| Soort | Stap |
+| --- | --- |
+| Start | Vaststellen besluit gestart |
+| Gebruikerstaak | Vaststellen besluit |
+| Systeemstap | Get besluit document url |
+| Beslistabel | Bepalen besluittype |
+| Aanroep | Vastleggen besluit → `generic-vastleggen-besluit` |
+| Aanroep | Zet zaak eigenschap → `generic-zet-zaakeigenschap` |
+| Keuze | Email adres aanwezig? |
+| Systeemstap | Versturen emailnotificatie besluit |
+| Einde | Vastleggen besluit afgerond |
+| Systeemstap | GenereerEmailTask |
+
+## Onderdelen
+
+**Formulieren**
+
+* `bs.vastleggen-besluit.vaststellen-besluit`
+
+**Beslistabellen**
+
+* `alo-bepaal-besluittype`
+
+Dit bouwblok heeft een eigen documentdefinitie.
+
+---
+
+Terug naar [Business services](../business-services.md).

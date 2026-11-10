@@ -38,3 +38,26 @@ De vastgelegde schermen tonen **dummygegevens**. Controleer bij het
 vernieuwen of de omgeving nog steeds testdata bevat en geen productiedata —
 afbeeldingen worden niet gedekt door de privacycontrole in
 `.claude/skills/privacy-check`.
+
+## generate-business-services.py
+
+Genereert een naslagpagina per business service in
+`functionaliteit/business-services/`, uit de bouwblokken van de backend.
+
+```bash
+python3 scripts/generate-business-services.py [pad-naar-backend]
+```
+
+Zonder argument wordt `../mijn-inkomen-gzac-backend-v13` geprobeerd.
+
+Per bouwblok worden gelezen:
+
+* **naam en omschrijving** uit `building-block-definition.json`;
+* **invoer en uitvoer** uit de tekstannotaties in het BPMN-model — niet elk
+  blok benoemt die, dan meldt de pagina dat;
+* **de processtappen** uit het BPMN-model, met het soort stap erbij;
+* **formulieren, formulierstromen en beslistabellen** uit de mappen ernaast.
+
+Draai dit opnieuw na een wijziging in de bouwblokken. De pagina's zijn
+volledig gegenereerd — handmatige aanpassingen gaan bij de volgende run
+verloren.
