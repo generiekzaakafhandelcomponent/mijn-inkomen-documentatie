@@ -95,7 +95,7 @@ flowchart TB
 | **Mijn Inkomen** | Voert de behandeling uit: procesregie, gegevensverzameling, beoordeling, besluit. |
 | **Open Zaak** | De formele zaakregistratie: zaak, status, documenten, besluiten. |
 | **Suwinet / Haal Centraal** | Leveren brongegevens over persoon, inkomen, vermogen en bewoning. |
-| **Socrates** | De uitkeringsadministratie waar de dienst wordt opgevoerd en de uitkering wordt betaald. |
+| **Uitkeringsadministratie** | Waar de dienst wordt opgevoerd en de uitkering wordt betaald. Deze koppeling is optioneel; zie [Integraties](../koppelingen/integraties.md#uitkeringsadministratie). |
 
 ## Twee soorten waarheid
 

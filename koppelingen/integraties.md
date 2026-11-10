@@ -4,7 +4,7 @@ description: De externe systemen waarmee Mijn Inkomen praat, en hoe die koppelin
 
 # Integraties
 
-Mijn Inkomen koppelt met tien externe systemen. Elke koppeling loopt via een **plugin**: een herbruikbare component die per omgeving wordt geconfigureerd. De procesmodellen roepen de plugin aan; de instellingen — URL's, sleutels, wachtwoorden — zitten in configuratie en komen uit omgevingsvariabelen.
+Mijn Inkomen koppelt met een reeks externe systemen. Elke koppeling loopt via een **plugin**: een herbruikbare component die per omgeving wordt geconfigureerd. De procesmodellen roepen de plugin aan; de instellingen — URL's, sleutels, wachtwoorden — zitten in configuratie en komen uit omgevingsvariabelen.
 
 ## Overzicht
 
@@ -18,10 +18,48 @@ Mijn Inkomen koppelt met tien externe systemen. Elke koppeling loopt via een **p
 | Open Notificaties | `notificatiesapi` | Melding van nieuwe verzoeken en afgeronde taken |
 | Suwinet | `suwinet` | Brongegevens van UWV, SVB, DUO, RDW, Kadaster, BRP |
 | Haal Centraal | `haalcentraalbrp`, `haalcentraalbag` | Bewoning en adresgegevens |
-| Socrates | `socrates` | Dienst opvoeren in de uitkeringsadministratie |
-| SMTP | `smtp-mail` | E-mailnotificaties |
+| Documentgenerator | wisselend | Brieven en rapportages opmaken |
+| E-mail | `smtp-mail` of `graph-mail` | E-mailnotificaties |
+| Socrates | `socrates` | Dienst opvoeren in de uitkeringsadministratie — *optioneel* |
+| Civision | — | Koppeling met de uitkeringsadministratie — *optioneel* |
 
-Ondersteunende plugins: `value-mapper` (aanvraag omzetten naar dossierstructuur), `mail-template` en `freemarker` (brieven en e-mails), `externe-klanttaak` (taken in het portaal).
+Ondersteunende plugins: `value-mapper` (aanvraag omzetten naar dossierstructuur), `mail-template` en `freemarker` (sjablonen voor brieven en e-mails), `externe-klanttaak` (taken in het portaal).
+
+{% hint style="info" %}
+**Niet elke koppeling is verplicht, en niet elke keuze ligt vast.** Voor documentgeneratie, e-mail en de uitkeringsadministratie bestaan meerdere ondersteunde varianten. Welke een gemeente gebruikt, is een inrichtingskeuze — zie [Wisselbare onderdelen](#wisselbare-onderdelen).
+{% endhint %}
+
+## Wisselbare onderdelen
+
+Drie onderdelen van de keten zijn niet aan één leverancier gebonden. De rest van Mijn Inkomen merkt daar niets van: het proces vraagt om een document of een bericht, en welke voorziening dat levert is configuratie.
+
+### Documentgeneratie
+
+Brieven en rapportages worden door een externe documentgenerator opgemaakt. Ondersteund:
+
+| Generator | Status |
+| --- | --- |
+| **DocSys** | Ondersteund |
+| **SmartDocuments** | Ondersteund |
+| **Reporting Cloud** | Ondersteund |
+| **Epistola** | Voorzien voor de toekomst |
+
+Welke generator wordt gebruikt, bepaalt niet wát er in de brief staat — de inhoud komt uit de sjablonen en de zaakgegevens. Zie [Besluit en afsluiting](../functionaliteit/besluit-en-afsluiting.md#brieven-en-sjablonen).
+
+### E-mail
+
+Voor uitgaande e-mail zijn er twee routes:
+
+| Route | Plugin | Wanneer |
+| --- | --- | --- |
+| **SMTP** | `smtp-mail` | Een eigen mailserver, met host, poort, inloggegevens en STARTTLS. |
+| **Microsoft Graph API** | `graph-mail` | Verzenden vanuit een Microsoft 365-omgeving. |
+
+### Uitkeringsadministratie
+
+De koppeling met de uitkeringsadministratie is **optioneel**. Zowel **Socrates** als **Civision** worden ondersteund; een gemeente kan ook zonder koppeling werken.
+
+Zonder koppeling vervalt het automatisch opvoeren van de dienst: dat gebeurt dan buiten Mijn Inkomen om. De behandeling zelf loopt gewoon door — zie [Socrates](#socrates-de-uitkeringsadministratie) voor wat die stap doet wanneer hij wél is ingericht.
 
 ## Open Zaak — de zaakregistratie
 
@@ -109,6 +147,10 @@ De mapping bepaalt welke delen van het portaalverzoek worden overgenomen: persoo
 
 Socrates is waar de uitkering uiteindelijk wordt uitgevoerd en betaald. Mijn Inkomen voert de **dienst** op: de administratieve registratie dat er een aanvraag loopt.
 
+{% hint style="info" %}
+Deze koppeling is **optioneel**, en Socrates is niet de enige mogelijkheid — zie [Wisselbare onderdelen](#uitkeringsadministratie). Wat hieronder staat, geldt voor een inrichting waarin Socrates is gekoppeld.
+{% endhint %}
+
 Dat gebeurt in de fase `opvoeren-dienst`, direct na het vaststellen van de belanghebbenden. Socrates geeft een aanvraag-ID terug dat in het dossier onder `socrates.aanvraagId` wordt bewaard — de brug tussen beide systemen.
 
 Bijbehorende processen:
@@ -131,7 +173,7 @@ Technisch: Suwinet gebruikt basic authentication via een aparte authenticatieplu
 
 ## E-mail
 
-E-mailnotificaties gaan via SMTP, met configureerbare host, poort, inloggegevens en STARTTLS. De inhoud komt uit FreeMarker-sjablonen die per regeling aan een zaaktype zijn gekoppeld.
+E-mailnotificaties gaan via **SMTP** of via de **Microsoft Graph API**, afhankelijk van hoe de omgeving is ingericht. De inhoud komt in beide gevallen uit FreeMarker-sjablonen die per regeling aan een zaaktype zijn gekoppeld; de keuze van route verandert niets aan wat de inwoner ontvangt.
 
 Notificaties gaan uit bij de ontvangstbevestiging, het uitzetten van een informatieverzoek en het vastleggen van het besluit — dat laatste alleen als er een e-mailadres bekend is.
 

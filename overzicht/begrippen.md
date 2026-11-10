@@ -68,7 +68,8 @@ description: De termen die in Mijn Inkomen en in deze documentatie worden gebrui
 | **Haal Centraal** | Landelijke API's voor onder meer BRP-bewoning en BAG-adresgegevens. |
 | **Socrates** | De uitkeringsadministratie waarin de dienst wordt opgevoerd. |
 | **Form.io** | De techniek waarmee de formulieren en zaaktabbladen zijn opgebouwd. |
-| **SmartDocuments** | De documentgenerator waarmee brieven worden opgemaakt. |
+| **Documentgenerator** | De externe voorziening die brieven en rapportages opmaakt. Mijn Inkomen ondersteunt er meerdere; zie [Integraties](../koppelingen/integraties.md#documentgeneratie). |
+| **SmartDocuments** | Eén van de ondersteunde documentgeneratoren. |
 | **Printstraat** | De centrale voorziening waaraan gegenereerde brieven worden aangeboden om afgedrukt en verzonden te worden. |
 | **Plugin** | Herbruikbare koppeling naar een extern systeem, configureerbaar per omgeving. |
 | **Process link** | De verbinding tussen een processtap en wat daar moet gebeuren: een formulier tonen of een plugin aanroepen. |
